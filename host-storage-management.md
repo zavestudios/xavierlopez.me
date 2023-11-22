@@ -1,17 +1,14 @@
 - Physical Storage
-- List the partition tables for the specified devices, then exit.
+- List disk and partition tables:
   - `fdisk -l`
-  - Example output, where 'sda' stands for scsi/sata disk a, and 'vda' stands for 'virtual disk a'.
-    - /dev/sda
-    - /dev/sda0
-    - /dev/sda1
-    - /dev/sdb
-    - /dev/sdb0
-    - /dev/sdb1
-    - /dev/vda
-    - /dev/vda0
-    - /dev/vda1
-    - etc.
+- List mounted filesystems
+  - `findmnt`
+- Show the definitions for partitions, along with a description of how it's mounted:
+  - `cat /etc/fstab`
+- Discover what files are open and who's using it:
+  - `lsof`
+
+
 - Create a partition to make a newly added disk usable:
   - First, go add the disk.
   - Choose the disk you want to partition.
@@ -25,5 +22,5 @@
   - `mount /dev/<disk-partition-name> /mnt/test`
   - View partitions:
   - `sudo cat /proc/partitions`
-
+- List all mounted filesystems
   - See Master Linux Storage Management with LVM Chapter 3 'Command Line Tools' for the procedure on LVM.
