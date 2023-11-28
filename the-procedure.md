@@ -9,5 +9,3 @@ If you want to use the entire unallocated space on `/dev/vdb1` to extend `/dev/v
 5. Copy the contents of `/dev/vda2` to `/mnt`.
 6. Update the `/etc/fstab` file with the new partition information.
 7. Reboot to apply the changes.
-
-Please note that these steps involve copying data, so make sure to have a backup in case anything goes wrong. Additionally, these steps may vary based on your specific system configuration. If you're not comfortable with these steps or if you're dealing with a critical system, it might be a good idea to consult with someone experienced or seek professional assistance.
