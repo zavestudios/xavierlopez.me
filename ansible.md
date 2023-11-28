@@ -1,8 +1,0 @@
-### Ansible
-- Concepts:
-  - Modules: Discrete units of code that can be used from the command line or in a playbook task. Ansible executes each module, usually on the remote managed node, and collects return values. In Ansible 2.10 and later, most modules are hosted in collections. Modules support taking arguments.
-  - Collections: A distributed format for content that can include playbooks, roles, modules, and plugins. You can install and use collections through a distribution server, such as Ansible Galaxy.
-  - Plugins: Pieces of code that augment Ansible's core functionality. Ansible uses a plugin architecture to enable a rich, flexible and expandable feature set. Ansible ships with some plugins. You can write your own.
-    - Example: Action plugins act in conjunction with modules to the execute actions required by playbook tasks. 
-- Gather facts from one host:
-- `ansible <host-name-or-IP> -m ansible.builtin.setup`

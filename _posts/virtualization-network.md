@@ -1,5 +1,0 @@
-- Network Virtualization
-    - Virtual Switches
-    - Virtual Firewalls
-    - Virtual NICs
-      - These map back to physical network adapters.
