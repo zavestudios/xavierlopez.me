@@ -5,7 +5,7 @@ title: Xavier G. Lopez
 
 **Senior Platform Engineer | Sec+ | TS/SCI | DoD 8570 IAT II certified**
 
-[xavier@xavierlopez.me](mailto:xavier@xavierlopez.me) • (909) 917-4973 • [linkedin.com/in/zavelopez](https://linkedin.com/in/zavelopez)
+[xavier@xavierlopez.me](mailto:xavier@xavierlopez.me) • (951) 456-2190 • [linkedin.com/in/zavelopez](https://linkedin.com/in/zavelopez)
 
 ---
 
