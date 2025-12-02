@@ -23,8 +23,8 @@ email: xavier@xavierlopez.me
 description: >- # this means to ignore newlines until "baseurl:"
   Senior Platform Engineer with a decade of experience in DevOps, site reliability engineering,
   cloud architecture and platform development. Sec+ and TS/SCI certified.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jotspot" # the subpath of your site, e.g. /blog
+url: "https://eckslopez.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: zavelopez
 github_username:  eckslopez
 
