@@ -6,6 +6,7 @@ gem "jekyll-paginate"
 gem "jekyll-sitemap"
 gem "jekyll-gzip"
 gem "jekyll-feed"
+gem "kramdown-parser-gfm"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
