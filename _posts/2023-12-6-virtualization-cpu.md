@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Virtualization - CPU"
 date:   2023-12-6 10:51:00 +0000
 categories: virtualization
