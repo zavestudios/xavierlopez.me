@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Host Storage Management"
 date:   2023-12-6 10:44:00 +0000
 categories: linux

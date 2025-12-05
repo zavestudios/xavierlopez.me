@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Network Troubleshooting"
 date:   2023-12-6 10:45:00 +0000
 categories: linux

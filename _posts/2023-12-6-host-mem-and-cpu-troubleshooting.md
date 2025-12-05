@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Host Memory and CPU Troubleshooting"
 date:   2023-12-6 10:43:00 +0000
 categories: linux

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title:  "Virtualization - Server"
 date:   2023-12-6 11:01:00 +0000
 categories: virtualization,networking
