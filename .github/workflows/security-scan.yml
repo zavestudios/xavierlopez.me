@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ main ]
 
+# Grant permissions to GITHUB_TOKEN
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+
 jobs:
   secret-scan:
     runs-on: ubuntu-latest
@@ -20,7 +26,6 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
   markdown-lint:
     runs-on: ubuntu-latest
