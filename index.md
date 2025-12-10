@@ -4,7 +4,7 @@ author_profile: true
 title: "Welcome"
 ---
 
-Senior Platform Engineer specializing in DevOps, cloud infrastructure, and platform engineering. I create systems that empower development teams to innovate faster.
+Senior Platform Engineer specializing in Kubernetes, cloud infrastructure, and secure CI/CD pipelines. I build and support platforms that developers can be enthusiastic about.
 
 [View My Resume →](/about/){: .btn .btn--primary}
 
