@@ -1,13 +1,11 @@
 ---
 permalink: /about/
-title: "About"
+title: "Professional Summary"
 layout: single
 author_profile: true
 ---
 
-## Professional Summary
-
-I create leverage for businesses by developing and operating platforms composed of carefully chosen OSS, COTS, and cloud services, drawing from a decade of experience in DevOps, site reliability engineering, cloud architecture and Agile application development. I reinforce internal and tenant developer productivity by insulating them from operational complexity—providing platform usage telemetry, handling service dependencies, executing software migrations—thereby freeing them to innovate at the application layer.
+Platform Engineer with 10+ years building secure, reliable, cloud-native platforms that increase developer velocity and reduce operational load. Expertise in Kubernetes, DevSecOps, IaC, CI/CD, and platform observability. Proven record reducing build times by 80%+, modernizing AMI pipelines, enabling multi-language tenant workloads, and delivering automated platform services at scale.
 
 ## Technical Expertise
 
