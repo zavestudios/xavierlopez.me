@@ -6,19 +6,15 @@ on:
   pull_request:
     branches: [ main ]
 
-# Define common checkout step as a reusable anchor
-.checkout: &checkout
-  name: Checkout code
-  uses: actions/checkout@v4
-  with:
-    fetch-depth: 0
-
 jobs:
   secret-scan:
     runs-on: ubuntu-latest
     name: Detect secrets
     steps:
-      - <<: *checkout
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Gitleaks Secret Scan
         uses: gitleaks/gitleaks-action@v2
@@ -30,7 +26,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint Markdown files
     steps:
-      - <<: *checkout
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Markdown Lint
         uses: articulate/actions-markdownlint@v1
@@ -44,7 +43,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Validate Jekyll
     steps:
-      - <<: *checkout
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
