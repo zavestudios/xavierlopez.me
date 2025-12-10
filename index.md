@@ -4,13 +4,9 @@ author_profile: true
 title: "Welcome"
 ---
 
-## About Me
+Senior Platform Engineer specializing in DevOps, cloud infrastructure, and platform engineering. I create systems that empower development teams to innovate faster.
 
-I'm a Senior Platform Engineer with over 10 years of experience in DevOps, site reliability engineering, cloud architecture, and platform development. I hold Security+ certification and an active TS/SCI clearance.
-
-I create leverage for businesses by developing and operating platforms composed of carefully chosen OSS, COTS, and cloud services. My focus is on reinforcing developer productivity by insulating teams from operational complexity—providing platform usage telemetry, handling service dependencies, and executing software migrations—thereby freeing them to innovate at the application layer.
-
-[View my full resume →](/about/){: .btn .btn--primary}
+[View My Resume →](/about/){: .btn .btn--primary}
 
 ## Recent Posts
 

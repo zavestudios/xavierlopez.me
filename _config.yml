@@ -1,9 +1,9 @@
 # Site Settings
 locale: "en-US"
-title: "Xavier G. Lopez"
+title: "Platform Engineering | DevSecOps"
 title_separator: "|"
-subtitle: "Senior Platform Engineer"
-name: "Xavier G. Lopez"
+subtitle: "Xavier G. Lopez"
+name: ""
 description: "Senior Platform Engineer with a decade of experience in DevOps, site reliability engineering, cloud architecture and platform development. Sec+ and TS/SCI certified."
 url: "https://xavierlopez.me"
 baseurl: ""
@@ -20,10 +20,10 @@ comments:
 
 # Site Author
 author:
-  name: "Xavier G. Lopez"
+  name: ""
   avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: "Senior Platform Engineer | DevSecOps | Sec+ | TS/SCI | DoD 8570 IAT II"
-  location: "Riverside, CA"
+  bio: ""
+  location: "Los Angeles, CA"
   email: "xavier@xavierlopez.me"
   links:
     - label: "LinkedIn"
@@ -150,7 +150,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: false
-      share: true
+      share: false
       related: true
   # _pages
   - scope:
