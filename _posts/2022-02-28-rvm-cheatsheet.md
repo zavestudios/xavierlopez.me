@@ -48,7 +48,7 @@ Why not create a new gemset and use it, in one command? This is the one I use th
 rvm use 2.5.1@namedgemset --create
 ```
 
-RVM does so much more than what I'm showing you here. I'll add more functionality to this post in the future, as the opportunities present theirselves.  If you're interested, go and take a look at the rvm homepage.
+RVM does so much more than what I'm showing you here. I'll add more functionality to this post in the future, as the opportunities present themselves. If you're interested, go and take a look at the rvm homepage.
 
 Here's something that has always confused me...let's list all our gemsets.
 
@@ -65,7 +65,7 @@ ruby -v && rvm gemset list
 If you're running ruby 2.5.1, on a MAC, here's what you're likely to see:
 
 ```
-ruby 2.5.1p57 (2018-03-29 revison 63029) [x86-64-darwin18]
+ruby 2.5.1p57 (2018-03-29 revision 63029) [x86-64-darwin18]
 gemsets for ruby-2.5.1 (found in /Users/you/.rvm/gems/ruby-2.5.1)
 => (default)
      gemset_1

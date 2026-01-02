@@ -12,7 +12,7 @@ categories: linux
   - `ENABLED="true"`
 - Check sysstat configuration
   - `sudo cat /etc/cron.d/sysstat`
-- Understanding uptime and load averages for 1, 5, and 15 mns.
+- Understanding uptime and load averages for 1, 5, and 15 mins.
   - `uptime`
   - Just uptime, no averages
   - `uptime -s`

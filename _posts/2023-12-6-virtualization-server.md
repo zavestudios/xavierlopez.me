@@ -10,13 +10,13 @@ categories: virtualization,networking
     - Scaling by creating new VMs from templates.
     - Scaling by cloning VMs
     - Adding more resources on demand.
-    - Admininstering many VMs from a single console.
+    - Administering many VMs from a single console.
     - Preserving state of a VM by snapshotting.
     - Policy-driven management.
   - Agility:
     - Rapid deployment of new applications.
     - Rapid scaling of new applications.
-    - Break down admininstrative silos in IT and reallocate time to business-impacting projects.
+    - Break down administrative silos in IT and reallocate time to business-impacting projects.
   - Availability:
     - Abstraction. What is virtualized in software becomes relatively independent of underlying hardware, and therefore, portable.
     - High availability for all. Availability that was once very difficult and expensive becomes standard. This high availability is takes the form of fast replacement of suddenly unavailable resources, among other ways.
@@ -24,10 +24,10 @@ categories: virtualization,networking
     - Reduced energy consumption through efficiency of resource use during runtime and powering down during hours where they are not needed.
     - Increased business agility. Faster scaling. 
   - Time savings:
-    - Admininstering servers.
+    - Administering servers.
     - Protecting data.
     - Deploying new applications.
-    - Replacing aging harwire.
+    - Replacing aging hardware.
     - Enabling HA and Loadbalancing.
   - Money:
     - Fewer servers = lower associated infrastructure costs.
@@ -61,4 +61,4 @@ categories: virtualization,networking
     - This happens when the VMs are allocated more resources than the physical has to give. You can run into performance and capacity issues, but the hypervisor is actually very efficient and smart about optimizing resources, especially memory. In the case of memory, it will share memory, compress memory, and in the worst case, use a swap file. Overcommittment is used commonly in data centers and 9 times out of 10, there is no trouble, as long as you properly monitor performance.
   - Overcommitment: Hypervisors often allow overcommitment, where the total vCPUs allocated to virtual machines can exceed the actual number of physical CPU cores. This is possible because not all virtual machines may use their allocated CPU resources simultaneously.
     
-  - The VMs are hardware indenpendent.
+  - The VMs are hardware independent.

@@ -7,7 +7,7 @@ categories: virtualization
 - Device mapper: A virtual block device driver framework provided by the Linux kernel, which provides an infrastructure to filter I/O for block devices (BIO). It provides a platform for filter drivers also known as targets to map to BIO to multiple block devices, or to modify the BIO while it is in transit in kernel.
   - Logical volume manager (LVM)
   - Software RAIDs
-  - Dm-crypt dick encryption
+  - Dm-crypt disk encryption
   - File system snapshots
 
 - Listing storage:
@@ -50,7 +50,7 @@ categories: virtualization
 
 - Note:
 
-  - While vCPUs provide flexibility and resource isolation in virtualized environments, it's important to consider the physical CPU capabilities and avoid overcommitting resources to prevent performance degradation. The performance of virtual machines depends on the available physical CPU resources and the efficiency of the hypervisor's scheduling algorithms. You can run into performance and capacity issue
+  - While vCPUs provide flexibility and resource isolation in virtualized environments, it's important to consider the physical CPU capabilities and avoid overcommitting resources to prevent performance degradation. The performance of virtual machines depends on the available physical CPU resources and the efficiency of the hypervisor's scheduling algorithms. You can run into performance and capacity issues
 
 - Why virtualization?
 - Complexities introduced by Virtualization: 

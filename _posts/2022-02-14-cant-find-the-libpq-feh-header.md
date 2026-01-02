@@ -21,4 +21,4 @@ Do you see the problem there? Yeah, neither did I. All I had to do to solve this
 sudo yum install postgresql-devel
 ```
 
-After that, bundler successfully installed the pg gem, and I was off and running. I'll refine this post for other linux distributions as the opportunities present theirselves. Be assured, they will.
+After that, bundler successfully installed the pg gem, and I was off and running. I'll refine this post for other linux distributions as the opportunities present themselves. Be assured, they will.

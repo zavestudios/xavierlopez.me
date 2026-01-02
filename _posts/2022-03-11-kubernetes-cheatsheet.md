@@ -55,7 +55,7 @@ kubectl logs -n ingress-nginx <ingress-nginx-controller-pod-name>
 Check the nginx configuration of a controller pod:
 
 ```bash
-kubectl exec -it -n ingress-nginx nginx-ingress-contoller-name cat /etc/nginx/nginx.conf
+kubectl exec -it -n ingress-nginx nginx-ingress-controller-name cat /etc/nginx/nginx.conf
 ```
 
 More to come.
