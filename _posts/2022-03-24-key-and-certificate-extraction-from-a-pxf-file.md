@@ -13,18 +13,26 @@ That's never happened to you?  Oh.
 
 Well, for those of us who've faced this crucible, here's what we're going to do.  First off, we should know that the .pxf (PKCS#12) file format, is for safely packaging the public key, which is the certificate, and a private key.  Our objective is to extract those two units, for use on another server.  We're going to use openssl to accomplish this.
 
-Read the password, from the txt file that was included in the zip file that was sent to you. You'll need it later:
+Read the password from the txt file that was included in the zip file that was sent to you. You'll need it later:
 
-`cat password.txt`
+```bash
+cat password.txt
+```
 
-Extract the private key.  You'll be prompted for the password:
+Extract the private key. You'll be prompted for the password:
 
-`openssl pkcs12 -in [yourfile.pfx] -nocerts -out [your.key]` 
+```bash
+openssl pkcs12 -in [yourfile.pfx] -nocerts -out [your.key]
+```
 
 Extract the certificate:
 
-`openssl pkcs12 -in [yourfile.pfx] -clcerts -nokeys -out [your.crt]`
+```bash
+openssl pkcs12 -in [yourfile.pfx] -clcerts -nokeys -out [your.crt]
+```
 
 Decrypt the private key. You'll be prompted again for the password:
 
-`openssl rsa -in [your.key] -out [your-decrypted.key]`
+```bash
+openssl rsa -in [your.key] -out [your-decrypted.key]
+```
