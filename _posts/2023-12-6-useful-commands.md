@@ -16,11 +16,15 @@ categories: linux administration,commands
   - MEM (%MEM): The percentage of RAM usage by the process.
   - TIME+: The total CPU time the process has used since it started.
   - COMMAND: The command or program associated with the process
-- A useful combo for redirecting the non-commented lines in a file, to another file:
-  - `grep -Ev '^($|#)' <path-to-file> | wc -l > <path-to-new-file>`
-- Getent displays entries from databases supported by the Name Service Switch libraries, which are configured in /etc/nsswitch.conf.
-  - `getent hosts`
-  - `getent group`
-  - `getent passwd`
-  - `getent shadow`
-  - `getent services`
+- A useful combo for redirecting the non-commented lines in a file to another file:
+  ```bash
+  grep -Ev '^($|#)' <path-to-file> | wc -l > <path-to-new-file>
+  ```
+- Getent displays entries from databases supported by the Name Service Switch libraries, which are configured in /etc/nsswitch.conf:
+  ```bash
+  getent hosts
+  getent group
+  getent passwd
+  getent shadow
+  getent services
+  ```

@@ -13,22 +13,30 @@ Those are important details. Let's document it all right here, so we can refer b
 
 ### Which init am I running?
 
-First, let's discover which system we're running, so we don't have to cycle through every possibility.  Making lots of mistakes is a great way to learn, but we're not in the mood for that right now, because we have people waiting on us. This trusty little companion will help with that.
+First, let's discover which system we're running, so we don't have to cycle through every possibility. Making lots of mistakes is a great way to learn, but we're not in the mood for that right now, because we have people waiting on us. This trusty little companion will help with that:
 
-`ps -p1 | grep "init\|upstart\|systemd"`
+```bash
+ps -p1 | grep "init\|upstart\|systemd"
+```
 
 Now, depending on what the command above returns, you do the following:
 
 ### Sys V Init & Upstart
 
-`sudo service unicorn restart`
+```bash
+sudo service unicorn restart
+```
 
 ### System D
 
-`sudo systemctl start unicorn`
+```bash
+sudo systemctl start unicorn
+```
 
 ### Sometimes you need to do this...
 
-...this might happen if your initialization script doesn't have a restart command.
+...this might happen if your initialization script doesn't have a restart command:
 
-`/etc/init.d/unicorn restart`
+```bash
+/etc/init.d/unicorn restart
+```
