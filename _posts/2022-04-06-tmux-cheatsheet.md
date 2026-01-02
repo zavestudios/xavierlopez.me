@@ -7,42 +7,58 @@ categories: software-development system-administration tools
 
 List tmux sessions:
 
-`tmux ls`
+```bash
+tmux ls
+```
 
 Start two new tmux sessions, detached, both running vim:
 
-`tmux new -s first -d vim`
-
-`tmux new -s second -d vim`
+```bash
+tmux new -s first -d vim
+tmux new -s second -d vim
+```
 
 Attach to the first new session:
 
-`tmux attach -t first`
+```bash
+tmux attach -t first
+```
 
 Detach from the first session:
 
-`PREFIX d`
+```
+PREFIX d
+```
 
 Attach to the second session:
 
-`tmux attach -t second`
+```bash
+tmux attach -t second
+```
 
 Switch to the second session, from the first, in one move:
 
-`PREFIX (`
+```
+PREFIX (
+```
 
 Switch back:
 
-`PREFIX )`
+```
+PREFIX )
+```
 
 Rename running session:
 
-`Ctrl + b:`
-
-`rename-session -t [current-name] [new-name]`
+```
+Ctrl + b:
+rename-session -t [current-name] [new-name]
+```
 
 Kill a session:
 
-`tmux kill-session -t [session-name]`
+```bash
+tmux kill-session -t [session-name]
+```
 
 More to come.
