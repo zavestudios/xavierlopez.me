@@ -5,9 +5,11 @@ date: 2022-02-03 15:25:13 -0800
 categories: software-development
 ---
 
-Sometimes you don't want to trigger an entire pipeline run, right? Maybe you've only changed the name of some files in the repo, or perhaps you deleted some files from the repo. Whatever your motivation for not following your CI/CD sequence,  here's how to push to git, without triggering a build:
+Sometimes you don't want to trigger an entire pipeline run, right? Maybe you've only changed the name of some files in the repo, or perhaps you deleted some files from the repo. Whatever your motivation for not following your CI/CD sequence, here's how to push to git without triggering a build:
 
-`git push <remote_name> <branch_name> -o ci.skip`
+```bash
+git push <remote_name> <branch_name> -o ci.skip
+```
 
 Here's how it looks in your pipeline view:
 

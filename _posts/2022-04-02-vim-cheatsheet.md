@@ -9,14 +9,26 @@ Everyone is already familiar with the basic stuff. If not, you can find it anywh
 
 Insert a character at the beginning of a range of lines in a file:
 
-`0i#` then `:<start-range>,<end-range>normal .`
+```vim
+0i#
+```
+
+Then:
+
+```vim
+:<start-range>,<end-range>normal .
+```
 
 Delete some characters from the beginning of a range of lines in a file:
 
-`:<start-range>,<end-range>s/<char-to-be-deleted>//`
+```vim
+:<start-range>,<end-range>s/<char-to-be-deleted>//
+```
 
 Find and replace throughout an entire file:
 
-`:%s/foo/bar/g`
+```vim
+:%s/foo/bar/g
+```
 
 More to come.

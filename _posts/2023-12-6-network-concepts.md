@@ -18,7 +18,7 @@ categories: linux
 - VLAN Explainer
   - VLANs (Virtual Local Area Network):
     - Purpose: VLANs are used to logically segment a physical network into multiple broadcast domains. This segmentation helps improve network performance, security, and management.
-    - Functionality: Devices in the same VLAN can communicate with each other as if they are in the same physical network, even if they are not physically connected t the same switch.
+    - Functionality: Devices in the same VLAN can communicate with each other as if they are in the same physical network, even if they are not physically connected to the same switch.
     - Implementation: VLANs are often implemented in switches, and devices within the same VLAN share the same VLAN ID.
     - Isolation: VLANs provide isolation at Layer 2, meaning devices in different VLANs cannot communicate directly at the Data Link Layer.
   - Subnets:
