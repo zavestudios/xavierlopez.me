@@ -1,83 +1,213 @@
 ---
 layout: single
-title: "RVM Cheatsheet"
-date: 2022-02-28 10:27:06 -0800
-categories: software-development system-administration
+title: "RVM Cheatsheet: Practical Ruby Version Management"
+date: 2022-02-28 08:00:00 +0000
+last_modified_at: 2025-01-08
+categories:
+  - ruby
+  - cli
+  - productivity
+tags:
+  - rvm
+  - ruby
+  - version-management
+  - development
+excerpt: "A practical RVM cheatsheet covering the commands you actually use to install, switch, and manage Ruby versions and gemsets."
+toc: true
+toc_sticky: true
 ---
 
-Let's create a handy little list of my most commonly used rvm commands. RVM, for those who might be wondering, is a ruby version manager. It does a great job of downloading and making rubies, but it also manages gems into 'gemsets'.  There is another ruby version manager, [RBENV](https://github.com/rbenv/rbenv), which is also a great tool.  I use them both, depending on the situation.  Look out for a post on RBENV, in the future.
+## Context
 
-Tell RVM to show us all the rubies in the world:
+Ruby projects often depend on **specific Ruby versions and gem sets**.
 
-```bash
+RVM (Ruby Version Manager) helps isolate those dependencies so:
+- projects don’t conflict
+- upgrades are controlled
+- development environments stay predictable
+
+This cheatsheet focuses on **everyday RVM commands**, not edge cases.
+
+---
+
+## Installing and Listing Ruby Versions
+
+List available Ruby versions:
+```
 rvm list known
 ```
 
-Install one:
-
-```bash
-rvm install 2.5.1
+Install a specific version:
+```
+rvm install 3.2.2
 ```
 
-In order to use that ruby, do this:
-
-```bash
-rvm 2.5.1
+List installed versions:
+```
+rvm list
 ```
 
-Rubies are one thing, and gems are another. Let's create a new gemset, then we'll match up a ruby with a gemset:
-
-```bash
-rvm gemset create namedgemset
+Set a default Ruby:
+```
+rvm --default use 3.2.2
 ```
 
-Output:
-```
-Gemset 'namedgemset' created.
-```
+---
 
-To use our new gemset:
+## Switching Ruby Versions
 
-```bash
-rvm gemset use namedgemset
+Use a Ruby version for the current shell:
+```
+rvm use 3.2.2
 ```
 
-Why not create a new gemset and use it, in one command? This is the one I use the most:
-
-```bash
-rvm use 2.5.1@namedgemset --create
+Use a Ruby version temporarily:
+```
+rvm use 3.1.4 --temporary
 ```
 
-RVM does so much more than what I'm showing you here. I'll add more functionality to this post in the future, as the opportunities present themselves. If you're interested, go and take a look at the rvm homepage.
+Check the active Ruby:
+```
+ruby -v
+```
 
-Here's something that has always confused me...let's list all our gemsets.
+Always confirm which Ruby you’re running before debugging issues.
 
-```bash
+---
+
+## Gemsets
+
+Gemsets isolate dependencies within a Ruby version.
+
+Create a gemset:
+```
+rvm gemset create myapp
+```
+
+Use a gemset:
+```
+rvm gemset use myapp
+```
+
+List gemsets:
+```
 rvm gemset list
 ```
 
-I've seen the output from that a hundred times and have always had a nagging suspicion that I wasn't seeing all the gemsets I want to see, until one day it occurred to me that when you run that, it only shows you the gemsets for the ruby interpreter you happen to be running, at that moment.  To demonstrate, let's do this:
-
-```bash
-ruby -v && rvm gemset list
+Delete a gemset:
+```
+rvm gemset delete myapp
 ```
 
-If you're running ruby 2.5.1, on a MAC, here's what you're likely to see:
+Gemsets prevent dependency bleed between projects.
 
+---
+
+## Project-Level Ruby Configuration
+
+Create a `.ruby-version` file:
 ```
-ruby 2.5.1p57 (2018-03-29 revision 63029) [x86-64-darwin18]
-gemsets for ruby-2.5.1 (found in /Users/you/.rvm/gems/ruby-2.5.1)
-=> (default)
-     gemset_1
-     gemset_2
-     gemset_3
-     gemset_n
-```
-
-So how can you see all the gemsets you have, for all the interpreters, without having to switch from one ruby to another?
-
-```bash
-rvm gemset list_all
+echo "3.2.2" > .ruby-version
 ```
 
-That's how.
+Create a `.ruby-gemset` file:
+```
+echo "myapp" > .ruby-gemset
+```
+
+When entering the directory, RVM will prompt to trust and switch automatically.
+
+---
+
+## Updating and Maintenance
+
+Update RVM itself:
+```
+rvm get stable
+```
+
+Upgrade Ruby:
+```
+rvm upgrade 3.1.4 3.2.2
+```
+
+Remove an old Ruby version:
+```
+rvm remove 2.7.8
+```
+
+Cleaning unused versions reduces confusion.
+
+---
+
+## Bundler Integration
+
+Install Bundler for the active Ruby:
+```
+gem install bundler
+```
+
+Install project dependencies:
+```
+bundle install
+```
+
+Bundler respects the active Ruby and gemset.
+
+---
+
+## Debugging Common Issues
+
+Reload RVM environment:
+```
+source ~/.rvm/scripts/rvm
+```
+
+Check RVM requirements:
+```
+rvm requirements
+```
+
+Diagnose environment issues:
+```
+rvm doctor
+```
+
+Many Ruby issues trace back to mismatched versions or gemsets.
+
+---
+
+## Shell Integration Notes
+
+RVM modifies shell behavior.
+
+Common issues arise when:
+- shells aren’t loading RVM scripts
+- multiple version managers are installed
+- PATH order is incorrect
+
+Avoid mixing RVM with other Ruby managers unless you understand the interactions.
+
+---
+
+## Practical Tips
+
+- Keep Ruby versions explicit per project
+- Remove versions you no longer need
+- Use gemsets sparingly but intentionally
+- Trust `.ruby-version` files only from known sources
+- Verify environment before debugging app errors
+
+Environment clarity saves hours.
+
+---
+
+## Takeaways
+
+- RVM manages Ruby versions and gem isolation
+- A small command set covers most workflows
+- Project-level files improve consistency
+- Most Ruby issues start with environment drift
+- Discipline beats memorization
+
+A clean Ruby environment makes application problems much easier to reason about.

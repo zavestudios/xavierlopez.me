@@ -1,55 +1,213 @@
 ---
 layout: single
-title: "Kubernetes Manual Certificate Update and Upgrade-bug Fixes"
-date: 2022-05-12 14:57:55 -0800
-categories: virtualization
+title: "Kubernetes Manual Certificate Updates and Upgrade Bug Fixes"
+date: 2022-05-12 08:40:00 +0000
+last_modified_at: 2025-02-27
+categories:
+  - kubernetes
+  - operations
+  - security
+tags:
+  - kubernetes
+  - certificates
+  - pki
+  - upgrades
+  - troubleshooting
+excerpt: "How to manually update Kubernetes certificates, why certificate issues often surface during upgrades, and how to safely recover clusters when automation falls short."
+toc: true
+toc_sticky: true
 ---
 
-About one year ago, I set up an on-premises Kubernetes cluster. Keeping track of the SSL certs slipped my mind, and I woke up one morning to an inaccessible cluster. Embarrassingly, I'd also failed to update the 3 CentOS servers that make up the cluster.  For a whole year.  Twelve hundred package updates later and ... I had an out-of-date-certificates problem, and a few new Kubernetes configuration bugs to deal with.
+## Context
 
-No biggie. Let's fix it -- people are depending on us. 
+Kubernetes certificate problems rarely appear during calm periods.
 
-This post assumes you've used kubeadm to set up your cluster. First, let's become root and confirm that our certificates are expired:
+They surface during:
+- control plane upgrades
+- node replacements
+- API server restarts
+- long-lived clusters reaching certificate expiration
 
-`sudo su -` 
+When certificate automation fails—or was never fully implemented—operators are left performing **manual recovery on critical infrastructure**.
 
-`kubeadm alpha certs check-expiration`
+This post documents how and why manual certificate updates become necessary, and how to approach them safely.
 
-Now let's renew those expired certificates:
+---
 
-`kubeadm alpha certs renew all` 
+## Why Kubernetes Certificates Matter
 
-That will take care of the certificates, which leaves us with the bugs.  The package updates left me with a newer version of kubernetes.  There are some changes in the way that we configure parts of the cluster, in version 1.18. I found it necessary to edit flanneld:
+Kubernetes relies heavily on **mutual TLS**.
 
-`kubectl edit cm -n kube-system kube-flannel-cfg`
+Certificates secure:
+- API server communication
+- kubelet authentication
+- controller-manager and scheduler access
+- etcd traffic
+- kubectl client access
 
-Add this part:
+If certificates expire or mismatch, the cluster doesn’t degrade gracefully—it stops working.
 
+---
+
+## Common Triggers for Manual Intervention
+
+Manual certificate updates are often required when:
+
+- clusters run longer than expected without rotation
+- upgrades expose latent certificate drift
+- bootstrap tools were misconfigured
+- control plane nodes were restored from snapshots
+- time skew invalidates certificates
+
+In many cases, the problem existed long before symptoms appeared.
+
+---
+
+## Understanding the Certificate Landscape
+
+Key certificate locations typically include:
+
+- `/etc/kubernetes/pki`
+- kubeconfig files under `/etc/kubernetes`
+- embedded certificates inside kubeconfigs
+
+Each component may rely on different certificates with different lifetimes.
+
+Blind rotation is dangerous without understanding dependencies.
+
+---
+
+## Checking Certificate Expiration
+
+On clusters bootstrapped with `kubeadm`, start with:
+
+```bash
+kubeadm certs check-expiration
 ```
-{
-  "name": "cbr0",
-  "cniVersion": "0.3.1",  <<<<<<<<<<<<<<<<
-  "plugins": [
-    {
-      "type": "flannel",
-      "delegate": {
-        "hairpinMode": true,
-        "isDefaultGateway": true
-      }
-    },
-    {
-      "type": "portmap",
-      "capabilities": {
-      "portMappings": true
-      }
-    }
-  ]
-}
+
+This provides a clear overview of:
+- which certificates are expired
+- which are approaching expiration
+- which components are affected
+
+If this command fails, you’re already in partial outage territory.
+
+---
+
+## Renewing Certificates with kubeadm
+
+When possible, prefer kubeadm-managed renewal:
+
+```bash
+kubeadm certs renew all
 ```
 
-The next issue requires us to edit /var/lib/kubelet/config.yml. Just add this to the end of the file, but if you're the organized type, put it in the proper place, alphabetically:
+This regenerates control plane certificates but does **not** automatically restart components.
 
-`featureGates:
-CSIMigration: false`
+After renewal, you must restart:
+- kube-apiserver
+- kube-controller-manager
+- kube-scheduler
+- kubelet (in some cases)
 
-This is just a few of the issues that I've encountered lately with my cluster. I'll add more to this post, as I begin dealing with them.
+Plan for controlled restarts.
+
+---
+
+## Updating kubeconfig Files
+
+Renewing certificates is only half the job.
+
+kubeconfig files often embed client certificates that must be updated:
+
+- `admin.conf`
+- `controller-manager.conf`
+- `scheduler.conf`
+- `kubelet.conf`
+
+Regenerate them as needed:
+
+```bash
+kubeadm init phase kubeconfig all
+```
+
+Then copy updated configs to their expected locations.
+
+---
+
+## Restarting Control Plane Components
+
+After certificate and kubeconfig updates:
+
+- restart static pods (usually via kubelet restart)
+- confirm API server health
+- verify component logs
+
+A certificate update without restarts leaves the cluster in a broken half-state.
+
+---
+
+## Upgrade-Related Certificate Bugs
+
+Upgrades sometimes surface certificate bugs such as:
+
+- mismatched CA bundles
+- outdated kubeconfigs
+- components referencing old cert paths
+- control plane components failing silently
+
+These issues often appear as:
+- API server refusing connections
+- kubelet registration failures
+- controllers stuck in crash loops
+
+Treat upgrades as stress tests for certificate hygiene.
+
+---
+
+## Debugging Tips
+
+When diagnosing certificate-related failures:
+
+- check system time on all nodes
+- inspect logs for TLS errors
+- verify file permissions under `/etc/kubernetes/pki`
+- ensure components reference the correct kubeconfigs
+
+Certificate errors are usually explicit—once you know where to look.
+
+---
+
+## When Manual Rotation Is Unsafe
+
+Avoid manual rotation when:
+- etcd health is unknown
+- backups are unavailable
+- cluster state is already inconsistent
+
+In these cases, recovery planning is more important than speed.
+
+---
+
+## Preventing Future Issues
+
+Long-term fixes include:
+- enabling automatic rotation
+- monitoring certificate expiration proactively
+- documenting bootstrap procedures
+- testing upgrades in long-lived environments
+
+Manual intervention should be a last resort, not a routine operation.
+
+---
+
+## Takeaways
+
+- Certificate issues often surface during upgrades
+- Kubernetes depends heavily on PKI correctness
+- kubeadm provides tooling—but requires operator follow-through
+- kubeconfigs are as important as certificates themselves
+- Proactive rotation and monitoring prevent emergencies
+
+When Kubernetes certificates fail, the cluster doesn’t limp—it stops.  
+Understanding manual recovery is essential for anyone operating long-lived clusters.

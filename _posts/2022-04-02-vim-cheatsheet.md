@@ -1,34 +1,316 @@
 ---
 layout: single
-title: "VIM Cheatsheet"
-date: 2022-04-02 20:56:19 -0800
-categories: software-development system-administration tools
+title: "Vim Cheatsheet: Practical Commands You Actually Use"
+date: 2022-04-02 08:15:00 +0000
+last_modified_at: 2025-01-15
+categories:
+  - cli
+  - productivity
+tags:
+  - vim
+  - editor
+  - terminal
+  - productivity
+  - workflows
+excerpt: "A practical Vim cheatsheet focused on the commands and patterns most useful for everyday editing in terminal-based workflows."
+toc: true
+toc_sticky: true
 ---
 
-Everyone is already familiar with the basic stuff. If not, you can find it anywhere on the web. I'm going to list some of the hard-to-remember stuff that accomplishes really useful multi-line tasks.
+## Context
 
-Insert a character at the beginning of a range of lines in a file:
+Vim rewards depth over breadth.
 
-```vim
-0i#
+You don’t need to know every command—just a **small, reliable core** that lets you move, edit, and refactor text efficiently without leaving the keyboard.
+
+This cheatsheet focuses on **high-value commands** that cover the majority of real-world editing tasks.
+
+---
+
+## Modes (The Mental Model)
+
+Vim is modal. Understanding this matters more than memorizing commands.
+
+- **Normal mode**: navigation and commands
+- **Insert mode**: text entry
+- **Visual mode**: selection
+- **Command mode**: file and editor commands
+
+If Vim feels confusing, it’s usually a mode issue.
+
+---
+
+## Basic Navigation
+
+Move the cursor:
+```
+h  j  k  l
 ```
 
-Then:
-
-```vim
-:<start-range>,<end-range>normal .
+Word movement:
+```
+w   next word
+b   previous word
+e   end of word
 ```
 
-Delete some characters from the beginning of a range of lines in a file:
-
-```vim
-:<start-range>,<end-range>s/<char-to-be-deleted>//
+Line movement:
+```
+0   start of line
+^   first non-blank character
+$   end of line
 ```
 
-Find and replace throughout an entire file:
-
-```vim
-:%s/foo/bar/g
+File movement:
+```
+gg  top of file
+G   bottom of file
 ```
 
-More to come.
+---
+
+## Insert Mode
+
+Enter insert mode:
+```
+i   insert before cursor
+a   insert after cursor
+o   open new line below
+O   open new line above
+```
+
+Exit insert mode:
+```
+Esc
+```
+
+Returning to Normal mode quickly is essential.
+
+---
+
+## Editing Text
+
+Delete:
+```
+x       delete character
+dd      delete line
+dw      delete word
+d$      delete to end of line
+```
+
+Change:
+```
+cw      change word
+cc      change line
+c$      change to end of line
+```
+
+Undo and redo:
+```
+u       undo
+Ctrl-r  redo
+```
+
+---
+
+## Copy, Cut, and Paste
+
+Yank (copy):
+```
+yy      yank line
+yw      yank word
+```
+
+Delete (cut):
+```
+dd
+```
+
+Paste:
+```
+p       paste after cursor
+P       paste before cursor
+```
+
+Vim treats delete as a form of cut.
+
+---
+
+## Visual Mode (Selecting Text)
+
+Enter visual mode:
+```
+v       character-wise
+V       line-wise
+Ctrl-v  block-wise
+```
+
+After selecting:
+```
+y       yank
+d       delete
+>       indent
+<       unindent
+```
+
+Visual mode makes structural edits safer.
+
+---
+
+## Searching
+
+Search forward:
+```
+/pattern
+```
+
+Search backward:
+```
+?pattern
+```
+
+Navigate results:
+```
+n       next match
+N       previous match
+```
+
+Clear search highlighting:
+```
+:noh
+```
+
+---
+
+## Replace
+
+Replace in the current line:
+```
+:s/old/new/
+```
+
+Replace globally in file:
+```
+:%s/old/new/g
+```
+
+Confirm each replacement:
+```
+:%s/old/new/gc
+```
+
+Search and replace is one of Vim’s strongest features.
+
+---
+
+## Working with Files
+
+Save file:
+```
+:w
+```
+
+Quit:
+```
+:q
+```
+
+Save and quit:
+```
+:wq
+```
+
+Quit without saving:
+```
+:q!
+```
+
+Open a file:
+```
+:e filename
+```
+
+---
+
+## Splits and Windows
+
+Horizontal split:
+```
+:split
+```
+
+Vertical split:
+```
+:vsplit
+```
+
+Move between splits:
+```
+Ctrl-w h
+Ctrl-w j
+Ctrl-w k
+Ctrl-w l
+```
+
+Close a split:
+```
+:close
+```
+
+Splits work well for side-by-side comparisons.
+
+---
+
+## Useful Quality-of-Life Commands
+
+Repeat last command:
+```
+.
+```
+
+Indent selection:
+```
+>>
+<<
+```
+
+Auto-indent file:
+```
+gg=G
+```
+
+Repeatability is where Vim speed comes from.
+
+---
+
+## Common Mistakes
+
+- Staying in Insert mode too long
+- Using arrow keys instead of motions
+- Avoiding Normal mode commands
+- Trying to memorize everything at once
+
+Vim improves with gradual adoption.
+
+---
+
+## Practical Tips
+
+- Learn motions before plugins
+- Optimize for editing, not aesthetics
+- Use Vim where latency matters (SSH, servers)
+- Let muscle memory build slowly
+
+Mastery comes from repetition, not shortcuts.
+
+---
+
+## Takeaways
+
+- Vim is modal by design—embrace it
+- A small command set covers most tasks
+- Motions + operators unlock power
+- Search and replace are first-class tools
+- Efficiency comes from staying on the keyboard
+
+You don’t need to know Vim—you need to **be comfortable** in it.
