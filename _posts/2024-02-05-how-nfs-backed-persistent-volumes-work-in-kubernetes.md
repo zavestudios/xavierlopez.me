@@ -73,7 +73,7 @@ An application runs as a standard Kubernetes **Deployment**.
 
 Instead of connecting directly to a pod IP, it references a **Service** using an environment variable such as:
 
-```
+```ini
 DB_HOST=postgres-service
 ```
 

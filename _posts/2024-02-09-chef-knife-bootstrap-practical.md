@@ -140,7 +140,7 @@ This version is one of the last to support RHEL 6.
 
 ### Step 2: Remove Existing Client Credentials
 
-```
+```bash
 sudo rm /etc/chef/client.pem
 ```
 
@@ -150,7 +150,7 @@ This ensures the node does not attempt to re-register with stale credentials.
 
 ### Step 3: Copy the RPM to the Node
 
-```
+```bash
 scp chef-17.9.52-1.el6.x86_64.rpm deploy-user@192.0.2.100:/home/deploy-user
 ```
 
@@ -158,7 +158,7 @@ scp chef-17.9.52-1.el6.x86_64.rpm deploy-user@192.0.2.100:/home/deploy-user
 
 ### Step 4: Check Existing Chef Version
 
-```
+```bash
 rpm -qa | grep chef
 ```
 
@@ -171,13 +171,13 @@ chef-12.x.x-1.el6.x86_64
 
 ### Step 5: Remove the Old Chef Client
 
-```
+```bash
 sudo rpm -e chef-12.x.x-1.el6.x86_64
 ```
 
 Verify removal:
 
-```
+```bash
 rpm -qa | grep chef
 ```
 
@@ -185,7 +185,7 @@ rpm -qa | grep chef
 
 ### Step 6: Install the New Client
 
-```
+```bash
 sudo rpm -ivh chef-17.9.52-1.el6.x86_64.rpm
 ```
 

@@ -47,7 +47,7 @@ This is rarely helpful when you care about **recency**.
 
 To sort files by modification time (newest first):
 
-```
+```bash
 ls -lt
 ```
 
@@ -66,7 +66,7 @@ Newest files appear at the top.
 
 To show the **oldest files first**:
 
-```
+```bash
 ls -ltr
 ```
 
@@ -98,7 +98,7 @@ Different flags expose different timestamps.
 
 To sort by metadata change time:
 
-```
+```bash
 ls -ltc
 ```
 
@@ -110,7 +110,7 @@ This is useful when:
 
 Combine with reverse order:
 
-```
+```bash
 ls -ltcr
 ```
 
@@ -120,7 +120,7 @@ ls -ltcr
 
 To sort by last access time:
 
-```
+```bash
 ls -ltu
 ```
 
@@ -138,13 +138,13 @@ Note that many systems disable or relax atime updates for performance reasons.
 
 To see only the most recent entries:
 
-```
+```bash
 ls -lt | head
 ```
 
 Or the oldest:
 
-```
+```bash
 ls -ltr | head
 ```
 
@@ -158,13 +158,13 @@ Hidden files are often the ones that matter most.
 
 Include them with:
 
-```
+```bash
 ls -lat
 ```
 
 Combine as needed:
 
-```
+```bash
 ls -latr
 ```
 
@@ -174,19 +174,19 @@ ls -latr
 
 See the most recently modified files in `/var/log`:
 
-```
+```bash
 ls -lt /var/log | head
 ```
 
 Find old files in a directory:
 
-```
+```bash
 ls -ltr | head
 ```
 
 Inspect recent config changes:
 
-```
+```bash
 ls -lt /etc
 ```
 

@@ -35,7 +35,7 @@ Deleting a namespace is not a single operation.
 
 When you run:
 
-```
+```sql
 kubectl delete namespace example-namespace
 ```
 
@@ -89,7 +89,7 @@ At that point, Kubernetes is waiting for a cleanup step that will never occur.
 
 First, verify the namespace state:
 
-```
+```bash
 kubectl get namespace example-namespace
 ```
 
@@ -101,7 +101,7 @@ STATUS   Terminating
 
 Inspect it more closely:
 
-```
+```bash
 kubectl describe namespace example-namespace
 ```
 
@@ -109,7 +109,7 @@ Often, you’ll see references to remaining resources or finalizers.
 
 For deeper inspection:
 
-```
+```bash
 kubectl get namespace example-namespace -o json
 ```
 
@@ -125,7 +125,7 @@ spec.finalizers
 
 Commands like:
 
-```
+```sql
 kubectl delete namespace example-namespace --force --grace-period=0
 ```
 
@@ -156,7 +156,7 @@ Proceed only when:
 
 ### Step 1: Export the Namespace Definition
 
-```
+```bash
 kubectl get namespace example-namespace -o json > namespace.json
 ```
 
@@ -186,7 +186,7 @@ After:
 
 ### Step 3: Submit the Finalized Object
 
-```
+```bash
 kubectl replace --raw "/api/v1/namespaces/example-namespace/finalize" \
   -f namespace.json
 ```

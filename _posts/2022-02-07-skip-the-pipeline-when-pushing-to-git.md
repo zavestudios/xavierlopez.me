@@ -60,7 +60,7 @@ or
 
 Example:
 
-```
+```bash
 git commit -m "Fix typo in README [skip ci]"
 ```
 
@@ -88,7 +88,7 @@ Always verify your repository’s workflow logic before relying on this behavior
 
 GitLab also supports push options:
 
-```
+```bash
 git push -o ci.skip
 ```
 

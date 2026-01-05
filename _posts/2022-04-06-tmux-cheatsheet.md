@@ -48,17 +48,17 @@ Almost all commands start with the prefix.
 ## Sessions
 
 Create a new session:
-```
+```bash
 tmux new -s mysession
 ```
 
 List sessions:
-```
+```bash
 tmux ls
 ```
 
 Attach to a session:
-```
+```bash
 tmux attach -t mysession
 ```
 

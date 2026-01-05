@@ -48,14 +48,14 @@ h  j  k  l
 ```
 
 Word movement:
-```
+```ruby
 w   next word
 b   previous word
 e   end of word
 ```
 
 Line movement:
-```
+```bash
 0   start of line
 ^   first non-blank character
 $   end of line
@@ -72,7 +72,7 @@ G   bottom of file
 ## Insert Mode
 
 Enter insert mode:
-```
+```sql
 i   insert before cursor
 a   insert after cursor
 o   open new line below
@@ -91,7 +91,7 @@ Returning to Normal mode quickly is essential.
 ## Editing Text
 
 Delete:
-```
+```sql
 x       delete character
 dd      delete line
 dw      delete word
@@ -99,7 +99,7 @@ d$      delete to end of line
 ```
 
 Change:
-```
+```ruby
 cw      change word
 cc      change line
 c$      change to end of line
@@ -146,7 +146,7 @@ Ctrl-v  block-wise
 ```
 
 After selecting:
-```
+```sql
 y       yank
 d       delete
 >       indent
@@ -176,7 +176,7 @@ N       previous match
 ```
 
 Clear search highlighting:
-```
+```vim
 :noh
 ```
 
@@ -185,7 +185,7 @@ Clear search highlighting:
 ## Replace
 
 Replace in the current line:
-```
+```vim
 :s/old/new/
 ```
 
@@ -206,27 +206,27 @@ Search and replace is one of Vim’s strongest features.
 ## Working with Files
 
 Save file:
-```
+```vim
 :w
 ```
 
 Quit:
-```
+```vim
 :q
 ```
 
 Save and quit:
-```
+```vim
 :wq
 ```
 
 Quit without saving:
-```
+```vim
 :q!
 ```
 
 Open a file:
-```
+```vim
 :e filename
 ```
 
@@ -235,12 +235,12 @@ Open a file:
 ## Splits and Windows
 
 Horizontal split:
-```
+```vim
 :split
 ```
 
 Vertical split:
-```
+```vim
 :vsplit
 ```
 
@@ -253,7 +253,7 @@ Ctrl-w l
 ```
 
 Close a split:
-```
+```vim
 :close
 ```
 
@@ -275,7 +275,7 @@ Indent selection:
 ```
 
 Auto-indent file:
-```
+```ini
 gg=G
 ```
 

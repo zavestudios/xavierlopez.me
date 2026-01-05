@@ -36,13 +36,13 @@ This is not a Helm tutorial—it’s a working engineer’s reference.
 
 List all releases in the current namespace:
 
-```
+```bash
 helm list
 ```
 
 List releases across all namespaces:
 
-```
+```bash
 helm list --all-namespaces
 ```
 
@@ -54,7 +54,7 @@ This is usually the first command to run when you’re orienting yourself in a c
 
 View detailed information about a release:
 
-```
+```bash
 helm status example-release -n example-namespace
 ```
 
@@ -73,13 +73,13 @@ It’s often more useful than checking Kubernetes resources directly.
 
 Get the values used by an installed release:
 
-```
+```bash
 helm get values example-release -n example-namespace
 ```
 
 Include all values (defaults + overrides):
 
-```
+```bash
 helm get values example-release -n example-namespace --all
 ```
 
@@ -91,13 +91,13 @@ This is critical when debugging configuration drift or unexpected behavior.
 
 Render templates without installing:
 
-```
+```bash
 helm template example-release ./example-chart
 ```
 
 Render with explicit values:
 
-```
+```bash
 helm template example-release ./example-chart \
   -f values.yaml \
   -n example-namespace
@@ -111,19 +111,19 @@ Local rendering is one of the fastest ways to debug Helm issues **before** touch
 
 Install a release:
 
-```
+```bash
 helm install example-release ./example-chart -n example-namespace
 ```
 
 Upgrade an existing release:
 
-```
+```bash
 helm upgrade example-release ./example-chart -n example-namespace
 ```
 
 Upgrade and install if missing:
 
-```
+```bash
 helm upgrade --install example-release ./example-chart -n example-namespace
 ```
 
@@ -135,7 +135,7 @@ This pattern is common in CI/CD pipelines.
 
 View revision history:
 
-```
+```bash
 helm history example-release -n example-namespace
 ```
 
@@ -151,7 +151,7 @@ This is useful for:
 
 Rollback to a specific revision:
 
-```
+```bash
 helm rollback example-release 3 -n example-namespace
 ```
 
@@ -163,7 +163,7 @@ Rollbacks reuse stored release data and are usually fast and reliable.
 
 Remove a release:
 
-```
+```bash
 helm uninstall example-release -n example-namespace
 ```
 

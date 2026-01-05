@@ -47,7 +47,7 @@ Without verbosity, many failures look identical—even when they’re not.
 
 Run `vagrant up` with the `--debug` flag:
 
-```
+```bash
 vagrant up --debug
 ```
 
@@ -59,7 +59,7 @@ This enables detailed logging across Vagrant’s execution path.
 
 Verbose output can be overwhelming. Redirecting it to a file makes it easier to inspect:
 
-```
+```bash
 vagrant up --debug > vagrant-debug.log 2>&1
 ```
 
@@ -79,13 +79,13 @@ Vagrant uses log levels internally.
 
 You can explicitly control them:
 
-```
+```ini
 VAGRANT_LOG=debug vagrant up
 ```
 
 For even more detail:
 
-```
+```ini
 VAGRANT_LOG=trace vagrant up
 ```
 

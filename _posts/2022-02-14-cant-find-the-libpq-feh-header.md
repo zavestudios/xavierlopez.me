@@ -62,7 +62,7 @@ You may have PostgreSQL installed and running—but **not** the development pack
 
 Install the PostgreSQL development package:
 
-```
+```sql
 sudo apt update
 sudo apt install libpq-dev
 ```
@@ -81,13 +81,13 @@ After installation, retry your build.
 
 Install the development package:
 
-```
+```bash
 sudo dnf install postgresql-devel
 ```
 
 Or on older systems:
 
-```
+```bash
 sudo yum install postgresql-devel
 ```
 
@@ -99,13 +99,13 @@ Package names differ slightly by distribution, but the intent is the same.
 
 If you’re using Homebrew:
 
-```
+```bash
 brew install postgresql
 ```
 
 Ensure headers are discoverable:
 
-```
+```bash
 brew info postgresql
 ```
 

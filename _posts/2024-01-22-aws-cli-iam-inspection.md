@@ -37,7 +37,7 @@ All examples assume a **fictional named CLI profile** is in use.
 
 To get a high-level view of IAM usage and limits for the current account:
 
-```
+```bash
 aws iam get-account-summary --profile demo-admin
 ```
 
@@ -59,7 +59,7 @@ This is often the fastest way to answer:
 
 To retrieve detailed IAM configuration across the entire account:
 
-```
+```bash
 aws iam get-account-authorization-details --profile demo-admin
 ```
 
@@ -86,7 +86,7 @@ Expect a large JSON response.
 
 To list all IAM users in the account:
 
-```
+```bash
 aws iam list-users --profile demo-admin
 ```
 
@@ -104,7 +104,7 @@ In mature environments, this list is often smaller than expected.
 
 To see which groups a user belongs to:
 
-```
+```bash
 aws iam list-groups-for-user \
   --user-name example-user \
   --profile demo-admin
@@ -124,7 +124,7 @@ This is especially useful when:
 
 To list managed policies attached to a specific IAM group:
 
-```
+```bash
 aws iam list-attached-group-policies \
   --group-name PlatformAdmins \
   --profile demo-admin
@@ -140,7 +140,7 @@ If permissions feel broader than expected, this command usually reveals why.
 
 To list all IAM roles in the account:
 
-```
+```bash
 aws iam list-roles --profile demo-admin
 ```
 

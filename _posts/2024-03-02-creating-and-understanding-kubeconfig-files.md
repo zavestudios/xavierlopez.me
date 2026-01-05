@@ -81,19 +81,19 @@ Nothing works unless all four line up.
 
 To see what `kubectl` is currently using:
 
-```
+```bash
 kubectl config view
 ```
 
 To see only the active context:
 
-```
+```bash
 kubectl config current-context
 ```
 
 To list all contexts:
 
-```
+```bash
 kubectl config get-contexts
 ```
 
@@ -107,7 +107,7 @@ Creating a kubeconfig intentionally makes the model click.
 
 ### Step 1: Define the Cluster
 
-```
+```bash
 kubectl config set-cluster example-cluster \
   --server=https://api.example.internal:6443 \
   --certificate-authority=/path/to/ca.crt
@@ -121,7 +121,7 @@ This tells `kubectl` *where* the API server is and *how to trust it*.
 
 Example using a client certificate:
 
-```
+```bash
 kubectl config set-credentials example-user \
   --client-certificate=/path/to/client.crt \
   --client-key=/path/to/client.key
@@ -133,7 +133,7 @@ Other authentication methods exist, but the structure is the same.
 
 ### Step 3: Create a Context
 
-```
+```bash
 kubectl config set-context example-context \
   --cluster=example-cluster \
   --user=example-user \
@@ -146,7 +146,7 @@ This binds identity to destination.
 
 ### Step 4: Activate the Context
 
-```
+```bash
 kubectl config use-context example-context
 ```
 
@@ -164,7 +164,7 @@ By default, `kubectl` looks for:
 
 You can override this with:
 
-```
+```ini
 KUBECONFIG=/path/to/config kubectl get pods
 ```
 

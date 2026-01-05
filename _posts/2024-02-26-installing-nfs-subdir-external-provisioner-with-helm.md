@@ -66,7 +66,7 @@ If the NFS server isn’t healthy, this installation will succeed—but provisio
 
 First, add the Helm repository that hosts the chart:
 
-```
+```sql
 helm repo add nfs-subdir-external-provisioner \
   https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
 
@@ -83,7 +83,7 @@ The core installation uses `helm install` with a small but important set of valu
 
 Example:
 
-```
+```sql
 helm install nfs-provisioner \
   nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
   --namespace storage-system \
@@ -127,13 +127,13 @@ Helm handles object creation, but **you are responsible** for understanding the 
 
 Check that the pod is running:
 
-```
+```bash
 kubectl get pods -n storage-system
 ```
 
 Confirm the StorageClass exists:
 
-```
+```bash
 kubectl get storageclass
 ```
 
@@ -145,7 +145,7 @@ You should see the `managed-nfs` StorageClass listed.
 
 Create a simple PVC referencing the StorageClass:
 
-```
+```bash
 kubectl apply -f - <<EOF
 apiVersion: v1
 kind: PersistentVolumeClaim

@@ -55,7 +55,7 @@ It is a creation mechanism, not a secrets management system.
 
 The most direct pattern uses literals:
 
-```
+```sql
 kubectl create secret generic example-db-creds \
   --from-literal=username=example_user \
   --from-literal=password=example_password
@@ -75,7 +75,7 @@ It is **not** ideal for long-lived or production secrets.
 
 A more common pattern is file-based creation:
 
-```
+```sql
 kubectl create secret generic example-config \
   --from-file=application.yaml
 ```
@@ -99,7 +99,7 @@ But it still raises questions about where that file lives and how it’s protect
 
 Environment-style files can also be used:
 
-```
+```sql
 kubectl create secret generic example-env \
   --from-env-file=.env
 ```
@@ -122,7 +122,7 @@ This is one of the most common failure modes.
 
 Always be explicit:
 
-```
+```sql
 kubectl create secret generic example-db-creds \
   --from-literal=username=example_user \
   --from-literal=password=example_password \
@@ -137,13 +137,13 @@ Secrets in the wrong namespace are indistinguishable from missing secrets.
 
 You can confirm a Secret exists with:
 
-```
+```bash
 kubectl get secret example-db-creds -n example-namespace
 ```
 
 And inspect metadata with:
 
-```
+```bash
 kubectl describe secret example-db-creds -n example-namespace
 ```
 

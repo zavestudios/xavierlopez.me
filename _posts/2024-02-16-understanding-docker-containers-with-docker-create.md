@@ -37,7 +37,7 @@ This post explains why and when that separation matters.
 
 At a high level:
 
-```
+```sql
 docker run = docker create + docker start
 ```
 
@@ -87,7 +87,7 @@ A typical `docker create` command defines:
 
 Example pattern:
 
-```
+```sql
 docker create \
   --name example-service \
   -p 8080:8080 \
@@ -105,7 +105,7 @@ Nothing runs yet. Docker simply records *intent*.
 
 Once created, you can inspect the container:
 
-```
+```bash
 docker inspect example-service
 ```
 
@@ -126,7 +126,7 @@ All without starting the container.
 
 After creation:
 
-```
+```bash
 docker start example-service
 ```
 

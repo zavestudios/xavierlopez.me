@@ -36,27 +36,27 @@ This cheatsheet focuses on **high-signal commands** that cover the majority of r
 ## Images
 
 Build an image:
-```
+```bash
 docker build -t my-image:latest .
 ```
 
 List local images:
-```
+```bash
 docker images
 ```
 
 Remove an image:
-```
+```bash
 docker rmi my-image:latest
 ```
 
 Remove unused images:
-```
+```bash
 docker image prune
 ```
 
 Tag an image:
-```
+```bash
 docker tag my-image:latest my-image:v1
 ```
 
@@ -65,37 +65,37 @@ docker tag my-image:latest my-image:v1
 ## Containers
 
 Run a container:
-```
+```bash
 docker run my-image
 ```
 
 Run interactively with a shell:
-```
+```bash
 docker run -it my-image /bin/bash
 ```
 
 Run in detached mode:
-```
+```bash
 docker run -d my-image
 ```
 
 List running containers:
-```
+```bash
 docker ps
 ```
 
 List all containers:
-```
+```bash
 docker ps -a
 ```
 
 Stop a container:
-```
+```bash
 docker stop <container_id>
 ```
 
 Remove a container:
-```
+```bash
 docker rm <container_id>
 ```
 
@@ -104,27 +104,27 @@ docker rm <container_id>
 ## Inspecting and Debugging
 
 View container logs:
-```
+```bash
 docker logs <container_id>
 ```
 
 Follow logs:
-```
+```bash
 docker logs -f <container_id>
 ```
 
 Inspect container details:
-```
+```bash
 docker inspect <container_id>
 ```
 
 Execute a command in a running container:
-```
+```bash
 docker exec -it <container_id> /bin/bash
 ```
 
 Check resource usage:
-```
+```bash
 docker stats
 ```
 
@@ -133,22 +133,22 @@ docker stats
 ## Networking
 
 List networks:
-```
+```bash
 docker network ls
 ```
 
 Inspect a network:
-```
+```bash
 docker network inspect <network_name>
 ```
 
 Run a container on a specific network:
-```
+```bash
 docker run --network my-network my-image
 ```
 
 Expose ports:
-```
+```bash
 docker run -p 8080:80 my-image
 ```
 
@@ -159,27 +159,27 @@ Networking issues are often configuration issues—inspect before guessing.
 ## Volumes and Data
 
 List volumes:
-```
+```bash
 docker volume ls
 ```
 
 Inspect a volume:
-```
+```bash
 docker volume inspect <volume_name>
 ```
 
 Create a volume:
-```
+```sql
 docker volume create my-volume
 ```
 
 Mount a volume:
-```
+```bash
 docker run -v my-volume:/data my-image
 ```
 
 Mount a host directory:
-```
+```bash
 docker run -v $(pwd):/app my-image
 ```
 
@@ -190,22 +190,22 @@ Understand whether your data is **ephemeral or persistent**.
 ## Cleanup (Use With Care)
 
 Remove stopped containers:
-```
+```bash
 docker container prune
 ```
 
 Remove unused networks:
-```
+```bash
 docker network prune
 ```
 
 Remove unused volumes:
-```
+```bash
 docker volume prune
 ```
 
 Remove everything unused:
-```
+```bash
 docker system prune
 ```
 
@@ -216,18 +216,18 @@ Prune commands are powerful—review what will be removed before confirming.
 ## Common Patterns
 
 Rebuild and run:
-```
+```bash
 docker build -t my-image . && docker run my-image
 ```
 
 Stop and remove all containers:
-```
+```bash
 docker stop $(docker ps -q)
 docker rm $(docker ps -aq)
 ```
 
 Remove dangling images:
-```
+```bash
 docker rmi $(docker images -f "dangling=true" -q)
 ```
 
