@@ -30,6 +30,7 @@ Platform Engineer with 10+ years building secure, reliable, cloud-native platfor
 ## Professional Experience
 
 ### Senior DevSecOps Engineer / Platform Engineer
+
 **Raft, Reston, VA** | *January 2024 - November 2024*
 
 Led, paired and mentored on platform engineering stories and tenant tickets on production DoD ATO'd cloud infrastructure serving internal and tenant development teams. Architected and implemented scalable solutions reducing build times 87% while enhancing security posture.
@@ -42,6 +43,7 @@ Led, paired and mentored on platform engineering stories and tenant tickets on p
 - Configured complex infrastructure components including ALB listener rules, GitLab Workspace network policies, and SES integration across multiple applications
 
 ### DevOps Engineer / SRE
+
 **Saasoft, Fillmore, CA** | *May 2023 - January 2024*
 
 - Maintained GitOps-driven CI/CD pipelines with version-controlled infrastructure and application code for efficient software delivery
@@ -49,6 +51,7 @@ Led, paired and mentored on platform engineering stories and tenant tickets on p
 - Developed Ruby on Rails features including REST APIs, microservices architecture, and authentication/authorization
 
 ### DevOps Engineer / SRE - Platform Lead
+
 **Insight Direct, Chandler, AZ** | *July 2018 - May 2023*
 
 Led platform transformation from bare metal infrastructure to hybrid architecture. Successfully managed staging, QA and production EKS clusters.
@@ -62,6 +65,7 @@ Led platform transformation from bare metal infrastructure to hybrid architectur
 - Lowered operational costs 25% through strategic cloud migration of data workloads and right-sizing infrastructure resources
 
 ### Full Stack Developer / DevOps Consultant
+
 **Juniper Networks, Sunnyvale, CA** | *July 2016 - July 2018*
 
 Led and paired on network device automation projects.
@@ -71,6 +75,7 @@ Led and paired on network device automation projects.
 - Designed POC for orchestrating live network device software/firmware updates with zero downtime
 
 ### Full Stack Developer / DevOps Engineer
+
 **Datalink, Eden Prairie, MN** | *November 2013 - June 2016*
 
 Led the application development team's adoption of DevOps.
