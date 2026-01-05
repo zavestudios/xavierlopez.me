@@ -1,6 +1,7 @@
 ---
 title: "Network Concepts for Platform Engineers"
 date: 2023-12-08 23:45:00 +0000
+last_modified_at: "2025-09-10"
 categories: [linux, networking]
 tags: [osi, layer2, layer3, vlan, subnet, kubernetes, aws]
 excerpt: "A practical refresher on Layer 2 vs Layer 3 networking, VLANs vs subnets, and how these concepts actually show up in day-to-day platform engineering work."
