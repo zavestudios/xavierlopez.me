@@ -21,6 +21,7 @@ toc_sticky: true
 ## Context
 
 Bootstrapping a node into Chef is one of those tasks that’s **simple in theory** and occasionally painful in practice—especially when you’re dealing with:
+
 - mixed operating systems
 - legacy hosts
 - older Chef clients
@@ -36,6 +37,7 @@ This is operational guidance, not a Chef tutorial.
 ## What `knife bootstrap` Actually Does
 
 At a high level, `knife bootstrap`:
+
 - connects to a remote node (SSH or WinRM)
 - installs the Chef client
 - registers the node with the Chef server
@@ -59,6 +61,7 @@ knife bootstrap <HOST_OR_IP> \
 ```
 
 Additional flags vary depending on:
+
 - OS
 - authentication method
 - privilege escalation
@@ -83,6 +86,7 @@ knife bootstrap windows-node.example.internal \
 ```
 
 Key points:
+
 - `-o winrm` switches the transport
 - credentials must be valid local or domain credentials
 - firewall and WinRM configuration must already be in place
@@ -106,6 +110,7 @@ knife bootstrap 192.0.2.60 \
 ```
 
 Notes:
+
 - `--sudo` is required if the SSH user is not root
 - the user must have password-based sudo access
 - policy-based bootstrapping avoids roles/environments drift
@@ -117,6 +122,7 @@ Notes:
 Older RHEL 6 systems often require **manual intervention** before bootstrapping.
 
 This process assumes:
+
 - an outdated Chef client is already installed
 - modern Chef packages are not available via standard repos
 
@@ -210,10 +216,12 @@ At this point, the node should register successfully.
 ## Policy-Based Bootstrapping
 
 All examples here use:
+
 - `--policy-name`
 - `--policy-group`
 
 This avoids:
+
 - environment drift
 - role sprawl
 - implicit configuration coupling
@@ -225,6 +233,7 @@ Policyfiles make bootstrap deterministic and repeatable.
 ## Common Failure Points
 
 Bootstrap failures usually trace back to:
+
 - SSH or WinRM connectivity
 - incorrect sudo permissions
 - stale `client.pem` files
@@ -250,6 +259,7 @@ Bootstrap is a one-time operation—but failures tend to repeat if patterns aren
 ## Closing Thoughts
 
 `knife bootstrap` sits at the boundary between:
+
 - unmanaged systems
 - and fully converged infrastructure
 

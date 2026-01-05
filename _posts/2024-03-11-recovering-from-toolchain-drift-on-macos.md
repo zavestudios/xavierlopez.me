@@ -37,6 +37,7 @@ It’s about **getting unstuck responsibly**.
 ## What Toolchain Drift Looks Like
 
 Toolchain drift usually presents as:
+
 - build failures after an unrelated update
 - cryptic linker or compilation errors
 - software that worked yesterday but not today
@@ -53,11 +54,13 @@ The environment did.
 ## Why This Happens
 
 On macOS, Homebrew:
+
 - aggressively tracks upstream releases
 - removes or unlinks deprecated versions
 - updates formulae with breaking changes
 
 OpenSSL:
+
 - has major version boundaries
 - frequently breaks ABI compatibility
 - is depended on implicitly by many tools
@@ -71,6 +74,7 @@ This is not negligence. It’s the cost of a fast-moving ecosystem.
 ## The Immediate Constraint
 
 At the moment of failure:
+
 - the project needed to build and run
 - rewriting dependencies was not an option
 - upgrading the application code was non-trivial
@@ -83,6 +87,7 @@ The goal was **restoration of functionality**, not architectural perfection.
 ## The Pragmatic Recovery Strategy
 
 The chosen approach was to:
+
 - temporarily switch to older, compatible versions
 - restore a known-good toolchain
 - unblock work
@@ -95,6 +100,7 @@ This is a **containment strategy**, not a permanent fix.
 ## Reverting Homebrew and OpenSSL Versions
 
 The recovery involved:
+
 - installing an older OpenSSL version
 - ensuring it was correctly linked
 - preventing accidental upgrades during the recovery window
@@ -127,6 +133,7 @@ This is why toolchain drift so often manifests as “random” build failures. T
 Downgrading or pinning dependencies is not without cost.
 
 It can:
+
 - delay security updates
 - make future upgrades more difficult
 - introduce divergence between machines

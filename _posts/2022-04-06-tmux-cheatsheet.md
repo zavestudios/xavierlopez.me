@@ -22,6 +22,7 @@ toc_sticky: true
 `tmux` is one of those tools that quietly becomes indispensable.
 
 If you:
+
 - work over SSH
 - manage multiple shells
 - run long-lived processes
@@ -144,6 +145,7 @@ Ctrl-b [
 ```
 
 Navigate using:
+
 - arrow keys
 - Page Up / Page Down
 - Vim-style keys (if configured)
@@ -231,11 +233,13 @@ Useful when iterating on configuration.
 ## Working Over SSH
 
 A common pattern:
+
 - start tmux on the remote host
 - attach once
 - leave it running indefinitely
 
 If your connection drops:
+
 - reconnect
 - reattach
 - everything is still there

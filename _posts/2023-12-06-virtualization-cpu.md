@@ -15,6 +15,7 @@ layout: single
 CPU issues in virtualized environments rarely show up as clean failures.
 
 Instead, they appear as:
+
 - intermittent latency,
 - unpredictable performance,
 - noisy-neighbor behavior,
@@ -31,6 +32,7 @@ To reason about these problems, platform engineers need to understand how **phys
 The **CPU (Central Processing Unit)** is the physical hardware responsible for executing instructions.
 
 It provides:
+
 - cores
 - threads
 - cache
@@ -45,6 +47,7 @@ These are finite, shared resources.
 A **vCPU** is a **software abstraction** created by the hypervisor.
 
 Key characteristics:
+
 - Represents a *share* of a physical CPU core
 - Is scheduled by the hypervisor
 - Is not permanently tied to a single physical core
@@ -68,6 +71,7 @@ From inside a VM, a vCPU looks like a real CPU. In reality, it is **time-sliced*
 This is **intentional overcommitment**.
 
 It works because:
+
 - Most workloads are not CPU-bound all the time
 - Hypervisors are efficient at scheduling short CPU bursts
 
@@ -76,11 +80,13 @@ It works because:
 ## CPU Scheduling (Where the Magic—and Pain—Happens)
 
 Hypervisors:
+
 - track runnable vCPUs
 - allocate CPU time slices
 - attempt fairness and efficiency
 
 Problems arise when:
+
 - too many vCPUs want CPU at the same time
 - latency-sensitive workloads are mixed with batch jobs
 - monitoring focuses only on averages
@@ -94,6 +100,7 @@ From a platform perspective, **CPU contention is often invisible until it’s se
 ### Why Overcommitment Exists
 
 Overcommitment enables:
+
 - higher utilization
 - better cost efficiency
 - fewer idle resources
@@ -118,6 +125,7 @@ This is where platform engineers earn their keep.
 ### Noisy Neighbor Effects
 
 When multiple VMs:
+
 - share the same physical CPU
 - peak simultaneously
 
@@ -128,6 +136,7 @@ Performance degrades in non-obvious ways.
 ### Troubleshooting Complexity
 
 Virtualization introduces layers:
+
 - application
 - guest OS
 - hypervisor
@@ -146,6 +155,7 @@ CPU issues may originate **below the VM**, even if symptoms appear inside it.
 - CPU limits and requests interact with hypervisor scheduling
 
 When pods throttle unexpectedly, the problem may be:
+
 - node-level CPU contention
 - host overcommitment
 - scheduler fairness, not Kubernetes itself

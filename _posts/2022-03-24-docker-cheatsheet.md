@@ -23,6 +23,7 @@ toc_sticky: true
 Docker is simple until it isn’t.
 
 Most day-to-day work boils down to a **small, reliable set of commands** for:
+
 - building images
 - running containers
 - inspecting state

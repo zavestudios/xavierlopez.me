@@ -22,6 +22,7 @@ toc_sticky: true
 Ruby projects often depend on **specific Ruby versions and gem sets**.
 
 RVM (Ruby Version Manager) helps isolate those dependencies so:
+
 - projects don’t conflict
 - upgrades are controlled
 - development environments stay predictable
@@ -182,6 +183,7 @@ Many Ruby issues trace back to mismatched versions or gemsets.
 RVM modifies shell behavior.
 
 Common issues arise when:
+
 - shells aren’t loading RVM scripts
 - multiple version managers are installed
 - PATH order is incorrect

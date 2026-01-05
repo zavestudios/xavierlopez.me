@@ -78,6 +78,7 @@ git push -o merge_request.create origin my-feature-branch
 ```
 
 Optional flags allow you to:
+
 - set the target branch
 - assign reviewers
 - mark the MR as draft
@@ -105,6 +106,7 @@ This approach fits naturally into automation-heavy workflows:
 - easy to document and standardize
 
 It’s especially useful when:
+
 - working across many repos
 - enforcing consistent MR metadata
 - scripting developer workflows
@@ -116,6 +118,7 @@ It’s especially useful when:
 Some platforms offer dedicated CLI tools (e.g., `glab` for GitLab).
 
 These tools can:
+
 - create merge requests
 - set labels and reviewers
 - open MRs in the browser if needed
@@ -129,6 +132,7 @@ They’re helpful, but not required—the native `git push` options are often su
 ### Authentication Errors
 
 If MR creation fails:
+
 - verify SSH access
 - check token scopes
 - confirm repository permissions
@@ -140,6 +144,7 @@ The push may succeed while MR creation fails.
 ### Target Branch Mismatch
 
 If the MR targets the wrong branch:
+
 - explicitly specify the target
 - don’t rely on defaults unless standardized
 
@@ -152,6 +157,7 @@ Implicit defaults cause surprises.
 Automating MR creation is helpful—but not every branch needs an MR.
 
 Avoid:
+
 - auto-creating MRs for experiments
 - flooding reviewers
 - bypassing review intent
@@ -163,6 +169,7 @@ Automation should reduce friction, not noise.
 ## When the UI Is Still Better
 
 Use the web UI when:
+
 - crafting detailed descriptions
 - attaching screenshots or artifacts
 - adjusting reviewers dynamically

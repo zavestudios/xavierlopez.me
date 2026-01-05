@@ -23,6 +23,7 @@ toc_sticky: true
 Host storage problems rarely announce themselves loudly.
 
 More often, they surface as:
+
 - gradual performance degradation
 - unrelated services failing mysteriously
 - nodes becoming unstable
@@ -69,6 +70,7 @@ You can have plenty of free space and still be unable to create files.
 ### Growth Is Usually Predictable
 
 Common sources of silent growth:
+
 - application logs
 - metrics and traces
 - caches
@@ -100,6 +102,7 @@ A disk that performs well for one may struggle badly with the other.
 High throughput with high latency still feels slow.
 
 When diagnosing storage performance:
+
 - latency spikes are usually more damaging than bandwidth limits
 - shared storage amplifies latency under contention
 
@@ -108,10 +111,12 @@ When diagnosing storage performance:
 ## Swap: Symptom, Not Solution
 
 Swap exists to:
+
 - absorb memory pressure
 - prevent immediate OOM conditions
 
 But heavy swap usage usually indicates:
+
 - memory overcommitment
 - poor workload sizing
 - storage-backed performance collapse
@@ -142,6 +147,7 @@ du -sh /var/*
 ```
 
 Pay special attention to:
+
 - `/var/log`
 - `/var/lib`
 - application-specific data directories
@@ -163,6 +169,7 @@ lsof | grep deleted
 ```
 
 This is common with:
+
 - log files
 - rotated output
 - long-running services
@@ -174,6 +181,7 @@ This is common with:
 ### Mount Options Matter
 
 Options like:
+
 - `noatime`
 - journaling modes
 - write barriers
@@ -189,6 +197,7 @@ Default options are safe—but not always optimal.
 Filesystems trade performance for safety differently.
 
 Symptoms of trouble:
+
 - sudden read-only mounts
 - I/O errors in logs
 - kernel warnings
@@ -207,6 +216,7 @@ Storage issues compound under abstraction:
 - shared volumes becoming contention points
 
 Host storage problems often appear as:
+
 - pod evictions
 - CI failures
 - unexplained latency

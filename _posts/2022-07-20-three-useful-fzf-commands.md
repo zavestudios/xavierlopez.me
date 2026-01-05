@@ -22,6 +22,7 @@ toc_sticky: true
 If you live in a terminal, speed comes from **reducing friction**, not memorizing more commands.
 
 `fzf` (fuzzy finder) earns its place because it:
+
 - composes cleanly with Unix tools
 - works interactively
 - scales from tiny repos to massive systems
@@ -57,6 +58,7 @@ code $(fzf)
 ```
 
 Why this works:
+
 - no need to remember paths
 - fast narrowing with a few keystrokes
 - works anywhere, not just Git repos
@@ -76,6 +78,7 @@ history | fzf
 ```
 
 This lets you:
+
 - scroll interactively
 - search by fragments
 - avoid exact matches
@@ -89,6 +92,7 @@ history | fzf | sed 's/^[ ]*[0-9]\+[ ]*//' | bash
 ```
 
 What this does:
+
 - strips history line numbers
 - executes the selected command
 
@@ -107,6 +111,7 @@ ps aux | fzf
 ```
 
 This is useful when:
+
 - multiple similar processes exist
 - PIDs change frequently
 - names are long or truncated
@@ -120,6 +125,7 @@ ps aux | fzf | awk '{print $2}' | xargs kill
 ```
 
 Why this is powerful:
+
 - no manual PID copying
 - visual confirmation before action
 - composable with other commands

@@ -21,7 +21,7 @@ toc_sticky: true
 
 You open a file in Vim, make your edits, and then hit save—only to see:
 
-```
+```text
 E212: Can't open file for writing
 ```
 
@@ -35,7 +35,7 @@ This happens constantly when editing system files, configs, or service definitio
 
 From **Normal mode**, run:
 
-```
+```vim
 :w !sudo tee %
 ```
 
@@ -61,6 +61,7 @@ Vim sends the buffer contents to `tee`, which writes the file as root.
 ## Why This Works (and `:w` Didn’t)
 
 When you opened the file:
+
 - Vim was running as your user
 - the file required elevated permissions to write
 
@@ -76,7 +77,7 @@ By default, `tee` echoes the file contents back to the terminal.
 
 To suppress that, use:
 
-```
+```vim
 :w !sudo tee % > /dev/null
 ```
 
@@ -88,7 +89,7 @@ This keeps your screen clean while still writing the file.
 
 After saving, reload the buffer to confirm ownership and permissions:
 
-```
+```vim
 :e!
 ```
 
@@ -99,6 +100,7 @@ This ensures Vim is displaying the file as it exists on disk.
 ## When This Is Appropriate
 
 This technique is ideal for:
+
 - quick config edits
 - one-off fixes
 - emergency changes
@@ -111,6 +113,7 @@ It’s a productivity shortcut—not a permission model.
 ## When You Should Avoid It
 
 Avoid this approach when:
+
 - performing large or risky edits
 - making repeated changes to protected files
 - working in audited or regulated environments
@@ -123,10 +126,11 @@ In those cases, opening the editor with `sudo vim` may be more appropriate.
 ## A Safer Default Habit
 
 To avoid this situation entirely:
+
 - open protected files explicitly with sudo
 - or use tools like `sudoedit`:
 
-```
+```vim
 sudoedit /etc/myconfig.conf
 ```
 

@@ -24,6 +24,7 @@ toc_sticky: true
 When GitLab Runner executes jobs against Kubernetes, it must authenticate to the cluster with **enough permissions to function—but no more**.
 
 This is a deceptively important problem. Over-permissioned runners are a common source of:
+
 - lateral movement
 - privilege escalation
 - accidental cluster-wide changes
@@ -35,6 +36,7 @@ This post breaks down **how GitLab Runner authenticates to Kubernetes**, the mec
 ## What GitLab Runner Actually Needs
 
 At a minimum, a Kubernetes-backed GitLab Runner must be able to:
+
 - create and delete pods
 - read pod status and logs
 - mount secrets and config maps
@@ -62,12 +64,14 @@ Most security failures happen when these are conflated.
 The most common and secure approach is to authenticate using a **Kubernetes ServiceAccount**.
 
 How it works:
+
 - GitLab Runner is deployed inside the cluster
 - It runs under a dedicated ServiceAccount
 - Kubernetes automatically mounts a token into the runner pod
 - API requests are authenticated using that token
 
 This approach is:
+
 - native to Kubernetes
 - auditable
 - revocable
@@ -80,17 +84,20 @@ This should be the default choice for in-cluster runners.
 ### 2️⃣ kubeconfig (Generally Discouraged)
 
 Some setups use a `kubeconfig` file containing:
+
 - cluster endpoint
 - certificate authority
 - user credentials or tokens
 
 Problems with this approach:
+
 - credentials are often long-lived
 - secrets tend to sprawl
 - revocation is painful
 - easy to accidentally over-permission
 
 This method is sometimes used for:
+
 - legacy runners
 - external runners
 - quick experiments
@@ -119,6 +126,7 @@ Authentication gets the runner in the door. **RBAC decides what happens next.**
 ### Namespace-Scoped Roles
 
 A strong default pattern:
+
 - one namespace per runner or workload class
 - namespace-scoped `Role`
 - minimal permissions required to run jobs
@@ -130,6 +138,7 @@ This contains failures and limits damage.
 ### Avoid ClusterRole Unless Necessary
 
 Granting `ClusterRole` permissions to a runner:
+
 - expands blast radius
 - increases accidental damage risk
 - makes audits harder
@@ -157,11 +166,13 @@ This balances usability with safety.
 ## Token Rotation and Lifecycle
 
 Modern Kubernetes clusters support:
+
 - projected service account tokens
 - bounded lifetimes
 - automatic rotation
 
 This reduces risk from:
+
 - leaked tokens
 - stale credentials
 - forgotten secrets
@@ -187,6 +198,7 @@ Authentication problems often masquerade as CI failures.
 ## Observability and Auditing
 
 Enable and monitor:
+
 - Kubernetes audit logs
 - API server requests from runner identities
 - unexpected resource access

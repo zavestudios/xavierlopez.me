@@ -22,6 +22,7 @@ toc_sticky: true
 Network issues are rarely binary.
 
 Most of the time, the network is:
+
 - *partially* working
 - working for some clients but not others
 - fast sometimes and slow at others
@@ -51,11 +52,13 @@ ping <destination>
 ```
 
 What this tells you:
+
 - basic IP connectivity exists
 - routing is functioning (at least one way)
 - ICMP is not blocked
 
 What it **does not** tell you:
+
 - application reachability
 - TCP/UDP health
 - latency under load
@@ -74,6 +77,7 @@ dig <hostname>
 ```
 
 Verify:
+
 - the hostname resolves
 - it resolves to the expected IP
 - the result is consistent across hosts
@@ -96,6 +100,7 @@ curl -v http://<host>:<port>
 ```
 
 This validates:
+
 - TCP connectivity
 - firewall rules
 - service listening state
@@ -114,6 +119,7 @@ ip route
 ```
 
 Check for:
+
 - correct IP assignment
 - expected default route
 - multiple routes competing unexpectedly
@@ -132,6 +138,7 @@ mtr <destination>
 ```
 
 These tools help surface:
+
 - where latency increases
 - where packet loss begins
 - whether the issue is local or upstream
@@ -169,6 +176,7 @@ Patterns save time.
 ## Virtualized and Platform Environments
 
 In VMs and containers, add more layers:
+
 - virtual switches
 - overlay networks
 - policy engines

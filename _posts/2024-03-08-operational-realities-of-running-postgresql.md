@@ -21,6 +21,7 @@ toc_sticky: true
 ## Context
 
 PostgreSQL is often treated like a dependency:
+
 - install it
 - point an app at it
 - scale when it gets slow
@@ -34,6 +35,7 @@ This post captures practical realities of running PostgreSQL in production—esp
 ## PostgreSQL Is a System, Not a Library
 
 PostgreSQL:
+
 - runs multiple cooperating processes
 - manages its own memory aggressively
 - assumes durable storage
@@ -52,6 +54,7 @@ One of the most common misconceptions is that PostgreSQL memory usage scales pri
 In practice, it scales with **connections**.
 
 Each connection:
+
 - consumes memory
 - spawns backend processes
 - increases scheduling and locking overhead
@@ -59,6 +62,7 @@ Each connection:
 A large number of idle connections can be just as harmful as active ones.
 
 This is why:
+
 - connection pooling matters
 - unbounded client connections are dangerous
 - “it works locally” doesn’t translate to production
@@ -70,6 +74,7 @@ This is why:
 When PostgreSQL is slow, adding CPU is often the first instinct.
 
 In reality, PostgreSQL performance issues are more commonly caused by:
+
 - disk I/O latency
 - WAL contention
 - excessive connections
@@ -85,11 +90,13 @@ CPU becomes a bottleneck *after* those are addressed.
 PostgreSQL’s durability guarantees rely heavily on the **Write-Ahead Log (WAL)**.
 
 This means:
+
 - every write involves disk I/O
 - latency matters more than raw throughput
 - storage performance directly affects commit speed
 
 Slow or inconsistent disks show up as:
+
 - slow transactions
 - replication lag
 - unexplained query latency
@@ -103,12 +110,14 @@ This is especially important in virtualized or networked storage environments.
 Running PostgreSQL in a container does not change how PostgreSQL works.
 
 It still:
+
 - writes to disk
 - uses shared memory
 - expects predictable I/O
 - assumes stable filesystem semantics
 
 Common container mistakes include:
+
 - ephemeral storage for data directories
 - ignoring filesystem sync behavior
 - assuming resource limits replace tuning
@@ -123,6 +132,7 @@ Containers change packaging, not physics.
 Kubernetes can help manage PostgreSQL, but it does not remove operational requirements.
 
 In Kubernetes:
+
 - PersistentVolumes define durability
 - StorageClasses define behavior
 - the underlying storage still matters
@@ -135,6 +145,7 @@ If the storage layer is slow or misconfigured, PostgreSQL will faithfully surfac
 ## Defaults Are Conservative (for a Reason)
 
 PostgreSQL defaults prioritize:
+
 - correctness
 - durability
 - broad compatibility
@@ -142,6 +153,7 @@ PostgreSQL defaults prioritize:
 They are intentionally conservative.
 
 This is good for safety, but it means:
+
 - defaults are rarely optimal for high-throughput systems
 - tuning should be intentional and informed
 - copying random config snippets is risky
@@ -155,6 +167,7 @@ Understanding *why* a setting exists matters more than memorizing values.
 PostgreSQL is verbose when asked correctly.
 
 Key signals include:
+
 - connection counts
 - transaction duration
 - lock waits
@@ -196,6 +209,7 @@ PostgreSQL rewards understanding. It punishes assumptions.
 Most PostgreSQL outages aren’t caused by bugs.
 
 They’re caused by mismatches between:
+
 - what PostgreSQL expects
 - and what the platform provides
 
