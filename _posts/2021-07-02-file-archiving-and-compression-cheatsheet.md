@@ -36,21 +36,25 @@ Most workflows rely on a **small set of commands**, but the flags are easy to fo
 ### Create an archive
 
 Create an uncompressed archive:
+
 ```bash
 tar -cvf archive.tar directory/
 ```
 
 Create a gzip-compressed archive:
+
 ```bash
 tar -czvf archive.tar.gz directory/
 ```
 
 Create a bzip2-compressed archive:
+
 ```bash
 tar -cjvf archive.tar.bz2 directory/
 ```
 
 Create an xz-compressed archive:
+
 ```bash
 tar -cJvf archive.tar.xz directory/
 ```
@@ -60,21 +64,25 @@ tar -cJvf archive.tar.xz directory/
 ### Extract an archive
 
 Extract a tar archive:
+
 ```bash
 tar -xvf archive.tar
 ```
 
 Extract a gzip archive:
+
 ```bash
 tar -xzvf archive.tar.gz
 ```
 
 Extract a bzip2 archive:
+
 ```bash
 tar -xjvf archive.tar.bz2
 ```
 
 Extract an xz archive:
+
 ```bash
 tar -xJvf archive.tar.xz
 ```
@@ -84,6 +92,7 @@ tar -xJvf archive.tar.xz
 ### Inspect an archive
 
 List contents without extracting:
+
 ```bash
 tar -tvf archive.tar.gz
 ```
@@ -93,21 +102,25 @@ tar -tvf archive.tar.gz
 ## gzip / gunzip
 
 Compress a file:
+
 ```bash
 gzip file.txt
 ```
 
 Decompress:
+
 ```bash
 gunzip file.txt.gz
 ```
 
 Keep original file:
+
 ```bash
 gzip -k file.txt
 ```
 
 Use higher compression:
+
 ```bash
 gzip -9 file.txt
 ```
@@ -117,21 +130,25 @@ gzip -9 file.txt
 ## zip / unzip
 
 Create a zip archive:
+
 ```bash
 zip -r archive.zip directory/
 ```
 
 Extract a zip archive:
+
 ```bash
 unzip archive.zip
 ```
 
 List zip contents:
+
 ```bash
 unzip -l archive.zip
 ```
 
 Exclude files:
+
 ```bash
 zip -r archive.zip directory/ -x "*.log"
 ```
@@ -141,16 +158,19 @@ zip -r archive.zip directory/ -x "*.log"
 ## xz
 
 Compress a file:
+
 ```bash
 xz file.txt
 ```
 
 Decompress:
+
 ```bash
 unxz file.txt.xz
 ```
 
 Use maximum compression:
+
 ```bash
 xz -9 file.txt
 ```
@@ -174,16 +194,19 @@ Compression choice is usually a tradeoff between speed and size.
 ## Common Patterns
 
 Archive logs with a timestamp:
+
 ```bash
 tar -czvf logs-$(date +%F).tar.gz /var/log
 ```
 
 Extract to a specific directory:
+
 ```bash
 tar -xzvf archive.tar.gz -C /tmp
 ```
 
 Compress everything except one file type:
+
 ```bash
 tar --exclude="*.tmp" -czvf archive.tar.gz directory/
 ```
