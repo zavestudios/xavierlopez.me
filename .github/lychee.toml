@@ -1,0 +1,15 @@
+verbose = "warn"
+no_progress = true
+accept = [200, 204, 301, 302]
+exclude_mail = true
+exclude_path = ["_site", "vendor", "node_modules"]
+
+# Reduce false positives from rate-limited sites
+timeout = 20
+max_retries = 2
+
+# Ignore localhost and common dev URLs
+exclude = [
+  "http://localhost",
+  "http://127.0.0.1"
+]

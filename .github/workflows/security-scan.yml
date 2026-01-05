@@ -1,74 +1,26 @@
 name: Security Scan
 
 on:
-  push:
-    branches: [ main, dev ]
   pull_request:
+  push:
     branches: [ main ]
+  workflow_dispatch:
 
-# Grant permissions to GITHUB_TOKEN
 permissions:
   contents: read
-  pull-requests: read
-  statuses: write
 
 jobs:
-  secret-scan:
+  gitleaks:
+    name: Secret Scan (Gitleaks)
     runs-on: ubuntu-latest
-    name: Detect secrets
+
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Gitleaks Secret Scan
+      - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  markdown-lint:
-    runs-on: ubuntu-latest
-    name: Lint Markdown files
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Markdown Lint
-        uses: articulate/actions-markdownlint@v1
-        with:
-          config: .markdownlint.json
-          files: '**/*.md'
-          ignore: vendor
-        continue-on-error: true
-
-  jekyll-lint:
-    runs-on: ubuntu-latest
-    name: Validate Jekyll
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'
-          bundler-cache: true
-
-      - name: Check for build warnings
-        run: |
-          bundle exec jekyll build 2>&1 | tee build.log
-          if grep -i "warning" build.log; then
-            echo "::warning::Jekyll build has warnings"
-          fi
-
-      - name: HTML Proofer
-        run: |
-          gem install html-proofer
-          bundle exec jekyll build
-          htmlproofer ./_site --disable-external --allow-hash-href
-        continue-on-error: true

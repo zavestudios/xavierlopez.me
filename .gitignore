@@ -13,7 +13,6 @@ _site/
 vendor/bundle/
 vendor/cache/
 vendor/ruby/
-Gemfile.lock
 
 # ------------------------------
 # Node / frontend tooling (if present)
