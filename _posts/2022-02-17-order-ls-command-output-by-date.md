@@ -35,7 +35,7 @@ The `ls` command provides several ways to sort output by time—if you know whic
 
 By default, `ls` sorts alphabetically:
 
-```
+```bash
 ls
 ```
 

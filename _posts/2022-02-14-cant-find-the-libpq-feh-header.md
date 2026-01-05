@@ -22,7 +22,7 @@ toc_sticky: true
 
 If you’ve ever seen an error like:
 
-```
+```text
 fatal error: libpq-fe.h: No such file or directory
 ```
 
@@ -117,7 +117,7 @@ If compilation still fails, confirm include paths are correct or exported.
 
 After installation, confirm the file is present:
 
-```
+```bash
 find /usr -name libpq-fe.h
 ```
 

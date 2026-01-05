@@ -75,7 +75,7 @@ rvm use 3.1.4 --temporary
 
 Check the active Ruby:
 
-```
+```bash
 ruby -v
 ```
 
@@ -161,7 +161,7 @@ Cleaning unused versions reduces confusion.
 
 Install Bundler for the active Ruby:
 
-```
+```bash
 gem install bundler
 ```
 

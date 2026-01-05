@@ -48,13 +48,13 @@ GitLab supports pipeline skipping through commit message directives.
 
 Add one of the following to your commit message:
 
-```
+```git
 [skip ci]
 ```
 
 or
 
-```
+```git
 [ci skip]
 ```
 

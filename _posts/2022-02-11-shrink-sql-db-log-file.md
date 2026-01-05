@@ -78,7 +78,7 @@ Shrinking should be **corrective**, not routine.
 
 Before doing anything, inspect log usage:
 
-```
+```sql
 DBCC SQLPERF(LOGSPACE);
 ```
 
@@ -98,7 +98,7 @@ Long-running transactions prevent log truncation.
 
 Check for them:
 
-```
+```sql
 DBCC OPENTRAN;
 ```
 
@@ -123,7 +123,7 @@ Fix backup jobs **before** shrinking.
 
 Once conditions are correct:
 
-```
+```sql
 DBCC SHRINKFILE (YourDatabase_log, 1024);
 ```
 
