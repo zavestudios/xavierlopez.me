@@ -23,6 +23,7 @@ toc_sticky: true
 Package installation failures that look like “network issues” are often **trust failures**.
 
 When GitLab rotates its repository signing keys, systems that rely on outdated keys will fail to:
+
 - update packages
 - install new versions
 - verify package integrity
@@ -36,6 +37,7 @@ Understanding how to fetch and manage repository signing keys is essential for m
 APT repositories are secured using **GPG keys**.
 
 These keys allow your system to:
+
 - verify the authenticity of packages
 - ensure packages haven’t been tampered with
 - establish trust between your host and the repository
@@ -49,6 +51,7 @@ If the key is missing, expired, or rotated, APT will refuse to proceed—and tha
 The traditional `apt-key` command is deprecated.
 
 Modern best practice is to:
+
 - store keys as individual files
 - reference them explicitly per repository
 - avoid a global trust store
@@ -68,6 +71,7 @@ curl -fsSL https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey \
 ```
 
 This:
+
 - fetches the current signing key
 - converts it to a binary keyring
 - stores it in a dedicated location
@@ -106,10 +110,12 @@ If the key is correct, APT should update cleanly without warnings.
 ### Expired or Rotated Keys
 
 Symptoms:
+
 - `NO_PUBKEY` errors
 - signature verification failures
 
 Solution:
+
 - re-fetch the latest key
 - replace the existing keyring file
 
@@ -120,6 +126,7 @@ Solution:
 Older systems may still trust keys added via `apt-key`.
 
 Problems include:
+
 - unclear trust boundaries
 - difficulty auditing key usage
 - unexpected behavior after rotations
@@ -131,6 +138,7 @@ Clean up unused legacy keys when possible.
 ## Automating Key Management
 
 In automated environments:
+
 - fetch keys as part of bootstrap scripts
 - avoid copying keys between systems
 - prefer idempotent configuration management

@@ -23,6 +23,7 @@ toc_sticky: true
 Kubernetes Secrets are often introduced early, but rarely explained clearly.
 
 Most examples focus on *how* to create a Secret, not:
+
 - **why** you’d choose one method over another
 - what tradeoffs you’re making
 - how Secrets fit into a broader operational model
@@ -34,11 +35,13 @@ This post focuses specifically on creating Secrets from the command line using `
 ## What kubectl create secret Actually Does
 
 At a high level, `kubectl create secret`:
+
 - takes input (literals, files, or environment variables)
 - base64-encodes the values
 - submits a Secret object to the Kubernetes API server
 
 It does **not**:
+
 - encrypt values by itself
 - manage secret rotation
 - track provenance
@@ -59,6 +62,7 @@ kubectl create secret generic example-db-creds \
 ```
 
 This is useful for:
+
 - quick experiments
 - local clusters
 - validating application wiring
@@ -77,10 +81,12 @@ kubectl create secret generic example-config \
 ```
 
 This creates a Secret where:
+
 - the key is the filename
 - the value is the file contents
 
 This works well for:
+
 - config blobs
 - certificates
 - structured files
@@ -99,6 +105,7 @@ kubectl create secret generic example-env \
 ```
 
 This is convenient, but dangerous if:
+
 - `.env` files are committed accidentally
 - shell history is not managed carefully
 - multiple environments share similar filenames
@@ -149,6 +156,7 @@ If you *do* decode, do it intentionally and clean up afterward.
 ## When kubectl create secret Is the Right Tool
 
 This approach works well when:
+
 - bootstrapping a cluster
 - validating application configuration
 - working in ephemeral environments
@@ -161,6 +169,7 @@ It’s a **mechanical tool**, not a long-term strategy.
 ## When kubectl create secret Becomes a Liability
 
 Problems arise when:
+
 - secrets are created manually and forgotten
 - values live in shell history
 - environments drift
@@ -174,12 +183,14 @@ At scale, this approach does not age well.
 ## Better Patterns for the Long Term
 
 As systems mature, secrets creation usually moves toward:
+
 - GitOps workflows
 - external secret managers
 - sealed or encrypted manifests
 - automated rotation
 
 In those models:
+
 - `kubectl create secret` is often replaced
 - or used only as a bootstrap mechanism
 

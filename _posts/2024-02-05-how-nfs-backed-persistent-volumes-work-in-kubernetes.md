@@ -78,6 +78,7 @@ DB_HOST=postgres-service
 ```
 
 This matters because:
+
 - pods are ephemeral
 - IPs change
 - Services provide a stable access point
@@ -91,6 +92,7 @@ The application is intentionally decoupled from where Postgres actually runs.
 PostgreSQL runs in its own **Pod**, configured to use persistent storage.
 
 That pod:
+
 - mounts a volume
 - does not know (or care) where the storage comes from
 - references a **PersistentVolumeClaim**, not a disk
@@ -110,6 +112,7 @@ It does *not* say:
 The **PersistentVolumeClaim** is a request, not storage itself.
 
 It defines:
+
 - how much storage is needed
 - access mode requirements
 - which StorageClass should satisfy the request
@@ -127,6 +130,7 @@ The **StorageClass** answers the question:
 > “Who is responsible for fulfilling this claim?”
 
 In this case, the StorageClass:
+
 - references a **custom NFS provisioner**
 - defines how volumes should be created
 - acts as a factory, not a disk
@@ -140,11 +144,13 @@ This is where Kubernetes hands off responsibility to something external.
 The NFS provisioner is just another **pod running in the cluster**.
 
 It is configured with:
+
 - the address of an NFS server
 - a base directory on that server
 - a unique provisioner name
 
 When Kubernetes sees a PVC that references this provisioner, the provisioner:
+
 - creates a directory on the NFS server
 - registers a corresponding PersistentVolume
 - binds it to the PVC
@@ -157,11 +163,13 @@ The provisioner does that work.
 ## The PersistentVolume (PV)
 
 The **PersistentVolume** represents:
+
 - a real directory on the NFS server
 - created dynamically
 - managed by Kubernetes metadata
 
 The PV:
+
 - is bound to exactly one PVC
 - references the StorageClass
 - points at a specific NFS path
@@ -184,6 +192,7 @@ Postgres Pod
 ```
 
 Each layer has a single responsibility:
+
 - Pods consume storage
 - PVCs request storage
 - StorageClasses decide *how* storage is made
@@ -199,11 +208,13 @@ No single object does everything.
 PostgreSQL is exposed via a **Service** (often NodePort or ClusterIP).
 
 The Service:
+
 - routes traffic to the active Postgres pod
 - provides a stable address
 - hides pod restarts and rescheduling
 
 This ensures:
+
 - applications don’t care about pod lifecycles
 - storage survives pod restarts
 - connectivity remains stable
@@ -213,12 +224,14 @@ This ensures:
 ## Why This Model Works
 
 This design gives you:
+
 - durable storage across pod restarts
 - dynamic provisioning without manual PV creation
 - clear separation of concerns
 - portability across environments
 
 It also explains why debugging storage issues often requires looking at:
+
 - PVC status
 - StorageClass configuration
 - provisioner logs

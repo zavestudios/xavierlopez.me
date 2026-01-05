@@ -31,6 +31,7 @@ The Docker alias set below is based on a script originally created and shared pu
 
 I did not invent these aliases.  
 My contribution here is:
+
 - curating the set I actually use
 - preserving the original intent
 - adding context around *why* these aliases are useful
@@ -43,6 +44,7 @@ Original source: https://gist.github.com/jgrodziski/9ed4a17709baad10dbcd4530b60d
 ## Why Aliases Matter for Docker
 
 Docker commands tend to fall into a few repeated patterns:
+
 - listing objects
 - inspecting state
 - cleaning up resources
@@ -59,6 +61,7 @@ That matters when Docker is part of a larger workflow (CI/CD, Kubernetes, local 
 Below is the alias set, unchanged in spirit from the original source.
 
 These aliases assume:
+
 - comfort with Docker fundamentals
 - awareness of what commands like `rm`, `rmi`, and `prune` actually do
 - intentional use (not blind copy-paste in production environments)
@@ -92,6 +95,7 @@ Keep these in a shell config file you already source (`.bashrc`, `.zshrc`, etc.)
 ## How I Use These in Practice
 
 These aliases shine when:
+
 - iterating on Dockerfiles
 - debugging container startup issues
 - cleaning up local environments after experiments
@@ -117,6 +121,7 @@ Aliases reduce friction, but they also remove hesitation. Use them deliberately.
 ## When Aliases Stop Being Enough
 
 At a certain scale:
+
 - Docker becomes a build tool, not a runtime
 - Kubernetes replaces local container orchestration
 - CI pipelines own image lifecycle

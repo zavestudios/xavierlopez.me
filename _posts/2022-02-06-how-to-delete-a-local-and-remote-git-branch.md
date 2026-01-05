@@ -22,6 +22,7 @@ toc_sticky: true
 Branches are cheap—but abandoned branches add noise.
 
 Over time, repositories accumulate:
+
 - merged feature branches
 - stale experiment branches
 - branches tied to completed tickets
@@ -139,6 +140,7 @@ git fetch --prune
 ```
 
 This ensures:
+
 - you’re not on the branch being deleted
 - local and remote state stay in sync
 

@@ -24,6 +24,7 @@ toc_sticky: true
 Most Kubernetes problems are **configuration problems that started months earlier**.
 
 Cluster configuration choices—often made during initial setup—quietly define:
+
 - what’s possible later
 - what’s painful to change
 - how failures manifest
@@ -56,6 +57,7 @@ These are **platform decisions**, not app decisions.
 The API server is the front door to the cluster.
 
 Key considerations:
+
 - authentication methods
 - authorization mode (RBAC)
 - admission plugins enabled
@@ -63,6 +65,7 @@ Key considerations:
 - API exposure and access paths
 
 Misconfiguration here shows up as:
+
 - brittle access control
 - noisy audit logs
 - confusing permission errors
@@ -75,6 +78,7 @@ Misconfiguration here shows up as:
 etcd is the cluster’s source of truth.
 
 Operational realities:
+
 - latency matters more than throughput
 - disk performance is critical
 - backups must be tested, not assumed
@@ -91,6 +95,7 @@ A healthy control plane depends on a boring, reliable etcd.
 Nodes are not interchangeable in practice.
 
 Consider:
+
 - control plane vs worker separation
 - dedicated system nodes
 - taints and tolerations
@@ -103,12 +108,14 @@ Clear boundaries prevent accidental blast radius.
 ### OS and Runtime Choices
 
 Node configuration includes:
+
 - operating system
 - kernel settings
 - container runtime
 - system services
 
 Inconsistent node configuration leads to:
+
 - unpredictable scheduling
 - subtle performance differences
 - hard-to-debug failures
@@ -122,6 +129,7 @@ Uniformity is an operational advantage.
 ### CNI Selection
 
 Your CNI defines:
+
 - pod networking semantics
 - performance characteristics
 - network policy capabilities
@@ -134,12 +142,14 @@ Changing CNIs later is painful. Choose deliberately.
 ### Service and Ingress Strategy
 
 Cluster configuration determines:
+
 - service CIDRs
 - load balancer integration
 - ingress controllers
 - traffic entry points
 
 Ambiguity here results in:
+
 - duplicated tooling
 - unclear ownership
 - inconsistent routing behavior
@@ -153,11 +163,13 @@ Ambiguity here results in:
 Clusters rarely live in isolation.
 
 Plan for:
+
 - external identity providers
 - service account usage
 - workload identity patterns
 
 Identity decisions affect:
+
 - security posture
 - auditability
 - developer experience
@@ -169,6 +181,7 @@ Identity decisions affect:
 RBAC complexity grows quickly.
 
 Good practices:
+
 - start restrictive
 - create reusable roles
 - avoid cluster-admin sprawl
@@ -183,12 +196,14 @@ RBAC debt accumulates silently.
 Admission controllers are where **cluster intent** becomes enforceable.
 
 Common uses:
+
 - security baselines
 - resource limits
 - image policy
 - namespace standards
 
 Policy at admission time:
+
 - prevents bad states
 - reduces reliance on reviews
 - encodes expectations directly into the platform
@@ -200,6 +215,7 @@ Policy at admission time:
 Clusters without defaults invite abuse—intentional or not.
 
 Consider:
+
 - default requests and limits
 - quota per namespace
 - priority classes
@@ -214,6 +230,7 @@ Without guardrails, noisy neighbors are inevitable.
 ### Logging
 
 Decide early:
+
 - what logs are collected
 - where they go
 - retention periods
@@ -226,6 +243,7 @@ Retroactively reconstructing logs is painful.
 ### Metrics
 
 Metrics underpin:
+
 - autoscaling
 - capacity planning
 - alerting
@@ -239,6 +257,7 @@ Inconsistent metrics make automation unreliable.
 Clusters evolve.
 
 Plan for:
+
 - Kubernetes version upgrades
 - node replacement
 - CNI changes

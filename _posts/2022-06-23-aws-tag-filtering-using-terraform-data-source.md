@@ -31,12 +31,14 @@ This post focuses on using Terraform data sources to filter AWS resources by tag
 ## Why Tag-Based Discovery Matters
 
 Static references break when:
+
 - resources are recreated
 - environments multiply
 - ownership changes
 - infrastructure evolves independently
 
 Tag-based discovery allows Terraform to:
+
 - locate existing infrastructure safely
 - adapt to changes without rewrites
 - reduce duplication across modules
@@ -56,6 +58,7 @@ A quick reminder:
 Tag filtering is almost always a **data source concern**.
 
 Using data sources keeps Terraform:
+
 - declarative
 - side-effect free
 - safe in shared environments
@@ -104,6 +107,7 @@ data "aws_subnets" "private" {
 ```
 
 This enables patterns like:
+
 - passing subnet IDs to modules
 - selecting AZ-aware resources
 - avoiding brittle lists
@@ -115,6 +119,7 @@ This enables patterns like:
 Some data sources return **lists**, not single objects.
 
 Be explicit about expectations:
+
 - use `aws_subnets` when multiple results are valid
 - use `aws_subnet` only when exactly one match is expected
 
@@ -133,6 +138,7 @@ Assuming uniqueness when it isn’t guaranteed leads to surprises.
 Terraform can only filter on what exists.
 
 Effective tag-based discovery depends on:
+
 - consistent keys (`Environment`, `Name`, `Tier`)
 - predictable values
 - shared conventions across teams
@@ -146,6 +152,7 @@ Without discipline, tag filtering becomes unreliable.
 ### No Matches Found
 
 Usually caused by:
+
 - mismatched tag keys
 - inconsistent casing
 - environment drift
@@ -157,6 +164,7 @@ Terraform errors here are a feature—they prevent unsafe assumptions.
 ### Too Many Matches
 
 Often indicates:
+
 - overly broad filters
 - missing constraints
 - unclear tagging intent
@@ -185,6 +193,7 @@ data "aws_vpc" "env" {
 ```
 
 This makes modules:
+
 - reusable across environments
 - decoupled from concrete IDs
 - safer to evolve over time
@@ -194,6 +203,7 @@ This makes modules:
 ## When Not to Use Tag Filtering
 
 Avoid tag-based discovery when:
+
 - the resource is created in the same module
 - strong ordering guarantees are required
 - ambiguity would be dangerous

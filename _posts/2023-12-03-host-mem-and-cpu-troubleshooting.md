@@ -23,6 +23,7 @@ layout: single
 When a Linux host is “slow,” the hardest part is not fixing the problem — it’s **figuring out where to look first**.
 
 This guide is a **host-level troubleshooting playbook** for:
+
 - high CPU usage
 - memory pressure
 - load average confusion
@@ -74,6 +75,7 @@ uptime
 ```
 
 This shows:
+
 - how long the system has been running
 - load averages over **1, 5, and 15 minutes**
 
@@ -90,10 +92,12 @@ cat /proc/uptime
 Load average is **not CPU usage**.
 
 It represents:
+
 - runnable processes
 - processes waiting on CPU or I/O
 
 High load with low CPU usage often means:
+
 - I/O contention
 - memory pressure
 - blocked processes
@@ -117,6 +121,7 @@ lscpu | grep '^CPU(s)'
 ```
 
 This matters on:
+
 - multi-core systems
 - hyperthreaded CPUs
 - virtual machines with vCPUs
@@ -157,6 +162,7 @@ top
 ```
 
 Look for:
+
 - sustained high `%CPU`
 - many runnable processes
 - uneven CPU utilization
@@ -186,12 +192,14 @@ sar -r
 ### Memory-heavy processes
 
 In `top`:
+
 - press `f` (fields)
 - move to `MEM`
 - press `s` (select)
 - `q` to quit
 
 High memory pressure often manifests as:
+
 - swap activity
 - CPU spikes (due to reclaim)
 - latency under load

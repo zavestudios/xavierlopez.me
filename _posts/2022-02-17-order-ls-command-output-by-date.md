@@ -22,6 +22,7 @@ toc_sticky: true
 When investigating files, **order matters**.
 
 Whether you’re checking logs, build artifacts, or recently modified configs, seeing files in the right order can immediately surface:
+
 - what changed most recently
 - what hasn’t changed in a long time
 - which files are actively being written
@@ -53,6 +54,7 @@ ls -lt
 This is the most commonly used time-based sort.
 
 Flags explained:
+
 - `-l` → long listing format
 - `-t` → sort by modification time
 
@@ -71,6 +73,7 @@ ls -ltr
 The `-r` flag reverses the sort order.
 
 This is useful when you want to see:
+
 - what changed earliest
 - long-lived files
 - stale artifacts
@@ -100,6 +103,7 @@ ls -ltc
 ```
 
 This is useful when:
+
 - permissions were changed
 - files were moved or renamed
 - ownership was updated
@@ -121,6 +125,7 @@ ls -ltu
 ```
 
 This can help identify:
+
 - files that are still being read
 - unused files
 - unexpected access patterns

@@ -23,6 +23,7 @@ toc_sticky: true
 CI/CD systems frequently need non-interactive access to Kubernetes clusters.
 
 Historically, this was straightforward:
+
 - create a ServiceAccount
 - bind it with RBAC
 - extract a token
@@ -36,6 +37,7 @@ In Kubernetes 1.24 and later, that workflow quietly broke.
 ## How CI/CD Auth to Kubernetes Works
 
 In a CI/CD environment:
+
 - the job runs outside the cluster
 - it uses a kubeconfig file
 - the kubeconfig authenticates as a ServiceAccount
@@ -48,6 +50,7 @@ This requires a long-lived credential.
 ## How ServiceAccount Tokens Used to Work
 
 Before Kubernetes 1.24:
+
 - ServiceAccounts automatically created token Secrets
 - tokens were long-lived
 - stored as Kubernetes Secrets
@@ -60,6 +63,7 @@ Many pipelines relied on this behavior.
 ## What Changed in Kubernetes 1.24
 
 Starting in Kubernetes 1.24:
+
 - token Secrets are no longer auto-created
 - Kubernetes uses bound ServiceAccount tokens
 - tokens are short-lived
@@ -73,6 +77,7 @@ This improves security but breaks external CI workflows.
 ## Why CI/CD Pipelines Break
 
 CI systems:
+
 - run outside the cluster
 - cannot receive projected tokens
 - cannot refresh short-lived credentials
@@ -96,12 +101,14 @@ If the output is empty, no token Secret exists.
 ## Bound Tokens vs Secret Tokens
 
 Bound tokens:
+
 - short-lived
 - pod-scoped
 - secure by default
 - unsuitable for external CI
 
 Secret-based tokens:
+
 - long-lived
 - manually created
 - usable by CI systems
@@ -130,6 +137,7 @@ Kubernetes will populate the token automatically.
 ## Security Implications
 
 Manually created tokens:
+
 - reintroduce long-lived credentials
 - require rotation discipline
 - increase blast radius if leaked
@@ -141,6 +149,7 @@ They should be treated as exceptions, not defaults.
 ## Modern Alternatives
 
 More robust approaches include:
+
 - OIDC federation
 - cloud IAM integrations
 - exec-based kubeconfig plugins

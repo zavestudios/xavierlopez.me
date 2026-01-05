@@ -21,6 +21,7 @@ toc_sticky: true
 ## Context
 
 Rails applications have always needed configuration:
+
 - database credentials
 - API keys
 - encryption secrets
@@ -37,11 +38,13 @@ Kubernetes Secrets provide a **runtime configuration mechanism** that aligns wel
 Rails already expects configuration to arrive via **environment variables**.
 
 This aligns naturally with:
+
 - the Twelve-Factor App methodology
 - container immutability
 - environment-specific deployments
 
 Kubernetes Secrets allow you to:
+
 - decouple configuration from images
 - rotate credentials without rebuilding
 - keep sensitive data out of Git
@@ -52,12 +55,14 @@ Kubernetes Secrets allow you to:
 ## What Belongs in a Secret (and What Doesn’t)
 
 Good candidates for Secrets:
+
 - database passwords
 - Rails `SECRET_KEY_BASE`
 - third-party API keys
 - encryption credentials
 
 Poor candidates:
+
 - non-sensitive configuration
 - feature flags
 - large blobs of data
@@ -160,6 +165,7 @@ For secrets like `SECRET_KEY_BASE`, Rails already expects an environment variabl
 Kubernetes does **not** automatically restart pods when Secrets change.
 
 Common patterns:
+
 - manually restart deployments
 - trigger rollouts via CI/CD
 - annotate pods to force restarts
@@ -173,11 +179,13 @@ Plan for rotation explicitly—don’t assume it happens automatically.
 ### Access Control
 
 Secrets are only as secure as:
+
 - namespace boundaries
 - RBAC policies
 - who can read them
 
 Avoid:
+
 - granting `get secrets` broadly
 - using default service accounts
 - sharing namespaces unnecessarily
@@ -187,6 +195,7 @@ Avoid:
 ### Visibility and Leakage
 
 Remember:
+
 - environment variables can appear in logs
 - crash dumps may include env state
 - anyone with pod exec access can read them
@@ -198,6 +207,7 @@ Secrets reduce risk—but don’t eliminate it.
 ## Alternatives and Complements
 
 Kubernetes Secrets are often combined with:
+
 - external secret managers (Vault, AWS Secrets Manager)
 - sealed secrets
 - encrypted GitOps workflows

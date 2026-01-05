@@ -23,6 +23,7 @@ toc_sticky: true
 Kubernetes certificate problems rarely appear during calm periods.
 
 They surface during:
+
 - control plane upgrades
 - node replacements
 - API server restarts
@@ -39,6 +40,7 @@ This post documents how and why manual certificate updates become necessary, and
 Kubernetes relies heavily on **mutual TLS**.
 
 Certificates secure:
+
 - API server communication
 - kubelet authentication
 - controller-manager and scheduler access
@@ -86,6 +88,7 @@ kubeadm certs check-expiration
 ```
 
 This provides a clear overview of:
+
 - which certificates are expired
 - which are approaching expiration
 - which components are affected
@@ -105,6 +108,7 @@ kubeadm certs renew all
 This regenerates control plane certificates but does **not** automatically restart components.
 
 After renewal, you must restart:
+
 - kube-apiserver
 - kube-controller-manager
 - kube-scheduler
@@ -157,6 +161,7 @@ Upgrades sometimes surface certificate bugs such as:
 - control plane components failing silently
 
 These issues often appear as:
+
 - API server refusing connections
 - kubelet registration failures
 - controllers stuck in crash loops
@@ -181,6 +186,7 @@ Certificate errors are usually explicit—once you know where to look.
 ## When Manual Rotation Is Unsafe
 
 Avoid manual rotation when:
+
 - etcd health is unknown
 - backups are unavailable
 - cluster state is already inconsistent
@@ -192,6 +198,7 @@ In these cases, recovery planning is more important than speed.
 ## Preventing Future Issues
 
 Long-term fixes include:
+
 - enabling automatic rotation
 - monitoring certificate expiration proactively
 - documenting bootstrap procedures

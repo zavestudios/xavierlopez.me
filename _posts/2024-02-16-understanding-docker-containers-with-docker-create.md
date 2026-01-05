@@ -23,6 +23,7 @@ toc_sticky: true
 Most people interact with Docker through `docker run`. It’s convenient, compact, and hides a lot of complexity.
 
 But `docker run` is actually doing *two* things at once:
+
 1. creating a container
 2. starting it
 
@@ -41,11 +42,13 @@ docker run = docker create + docker start
 ```
 
 `docker create`:
+
 - defines a container
 - stores its configuration
 - does **not** start it
 
 `docker start`:
+
 - executes an already-defined container
 
 That distinction is subtle, but important.
@@ -55,11 +58,13 @@ That distinction is subtle, but important.
 ## Why Use docker create Explicitly?
 
 Using `docker create` forces you to think in terms of:
+
 - container identity
 - configuration as state
 - lifecycle boundaries
 
 This is especially useful when:
+
 - debugging complex flags
 - iterating on volume mounts
 - inspecting container configuration before execution
@@ -107,6 +112,7 @@ docker inspect example-service
 This is where `docker create` shines.
 
 You can:
+
 - verify mounts
 - confirm ports
 - inspect environment variables
@@ -127,6 +133,7 @@ docker start example-service
 Stopping and restarting now operate on a **known container**, not a transient command.
 
 This makes container behavior:
+
 - more predictable
 - easier to debug
 - less error-prone
@@ -143,6 +150,7 @@ Using `docker create` works well for:
 - reproducing issues reliably
 
 It’s less useful for:
+
 - one-off commands
 - disposable CI jobs
 - quick experiments
@@ -154,6 +162,7 @@ Knowing when *not* to use it is part of the skill.
 ## Relationship to Docker Compose
 
 Docker Compose formalizes what `docker create` makes explicit:
+
 - declarative configuration
 - repeatability
 - separation of config and execution

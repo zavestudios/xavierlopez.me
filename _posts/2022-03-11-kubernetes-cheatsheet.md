@@ -23,6 +23,7 @@ toc_sticky: true
 Kubernetes has a large surface area, but day-to-day operations rely on a **small, repeatable set of kubectl commands**.
 
 This cheatsheet emphasizes:
+
 - inspection over modification
 - safety before speed
 - commands that scale from dev clusters to production
@@ -207,6 +208,7 @@ kubectl get events --sort-by=.metadata.creationTimestamp
 ```
 
 Events often explain:
+
 - scheduling failures
 - image pull issues
 - permission problems
@@ -255,6 +257,7 @@ Deletion is irreversible—confirm scope first.
 ## Debugging Patterns
 
 Common workflow:
+
 1. `kubectl get`
 2. `kubectl describe`
 3. `kubectl logs`

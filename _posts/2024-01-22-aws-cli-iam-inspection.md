@@ -21,6 +21,7 @@ toc_sticky: true
 ## Context
 
 When auditing or troubleshooting IAM in an AWS account, the web console is often **too slow and too abstract**. The AWS CLI provides a faster, more precise way to understand:
+
 - who exists in the account
 - what roles and groups are defined
 - how policies are attached
@@ -41,6 +42,7 @@ aws iam get-account-summary --profile demo-admin
 ```
 
 This returns counts and usage metrics for:
+
 - users
 - groups
 - roles
@@ -62,6 +64,7 @@ aws iam get-account-authorization-details --profile demo-admin
 ```
 
 This includes:
+
 - users
 - groups
 - roles
@@ -69,6 +72,7 @@ This includes:
 - attached managed policies
 
 It’s verbose, but useful when:
+
 - auditing permissions
 - exporting IAM state
 - diffing environments
@@ -87,6 +91,7 @@ aws iam list-users --profile demo-admin
 ```
 
 This is helpful for:
+
 - confirming legacy users still exist
 - identifying service accounts
 - verifying cleanup after migrations to roles or SSO
@@ -108,6 +113,7 @@ aws iam list-groups-for-user \
 Group membership often explains **effective permissions** more clearly than individual policies.
 
 This is especially useful when:
+
 - debugging unexpected access
 - validating least-privilege changes
 - tracing permission inheritance
@@ -139,6 +145,7 @@ aws iam list-roles --profile demo-admin
 ```
 
 IAM roles typically outnumber users and are central to:
+
 - EC2 instance permissions
 - CI/CD pipelines
 - cross-account access
@@ -152,6 +159,7 @@ This list grows quickly in active environments.
 ## Why the CLI Is Often Better Than the Console
 
 For IAM inspection, the CLI provides:
+
 - scriptability
 - reproducibility
 - auditability

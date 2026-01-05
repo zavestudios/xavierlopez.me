@@ -22,6 +22,7 @@ toc_sticky: true
 Helm is the de facto package manager for Kubernetes, but most real-world usage revolves around a **small, repeatable set of commands**.
 
 These notes focus on the Helm CLI commands that show up most often when:
+
 - inspecting deployed releases
 - debugging failed upgrades
 - validating rendered manifests
@@ -58,6 +59,7 @@ helm status example-release -n example-namespace
 ```
 
 This shows:
+
 - deployment status
 - revision history
 - notes from the chart
@@ -138,6 +140,7 @@ helm history example-release -n example-namespace
 ```
 
 This is useful for:
+
 - understanding rollout order
 - identifying failed revisions
 - preparing for rollbacks
@@ -165,6 +168,7 @@ helm uninstall example-release -n example-namespace
 ```
 
 This deletes:
+
 - the Helm release record
 - associated Kubernetes resources (unless otherwise configured)
 
@@ -175,6 +179,7 @@ Always confirm the namespace before uninstalling.
 ## Debugging Failed Deployments
 
 Common debugging flow:
+
 1. `helm status`
 2. `helm get values`
 3. `helm history`

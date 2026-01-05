@@ -32,6 +32,7 @@ This post explains what changes when networks are virtualized, what stays the sa
 In a virtualized environment, networking is **implemented in software** rather than directly on physical switches and NICs.
 
 At a high level:
+
 - Virtual machines connect to **virtual network interfaces**
 - These interfaces attach to **virtual switches**
 - Virtual switches map traffic onto **physical network interfaces**
@@ -47,6 +48,7 @@ The result is a software-defined network path that *looks* simple from inside a 
 Each VM is assigned one or more **virtual NICs**.
 
 From inside the guest OS:
+
 - the vNIC appears like a normal network card
 - it has a MAC address
 - it participates in IP networking normally
@@ -60,6 +62,7 @@ The guest is unaware that the NIC is virtual.
 A **virtual switch** exists inside the hypervisor.
 
 Its responsibilities include:
+
 - switching traffic between VMs on the same host
 - enforcing VLANs or port groups
 - forwarding traffic to physical NICs
@@ -75,6 +78,7 @@ Eventually, traffic must leave the host.
 The hypervisor maps virtual switch traffic onto one or more **physical NICs**, which connect to the real network.
 
 This is where:
+
 - bandwidth becomes shared
 - congestion becomes possible
 - performance characteristics change
@@ -101,11 +105,13 @@ Each step adds flexibility — and complexity.
 Just like CPU and memory, **network I/O is shared**.
 
 Multiple VMs may:
+
 - share the same virtual switch
 - compete for the same physical NIC
 - burst traffic simultaneously
 
 This leads to:
+
 - unpredictable latency
 - noisy-neighbor effects
 - contention that’s invisible from inside a VM
@@ -129,6 +135,7 @@ Virtualization inserts layers:
 A failure or bottleneck in *any* layer can look identical from the VM.
 
 Common pain points:
+
 - packet loss without interface errors
 - latency spikes without CPU saturation
 - traffic blocked by virtual policy, not physical ACLs
@@ -140,11 +147,13 @@ The abstraction that makes virtualization powerful also obscures root cause.
 ## Virtual I/O and Abstraction
 
 Virtualized networking is part of a broader **virtual I/O model**, which includes:
+
 - virtual ethernet
 - virtual storage paths
 - abstracted hardware access
 
 The VM does not interact with hardware directly. Instead, the hypervisor mediates all I/O, enabling:
+
 - portability
 - isolation
 - hardware independence
@@ -156,11 +165,13 @@ But mediation always has a cost.
 ## In Practice
 
 Virtual networking enables:
+
 - rapid provisioning
 - flexible topology changes
 - software-defined segmentation
 
 It also demands:
+
 - good observability
 - awareness of host-level constraints
 - discipline when troubleshooting

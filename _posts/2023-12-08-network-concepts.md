@@ -29,6 +29,7 @@ At that point, most issues collapse down to **Layer 2 vs Layer 3 boundaries** an
 Layer 2 is concerned with **local, same-network communication**.
 
 **Key characteristics:**
+
 - **Scope:** One broadcast domain
 - **Addressing:** MAC addresses
 - **Devices:** Switches
@@ -48,6 +49,7 @@ If yes, you’re operating at Layer 2.
 Layer 3 is responsible for **communication between different networks**.
 
 **Key characteristics:**
+
 - **Scope:** Multiple networks
 - **Addressing:** IP addresses
 - **Devices:** Routers
@@ -76,11 +78,13 @@ VLANs and subnets are often talked about interchangeably, but they solve **diffe
 ### VLANs (Virtual Local Area Networks)
 
 **What they do well:**
+
 - Segment a physical switch into multiple logical networks
 - Reduce broadcast noise
 - Provide Layer 2 isolation
 
 **Important properties:**
+
 - Devices in the same VLAN behave as if they are on the same physical network
 - VLANs are identified by a **VLAN ID**
 - VLAN isolation happens **before IP routing**
@@ -93,11 +97,13 @@ VLANs alone do *not* provide routing. Traffic between VLANs requires a Layer 3 d
 ### Subnets
 
 **What they do well:**
+
 - Partition IP address space
 - Define routing boundaries
 - Enable policy and traffic control at Layer 3
 
 **Important properties:**
+
 - Devices in the same subnet can communicate directly
 - Traffic between subnets *always* requires routing
 - Subnets are fundamental to cloud networking (VPCs, route tables)
@@ -113,6 +119,7 @@ VLANs alone do *not* provide routing. Traffic between VLANs requires a Layer 3 d
 - NetworkPolicies operate at L3/L4 (and sometimes L7)
 
 When pod-to-pod traffic fails:
+
 - Ask whether it’s a **routing** issue (L3)
 - Or a **segmentation** issue (policy / isolation)
 
@@ -134,6 +141,7 @@ There are no traditional VLANs exposed — AWS hides L2 and forces you to reason
 - Pipelines timing out on internal endpoints?
 
 These often trace back to:
+
 - Missing routes
 - Incorrect subnet placement
 - Assumptions about “same network” that aren’t true

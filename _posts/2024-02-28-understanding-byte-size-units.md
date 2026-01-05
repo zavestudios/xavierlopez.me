@@ -23,6 +23,7 @@ toc_sticky: true
 Most engineers *know* that there’s a difference between decimal and binary byte units.
 
 Fewer engineers can confidently say:
+
 - which one a given system is using
 - when the distinction matters
 - when it’s safe to ignore
@@ -38,6 +39,7 @@ There are **two** byte size systems in common use:
 ### Decimal (Base-10)
 
 Used primarily for:
+
 - disk marketing
 - network throughput
 - vendor specifications
@@ -56,6 +58,7 @@ These scale cleanly by powers of 10.
 ### Binary (Base-2)
 
 Used primarily by:
+
 - operating systems
 - memory reporting
 - filesystems
@@ -77,12 +80,14 @@ These scale by powers of 2.
 The confusion comes from history.
 
 For years, binary quantities were labeled using decimal names:
+
 - “KB” meant 1024 bytes
 - “MB” meant 1024² bytes
 
 That shorthand stuck—long after it became misleading.
 
 The **IEC standard** introduced:
+
 - KiB, MiB, GiB, TiB
 
 Not to complicate things—but to be precise.
@@ -129,6 +134,7 @@ It’s not overhead. It’s arithmetic.
 ## When You Should Care
 
 You should pay attention to units when:
+
 - capacity planning
 - comparing vendor claims
 - sizing storage or memory limits
@@ -136,6 +142,7 @@ You should pay attention to units when:
 - interpreting monitoring metrics
 
 This is especially true in:
+
 - Kubernetes resource limits
 - cloud storage pricing
 - filesystem usage reports
@@ -145,6 +152,7 @@ This is especially true in:
 ## When You Can Mostly Ignore It
 
 You can often ignore the distinction when:
+
 - working at small scales
 - eyeballing approximate usage
 - doing relative comparisons within the same system
@@ -169,6 +177,7 @@ If the tool says `GiB`, believe it.
 ## Why This Is Still Worth Knowing
 
 This confusion persists because:
+
 - both systems are valid
 - both are widely used
 - tools are inconsistent about labeling

@@ -24,6 +24,7 @@ Understanding how Kubernetes storage works is one thing.
 Actually **enabling** that capability in a cluster is another.
 
 If you want dynamic NFS-backed Persistent Volumes, Kubernetes needs a component that can:
+
 - watch for PersistentVolumeClaims
 - create directories on an NFS server
 - register those directories as PersistentVolumes
@@ -37,6 +38,7 @@ This post focuses on installing it intentionally using Helm—and understanding 
 ## What This Provisioner Does
 
 The NFS Subdir External Provisioner:
+
 - runs as a pod in your cluster
 - listens for PVCs referencing its StorageClass
 - creates subdirectories on an external NFS server
@@ -94,12 +96,15 @@ helm install nfs-provisioner \
 Key values explained:
 
 - `nfs.server`  
+
   Address of the external NFS server
 
 - `nfs.path`  
+
   Base directory where subdirectories will be created
 
 - `storageClass.name`  
+
   The StorageClass PVCs will reference
 
 This command installs the provisioner and registers a new StorageClass.
@@ -157,6 +162,7 @@ EOF
 ```
 
 If provisioning works:
+
 - a PersistentVolume will be created automatically
 - a new directory will appear on the NFS server
 - the PVC will bind successfully
@@ -185,12 +191,14 @@ Most failures are external to Kubernetes.
 ## When This Is (and Isn’t) the Right Choice
 
 This approach works well for:
+
 - shared storage
 - development clusters
 - on-prem environments
 - workloads needing `ReadWriteMany`
 
 It may not be appropriate for:
+
 - high-performance databases
 - latency-sensitive workloads
 - cloud-native block storage replacements

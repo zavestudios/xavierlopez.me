@@ -21,11 +21,13 @@ toc_sticky: true
 ## Context
 
 PFX files (also known as PKCS#12 files) are commonly used to bundle:
+
 - a private key
 - a public certificate
 - one or more intermediate certificates
 
 They’re frequently encountered when:
+
 - exporting certificates from Windows systems
 - integrating with load balancers or proxies
 - migrating TLS assets between platforms
@@ -39,6 +41,7 @@ At some point, you’ll need to **extract individual components**—and do so ca
 A PFX file is a **password-protected container** format defined by the PKCS#12 standard.
 
 It typically contains:
+
 - a private key
 - an end-entity certificate
 - a certificate chain
@@ -50,6 +53,7 @@ Everything is bundled together to simplify transport—but not necessarily day-t
 ## Why You Might Need to Extract Contents
 
 Common reasons include:
+
 - configuring TLS for NGINX, Apache, or HAProxy
 - importing certificates into Kubernetes secrets
 - separating key material for different systems
@@ -62,6 +66,7 @@ Most systems expect **separate PEM-encoded files**, not a PFX bundle.
 ## Prerequisites
 
 You’ll need:
+
 - the PFX file
 - the PFX password
 - `openssl` installed
@@ -83,6 +88,7 @@ openssl pkcs12 -info -in certificate.pfx
 ```
 
 This shows:
+
 - which certificates are included
 - whether a private key is present
 - the certificate chain order
@@ -100,6 +106,7 @@ openssl pkcs12 -in certificate.pfx -nocerts -out private.key
 ```
 
 You will be prompted to:
+
 - enter the PFX password
 - optionally set a passphrase on the output key
 
@@ -134,6 +141,7 @@ openssl pkcs12 -in certificate.pfx -cacerts -nokeys -out chain.crt
 ```
 
 Some systems expect:
+
 - a combined certificate + chain
 - others require them as separate files
 

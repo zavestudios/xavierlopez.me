@@ -39,6 +39,7 @@ git log --oneline --decorate --graph
 ```
 
 What this adds:
+
 - `--oneline` → compact, readable commits
 - `--decorate` → branch and tag names
 - `--graph` → visual branch structure
@@ -56,6 +57,7 @@ git log --oneline --decorate --graph --all --date=short --pretty=format:"%h %ad 
 ```
 
 This shows:
+
 - short commit hash
 - commit date
 - author
@@ -75,6 +77,7 @@ git log --stat
 ```
 
 This surfaces:
+
 - affected files
 - lines added and removed
 - change scope per commit
@@ -94,6 +97,7 @@ git log -p
 This includes the full diff for each commit.
 
 Use this when:
+
 - auditing changes
 - tracking regressions
 - reviewing unfamiliar code paths
@@ -149,6 +153,7 @@ git log --grep="fix"
 ```
 
 These filters help answer questions like:
+
 - Who touched this last?
 - When was this bug introduced?
 - How often does this area change?
@@ -195,6 +200,7 @@ Small conveniences encourage better habits.
 ## When Detailed Logs Are Most Useful
 
 Detailed `git log` views shine when:
+
 - debugging regressions
 - onboarding to a new repo
 - reviewing architectural changes

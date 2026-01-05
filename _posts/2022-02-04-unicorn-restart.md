@@ -30,6 +30,7 @@ This post explains the common restart patterns and when to use each one.
 ## How Unicorn Is Structured
 
 A typical Unicorn setup includes:
+
 - one **master process**
 - multiple **worker processes**
 - a shared listening socket
@@ -43,18 +44,19 @@ The master process manages workers. Workers handle requests. Restart behavior de
 Before sending signals, you need the master PID.
 
 Common approaches:
+
 - a PID file (configured in `unicorn.rb`)
 - process listing
 
 Example using a PID file:
 
-```
+```bash
 cat /path/to/unicorn.pid
 ```
 
 Or via process inspection:
 
-```
+```bash
 ps aux | grep unicorn
 ```
 
@@ -66,11 +68,12 @@ Always confirm you’re signaling the **master**, not a worker.
 
 To perform a **graceful restart**:
 
-```
+```bash
 kill -USR2 <unicorn_master_pid>
 ```
 
 What this does:
+
 - starts a new master process
 - spins up new workers
 - allows old workers to finish in-flight requests
@@ -84,11 +87,12 @@ This is the preferred way to deploy code changes with zero downtime.
 
 If you’ve only changed configuration and want workers to reload:
 
-```
+```bash
 kill -HUP <unicorn_master_pid>
 ```
 
 This:
+
 - reloads configuration
 - restarts worker processes
 - keeps the same master process
@@ -101,17 +105,18 @@ Use this when you don’t need a full master restart.
 
 To force Unicorn to stop immediately:
 
-```
+```bash
 kill -TERM <unicorn_master_pid>
 ```
 
 or
 
-```
+```bash
 kill -INT <unicorn_master_pid>
 ```
 
 This:
+
 - stops accepting new requests
 - terminates workers
 - may drop active connections
@@ -123,11 +128,13 @@ Only use this during emergencies or controlled shutdowns.
 ## Rolling Restarts and Zero Downtime
 
 Unicorn’s graceful restart model works best when:
+
 - a load balancer sits in front
 - multiple workers are running
 - requests are short-lived
 
 During `USR2` restarts:
+
 - old and new masters coexist briefly
 - sockets are handed off
 - traffic continues flowing
@@ -139,6 +146,7 @@ This design avoids request loss without complex coordination.
 ## Common Deployment Pattern
 
 A typical deploy flow:
+
 1. update application code
 2. verify configs and permissions
 3. send `USR2` to the master
@@ -152,6 +160,7 @@ This keeps deploys boring—which is the goal.
 ## Verifying a Successful Restart
 
 After restarting:
+
 - check logs for new master startup
 - confirm workers are accepting requests
 - ensure old workers have exited

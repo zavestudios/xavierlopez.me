@@ -23,6 +23,7 @@ toc_sticky: true
 Transaction log files grow for a reason.
 
 They record every change made to a database and are essential for:
+
 - crash recovery
 - replication
 - point-in-time restores
@@ -36,6 +37,7 @@ This post explains **when shrinking is appropriate**, how to do it safely, and w
 ## What a Transaction Log Does
 
 A transaction log:
+
 - records all data modifications
 - ensures atomicity and durability
 - allows rollback and recovery
@@ -48,6 +50,7 @@ As long as the log is being used, it **cannot** be safely truncated.
 ## Why Log Files Grow
 
 Common causes include:
+
 - long-running transactions
 - missing or failing log backups
 - bulk operations
@@ -61,6 +64,7 @@ Shrinking the log without addressing the root cause guarantees it will grow agai
 ## When Shrinking Is Appropriate
 
 Shrinking is reasonable when:
+
 - an unusual event caused temporary growth
 - log backups are functioning correctly
 - you’ve confirmed no long-running transactions
@@ -79,6 +83,7 @@ DBCC SQLPERF(LOGSPACE);
 ```
 
 This shows:
+
 - total log size
 - percent used
 - which databases are affected
@@ -143,6 +148,7 @@ Frequent growth events fragment disks and hurt performance.
 ## Why Shrinking Is Often Discouraged
 
 Routine shrinking causes:
+
 - repeated growth cycles
 - I/O fragmentation
 - performance instability

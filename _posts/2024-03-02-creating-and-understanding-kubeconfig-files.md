@@ -33,6 +33,7 @@ This post explains what a kubeconfig actually is, how it’s structured, and how
 A kubeconfig file is **not credentials**.
 
 It is a **configuration document** that tells `kubectl`:
+
 - which cluster to talk to
 - how to authenticate
 - which identity to use
@@ -47,22 +48,29 @@ Think of it as a **connection profile**, not a secret store.
 Every kubeconfig is built from four pieces.
 
 ### Cluster
+
 Defines:
+
 - API server endpoint
 - CA certificate used to trust the server
 
 ### User
+
 Defines:
+
 - how authentication happens
 - certificates, tokens, or exec plugins
 
 ### Context
+
 Binds:
+
 - one cluster
 - one user
 - optionally a namespace
 
 ### Current Context
+
 Tells `kubectl` which context to use by default.
 
 Nothing works unless all four line up.
@@ -169,6 +177,7 @@ Multiple kubeconfig files can be merged automatically via the `KUBECONFIG` envir
 Most access mistakes are **context mistakes**, not auth failures.
 
 Common issues include:
+
 - talking to the wrong cluster
 - using the wrong namespace
 - reusing similarly named contexts
@@ -181,10 +190,12 @@ Always check the context before acting.
 ## How This Relates to RBAC
 
 A kubeconfig:
+
 - defines *how* you authenticate
 - does **not** define *what you can do*
 
 Authorization is enforced by:
+
 - Kubernetes RBAC
 - Roles and RoleBindings
 - ClusterRoles and ClusterRoleBindings
@@ -192,6 +203,7 @@ Authorization is enforced by:
 If access is denied, the kubeconfig is usually fine—the permissions are not.
 
 ---
+
 ### Verifying Access with kubectl auth can-i
 
 Once authentication is working, the next question is authorization.
@@ -232,6 +244,7 @@ If the command errors, the kubeconfig itself may be misconfigured.
 ## Make It a Habit
 
 Before debugging:
+
 - forbidden errors
 - CI/CD access failures
 - “works for me” discrepancies
@@ -245,6 +258,7 @@ It turns RBAC from guesswork into something concrete.
 
 
 ---
+
 ## Practical Guidance
 
 - treat kubeconfig as connection metadata
@@ -260,6 +274,7 @@ Understanding kubeconfig reduces both mistakes and anxiety.
 ## Why This Mental Model Scales
 
 Once this clicks:
+
 - EKS/GKE/AKS configs make sense
 - CI/CD kubeconfigs are less scary
 - access rotation becomes manageable
