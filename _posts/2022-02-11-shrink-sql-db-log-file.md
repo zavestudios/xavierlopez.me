@@ -2,7 +2,7 @@
 layout: single
 title: "Shrink a SQL Database Log File Safely"
 date: 2022-02-11 08:00:00 +0000
-last_modified_at: 2025-01-03
+last_modified_at: "2025-01-03"
 categories:
   - databases
   - operations

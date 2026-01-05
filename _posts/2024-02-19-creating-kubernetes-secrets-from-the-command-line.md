@@ -2,7 +2,7 @@
 layout: single
 title: "Creating Kubernetes Secrets from the Command Line (and When Not To)"
 date: 2024-02-19 08:00:00 +0000
-last_modified_at: 2025-01-06
+last_modified_at: "2025-01-06"
 categories:
   - kubernetes
   - security

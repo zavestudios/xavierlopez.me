@@ -2,7 +2,7 @@
 layout: single
 title: "Skip the Pipeline When Pushing to Git"
 date: 2022-02-07 08:00:00 +0000
-last_modified_at: 2025-01-02
+last_modified_at: "2025-01-02"
 categories:
   - git
   - ci-cd

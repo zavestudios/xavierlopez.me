@@ -2,7 +2,7 @@
 layout: single
 title: "Authenticating GitLab Runner to Kubernetes"
 date: 2022-11-04 08:55:00 +0000
-last_modified_at: 2025-02-21
+last_modified_at: "2025-02-21"
 categories:
   - ci-cd
   - kubernetes

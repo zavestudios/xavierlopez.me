@@ -2,7 +2,7 @@
 layout: single
 title: "Helm CLI: Practical Command Notes"
 date: 2024-01-29 08:00:00 +0000
-last_modified_at: 2025-01-02
+last_modified_at: "2025-01-02"
 categories:
   - kubernetes
   - helm

@@ -2,7 +2,7 @@
 layout: single
 title: "Vim Cheatsheet: Practical Commands You Actually Use"
 date: 2022-04-02 08:15:00 +0000
-last_modified_at: 2025-01-15
+last_modified_at: "2025-01-15"
 categories:
   - cli
   - productivity

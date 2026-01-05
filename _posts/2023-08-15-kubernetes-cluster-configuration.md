@@ -2,7 +2,7 @@
 layout: single
 title: "Kubernetes Cluster Configuration: Decisions That Shape Everything"
 date: 2023-08-15 09:30:00 +0000
-last_modified_at: 2025-05-06
+last_modified_at: "2025-05-06"
 categories:
   - kubernetes
   - platform

@@ -2,7 +2,7 @@
 layout: single
 title: "Create a New Git Merge Request from the Command Line"
 date: 2023-08-12 09:15:00 +0000
-last_modified_at: 2025-01-29
+last_modified_at: "2025-01-29"
 categories:
   - git
   - workflow

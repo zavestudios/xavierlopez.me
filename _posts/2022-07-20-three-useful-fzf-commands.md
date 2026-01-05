@@ -2,7 +2,7 @@
 layout: single
 title: "Three Useful fzf Commands for Everyday Terminal Work"
 date: 2022-07-20 09:10:00 +0000
-last_modified_at: 2025-01-18
+last_modified_at: "2025-01-18"
 categories:
   - cli
   - productivity

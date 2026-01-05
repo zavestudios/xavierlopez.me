@@ -1,7 +1,7 @@
 ---
 title: "Server Virtualization for Platform Engineers"
 date: 2023-12-07 11:01:00 +0000
-last_modified_at: 2025-08-14
+last_modified_at: "2025-08-14"
 categories: [virtualization, networking, platform]
 tags: [hypervisor, vm, kvm, esxi, capacity-planning, ha]
 excerpt: "A platform-engineer-focused overview of server virtualization, covering hypervisors, overcommitment, availability, and how these concepts still matter in a cloud-native world."

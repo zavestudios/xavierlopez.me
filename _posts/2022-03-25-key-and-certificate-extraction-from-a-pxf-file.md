@@ -2,7 +2,7 @@
 layout: single
 title: "Key and Certificate Extraction from a PFX File"
 date: 2022-03-25 08:10:00 +0000
-last_modified_at: 2025-01-20
+last_modified_at: "2025-01-20"
 categories:
   - security
   - certificates

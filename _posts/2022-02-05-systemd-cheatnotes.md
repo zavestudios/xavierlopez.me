@@ -2,7 +2,7 @@
 layout: single
 title: "systemd Cheatnotes: Practical Service Management"
 date: 2022-02-05 08:00:00 +0000
-last_modified_at: 2025-01-01
+last_modified_at: "2025-01-01"
 categories:
   - linux
   - systems

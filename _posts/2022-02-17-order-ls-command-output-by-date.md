@@ -2,7 +2,7 @@
 layout: single
 title: "Order `ls` Command Output by Date"
 date: 2022-02-17 08:00:00 +0000
-last_modified_at: 2025-01-07
+last_modified_at: "2025-01-07"
 categories:
   - linux
   - cli

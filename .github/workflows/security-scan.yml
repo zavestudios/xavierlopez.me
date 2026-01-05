@@ -13,6 +13,8 @@ jobs:
   gitleaks:
     name: Secret Scan (Gitleaks)
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
 
     steps:
       - name: Checkout

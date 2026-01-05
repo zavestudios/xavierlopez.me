@@ -2,7 +2,7 @@
 layout: single
 title: "Restarting Unicorn Without Dropping Requests"
 date: 2022-02-04 07:30:00 +0000
-last_modified_at: 2025-01-01
+last_modified_at: "2025-01-01"
 categories:
   - rails
   - operations

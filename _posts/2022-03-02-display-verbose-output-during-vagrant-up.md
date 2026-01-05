@@ -2,7 +2,7 @@
 layout: single
 title: "Display Verbose Output During `vagrant up`"
 date: 2022-03-02 08:00:00 +0000
-last_modified_at: 2025-01-09
+last_modified_at: "2025-01-09"
 categories:
   - virtualization
   - cli

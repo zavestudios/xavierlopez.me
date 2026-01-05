@@ -2,7 +2,7 @@
 layout: single
 title: "See Git Log in Glorious Detail"
 date: 2022-02-15 08:00:00 +0000
-last_modified_at: 2025-01-05
+last_modified_at: "2025-01-05"
 categories:
   - git
   - cli

@@ -2,7 +2,7 @@
 layout: single
 title: "Kubernetes Cheatsheet: Practical kubectl Commands"
 date: 2022-03-11 08:00:00 +0000
-last_modified_at: 2025-01-10
+last_modified_at: "2025-01-10"
 categories:
   - kubernetes
   - cli

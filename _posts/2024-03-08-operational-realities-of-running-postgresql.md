@@ -2,7 +2,7 @@
 layout: single
 title: "Operational Realities of Running PostgreSQL"
 date: 2024-03-08 08:00:00 +0000
-last_modified_at: 2025-01-12
+last_modified_at: "2025-01-12"
 categories:
   - databases
   - operations

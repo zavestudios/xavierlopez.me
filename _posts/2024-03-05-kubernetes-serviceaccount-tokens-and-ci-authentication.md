@@ -2,7 +2,7 @@
 layout: single
 title: "Kubernetes ServiceAccount Tokens and CI/CD Authentication"
 date: 2024-03-05 08:00:00 +0000
-last_modified_at: 2025-01-11
+last_modified_at: "2025-01-11"
 categories:
   - kubernetes
   - security

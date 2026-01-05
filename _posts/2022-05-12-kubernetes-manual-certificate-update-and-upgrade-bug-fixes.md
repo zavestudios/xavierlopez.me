@@ -2,7 +2,7 @@
 layout: single
 title: "Kubernetes Manual Certificate Updates and Upgrade Bug Fixes"
 date: 2022-05-12 08:40:00 +0000
-last_modified_at: 2025-02-27
+last_modified_at: "2025-02-27"
 categories:
   - kubernetes
   - operations

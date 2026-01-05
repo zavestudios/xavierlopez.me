@@ -2,7 +2,7 @@
 layout: single
 title: "Fetch the Latest GitLab Repository Signing Key"
 date: 2022-04-13 08:30:00 +0000
-last_modified_at: 2025-01-22
+last_modified_at: "2025-01-22"
 categories:
   - linux
   - security

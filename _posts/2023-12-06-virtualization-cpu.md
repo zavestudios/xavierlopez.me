@@ -1,7 +1,7 @@
 ---
 title: "Virtualization and CPU: vCPU, Scheduling, and Overcommitment"
 date: 2023-12-06 10:51:00 +0000
-last_modified_at: 2025-02-19
+last_modified_at: "2025-02-19"
 categories: [virtualization, platform]
 tags: [cpu, vcpu, hypervisor, scheduling, overcommitment]
 excerpt: "A platform engineer’s guide to how CPUs are virtualized, how vCPUs are scheduled, and why CPU overcommitment usually works—until it doesn’t."
