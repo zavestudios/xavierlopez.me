@@ -182,6 +182,7 @@ xz provides excellent compression but is slower than gzip.
 ## Choosing the Right Tool
 
 General guidance:
+
 - **gzip** → speed, wide compatibility
 - **bzip2** → better compression, slower
 - **xz** → best compression, slowest
