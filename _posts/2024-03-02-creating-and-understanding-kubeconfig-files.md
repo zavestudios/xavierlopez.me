@@ -217,6 +217,7 @@ Once authentication is working, the next question is authorization.
 ```bash
 kubectl auth can-i get pods
 ```
+
 This checks whether the **current context’s user** is allowed to list pods in the current namespace.
 
 ### Explicit namespace check
@@ -239,7 +240,7 @@ This verifies permissions that are not namespace-bound.
 
 ```bash
 kubectl auth can-i
-``` 
+```
 
 Is the fastest way to distinguish between:
 

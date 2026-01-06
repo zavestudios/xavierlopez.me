@@ -11,6 +11,7 @@ Only Docker and Docker Compose are required:
 ## Quick Start
 
 ### 1. Build the Docker image
+
 ```bash
 docker-compose build
 ```
@@ -21,16 +22,20 @@ This will:
 - Set up Jekyll
 
 ### 2. Start the development server
+
 ```bash
 docker-compose up
 ```
 
 Your site will be available at:
+
 - **Site**: http://localhost:4000
 - **LiveReload**: Enabled automatically (changes refresh the browser)
 
 ### 3. Stop the server
+
 Press `Ctrl+C` or in another terminal:
+
 ```bash
 docker-compose down
 ```
@@ -54,12 +59,14 @@ make help       # Show all available commands
 ## Common Workflows
 
 ### First Time Setup
+
 ```bash
 make build
 make up
 ```
 
 ### Daily Development
+
 ```bash
 make up
 # Edit your files...
@@ -68,11 +75,13 @@ make up
 ```
 
 ### After Updating Gemfile
+
 ```bash
 make rebuild
 ```
 
 ### Debugging
+
 ```bash
 make logs       # View live logs
 make shell      # Get a shell inside the container
@@ -88,6 +97,7 @@ make shell      # Get a shell inside the container
 ## Troubleshooting
 
 ### Port 4000 already in use
+
 ```bash
 # Find what's using port 4000
 lsof -i :4000
@@ -98,16 +108,19 @@ ports:
 ```
 
 ### Gem installation fails
+
 ```bash
 make clean
 make build
 ```
 
 ### Site not updating
+
 - Make sure `--force_polling` is in the command (it is by default)
 - Try rebuilding: `make rebuild`
 
 ### Permission issues
+
 ```bash
 # If you get permission errors on _site directory:
 sudo chown -R $USER:$USER _site .jekyll-cache .sass-cache
@@ -115,16 +128,17 @@ sudo chown -R $USER:$USER _site .jekyll-cache .sass-cache
 
 ## Benefits of This Setup
 
-✅ No Ruby/Bundler installation needed on your machine  
-✅ Consistent environment across all machines  
-✅ Easy to clean up (just delete the Docker image)  
-✅ LiveReload works out of the box  
-✅ Fast startup after initial build  
-✅ Isolated from your system  
+- No Ruby/Bundler installation needed on your machine  
+- Consistent environment across all machines  
+- Easy to clean up (just delete the Docker image)  
+- LiveReload works out of the box  
+- Fast startup after initial build  
+- Isolated from your system  
 
 ## What's Mounted
 
 The current directory (`.`) is mounted to `/srv/jekyll` in the container, so:
+
 - Edit files on your machine with your favorite editor
 - Changes are immediately visible in the container
 - Jekyll rebuilds automatically
@@ -133,6 +147,7 @@ The current directory (`.`) is mounted to `/srv/jekyll` in the container, so:
 ## Cleaning Up
 
 To completely remove everything:
+
 ```bash
 make clean                    # Clean project files
 docker-compose down -v        # Remove containers and volumes
@@ -142,16 +157,19 @@ docker rmi jotspot-jekyll     # Remove the image
 ## Advanced Usage
 
 ### Run a one-off command
+
 ```bash
 docker-compose run --rm jekyll bundle update
 ```
 
 ### Build for production
+
 ```bash
 docker-compose run --rm jekyll bundle exec jekyll build --config _config.yml
 ```
 
 ### Check gems
+
 ```bash
 docker-compose run --rm jekyll bundle list
 ```
