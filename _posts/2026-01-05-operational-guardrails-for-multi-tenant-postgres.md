@@ -40,15 +40,15 @@ This post explains the operational guardrails required to ensure **safe**, **pre
 
 ---
 
-# Why Operational Guardrails Matter
+## Why Operational Guardrails Matter
 
 Multi-tenant PostgreSQL is only viable when both of these are true:
 
-## 1. Security boundaries must be provable  
+### 1. Security boundaries must be provable  
 
 No tenant should ever be able to read or affect another tenant’s data.
 
-## 2. Operational behavior must be controlled  
+### 2. Operational behavior must be controlled  
 
 No tenant should be able to destabilize the shared database server.
 
@@ -69,9 +69,9 @@ Both sets of controls are implemented and actively tested in the project linked 
 
 ---
 
-# Operational Risks in Multi-Tenant PostgreSQL
+## Operational Risks in Multi-Tenant PostgreSQL
 
-## 1. Connection Exhaustion — The Classic Failure Mode
+### 1. Connection Exhaustion — The Classic Failure Mode
 
 Every PostgreSQL instance has a *global* connection budget (`max_connections`). All tenants draw from this shared pool.
 
@@ -97,7 +97,7 @@ The test suite spawns multiple concurrent connections and confirms one fails onc
 
 ---
 
-## 2. Runaway or Long-Running Queries
+### 2. Runaway or Long-Running Queries
 
 A single long query—or a stuck transaction—can tie up CPU, I/O, locks, and memory.
 
@@ -117,7 +117,7 @@ These serve as circuit breakers against runaway behavior.
 
 ---
 
-## 3. Lock Contention → Autovacuum Starvation → Bloat
+### 3. Lock Contention → Autovacuum Starvation → Bloat
 
 Long-lived locks stop autovacuum from doing its job. The result:
 
@@ -138,7 +138,7 @@ These are documented operational expectations for production RDS deployments.
 
 ---
 
-## 4. Shared WAL, Checkpoints, and I/O
+### 4. Shared WAL, Checkpoints, and I/O
 
 PostgreSQL’s background processes operate at the **instance** level:
 
@@ -156,11 +156,11 @@ A high-churn tenant can degrade performance for everyone.
 
 ---
 
-## 5. Backups and Snapshots Include All Tenants
+### 5. Backups and Snapshots Include All Tenants
 
 On AWS RDS, a snapshot contains **all tenant databases**.
 
-### Guardrail  
+### Guardrails
 
 - strict IAM permissions for snapshot creation/restoration  
 - KMS key policy constraints  
@@ -170,9 +170,9 @@ This is essential for IL4 workloads.
 
 ---
 
-# Guardrails Implemented in the Project
+## Guardrails Implemented in the Project
 
-## Security Controls
+### Security Controls
 
 - role-per-tenant  
 - database-per-tenant  
@@ -183,20 +183,20 @@ This is essential for IL4 workloads.
 - blocked extension creation  
 - negative cross-tenant isolation tests  
 
-## Operational Controls
+### Operational Controls
 
 - per-role connection limits  
 - per-role statement timeouts  
 - per-role lock timeouts  
 - per-role idle-in-transaction timeouts  
 
-## Automated Tests
+### Automated Tests
 
 - connection-limit exceedance validated via concurrency  
 - long-query timeout enforcement  
 - concurrency behaviors tested safely and repeatably  
 
-## Compliance Documentation
+### Compliance Documentation
 
 - NIST 800-53 mapping  
 - FedRAMP Moderate alignment  
@@ -205,7 +205,7 @@ This is essential for IL4 workloads.
 
 ---
 
-# When Not To Use Multi-Tenant PostgreSQL
+## When Not To Use Multi-Tenant PostgreSQL
 
 Avoid multi-tenant PostgreSQL when:
 
@@ -219,7 +219,7 @@ These constraints are architectural realities, not limitations of PostgreSQL its
 
 ---
 
-# Conclusion
+## Conclusion
 
 Multi-tenant PostgreSQL can be secure, cost-effective, and IL4-aligned — but only when operational guardrails are enforced. These include:
 
