@@ -11,7 +11,9 @@ Senior Platform Engineer specializing in Kubernetes, cloud infrastructure, and s
 ## Recent Posts
 
 {% for post in site.posts limit:3 %}
+
 ### [{{ post.title }}]({{ post.url }})
+
 *{{ post.date | date: "%B %d, %Y" }}*
 
 {{ post.excerpt }}

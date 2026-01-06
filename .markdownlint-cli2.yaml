@@ -10,6 +10,10 @@ config:
   # Allow inline HTML (Minimal Mistakes sometimes uses it)
   MD033: false
 
+  # Allow  title as heading, date as metadata
+  MD036: false
+
+
 globs:
   - "**/*.md"
 ignores:
