@@ -5,6 +5,7 @@ Run your Jekyll site locally without installing Ruby, Bundler, or any dependenci
 ## Prerequisites
 
 Only Docker and Docker Compose are required:
+
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
@@ -17,6 +18,7 @@ docker-compose build
 ```
 
 This will:
+
 - Create a Ruby 3.1 environment
 - Install all gems from your Gemfile
 - Set up Jekyll
@@ -29,7 +31,7 @@ docker-compose up
 
 Your site will be available at:
 
-- **Site**: http://localhost:4000
+- **Site**: <http://localhost:4000>
 - **LiveReload**: Enabled automatically (changes refresh the browser)
 
 ### 3. Stop the server
