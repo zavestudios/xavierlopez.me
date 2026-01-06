@@ -182,7 +182,7 @@ This is the object that actually bridges Kubernetes and storage.
 
 The relationship flows like this:
 
-```
+```text
 Postgres Pod
   → PersistentVolumeClaim
     → StorageClass
@@ -267,4 +267,3 @@ Once these are clear, storage behavior becomes predictable.
 - Mental models matter more than YAML
 
 Understanding *how the system fits together* is far more valuable than memorizing fields.
-

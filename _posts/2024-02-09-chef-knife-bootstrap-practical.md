@@ -51,7 +51,7 @@ After bootstrap, the node becomes manageable via Chef like any other system.
 
 The general pattern looks like this:
 
-```
+```bash
 knife bootstrap <HOST_OR_IP> \
   -N <NODE_NAME> \
   -U <USERNAME> \
@@ -75,7 +75,7 @@ For Windows hosts, `knife bootstrap` typically uses **WinRM**.
 
 Example pattern:
 
-```
+```bash
 knife bootstrap windows-node.example.internal \
   -N WINDOWS-NODE-01 \
   -U chef-user \
@@ -99,7 +99,7 @@ If WinRM isn’t reachable, bootstrap will fail before Chef is ever involved.
 
 For modern Linux systems, SSH-based bootstrap is straightforward:
 
-```
+```bash
 knife bootstrap 192.0.2.60 \
   -N LINUX-NODE-01 \
   -U deploy-user \
@@ -130,7 +130,7 @@ This process assumes:
 
 ### Step 1: Download a Compatible Chef Client RPM
 
-```
+```bash
 wget https://packages.chef.io/files/stable/chef/17.9.52/el/6/chef-17.9.52-1.el6.x86_64.rpm
 ```
 
@@ -164,7 +164,7 @@ rpm -qa | grep chef
 
 Older systems often show something like:
 
-```
+```bash
 chef-12.x.x-1.el6.x86_64
 ```
 
@@ -192,7 +192,7 @@ sudo rpm -ivh chef-17.9.52-1.el6.x86_64.rpm
 
 Confirm installation:
 
-```
+```bash
 chef-client --version
 ```
 
@@ -200,7 +200,7 @@ chef-client --version
 
 ### Step 7: Bootstrap the Node
 
-```
+```bash
 knife bootstrap 192.0.2.100 \
   -N LEGACY-RHEL6-NODE \
   -U deploy-user \
