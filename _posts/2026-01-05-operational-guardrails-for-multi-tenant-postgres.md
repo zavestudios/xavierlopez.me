@@ -36,8 +36,7 @@ If one tenant misbehaves, it can degrade the experience for all others—even wi
 
 This post explains the operational guardrails required to ensure **safe**, **predictable**, and **compliant** multi-tenant PostgreSQL deployments. All guardrails described here are fully implemented and verifiable in the accompanying project:
 
-**Project:** Multi-Tenant PostgreSQL Security & Operational Isolation  
-https://github.com/YOUR_REPO/pg-multitenant-postgres
+**Project:** [Multi-Tenant PostgreSQL Security & Operational Isolation](https://github.com/YOUR_REPO/pg-multitenant-postgres)
 
 ---
 
@@ -46,12 +45,15 @@ https://github.com/YOUR_REPO/pg-multitenant-postgres
 Multi-tenant PostgreSQL is only viable when both of these are true:
 
 ## 1. Security boundaries must be provable  
+
 No tenant should ever be able to read or affect another tenant’s data.
 
 ## 2. Operational behavior must be controlled  
+
 No tenant should be able to destabilize the shared database server.
 
 The first requirement is handled by:
+
 - database-per-tenant  
 - role-per-tenant  
 - schema-per-tenant  
@@ -74,6 +76,7 @@ Both sets of controls are implemented and actively tested in the project linked 
 Every PostgreSQL instance has a *global* connection budget (`max_connections`). All tenants draw from this shared pool.
 
 A single tenant with:
+
 - an oversized ORM pool  
 - idle-in-transaction leaks  
 - a bug sending excessive connections  
@@ -89,6 +92,7 @@ ALTER ROLE tenant_a_app CONNECTION LIMIT 2;
 Small limits dramatically reduce blast radius.
 
 ### In the project  
+
 The test suite spawns multiple concurrent connections and confirms one fails once the limit is exceeded.
 
 ---
@@ -108,6 +112,7 @@ ALTER ROLE tenant_a_app SET idle_in_transaction_session_timeout = '10s';
 These serve as circuit breakers against runaway behavior.
 
 ### In the project  
+
 `SELECT pg_sleep(10)` is used to confirm the timeout fires predictably.
 
 ---
@@ -124,6 +129,7 @@ Long-lived locks stop autovacuum from doing its job. The result:
 In multi-tenant environments, *all* tenants suffer.
 
 ### Guardrails  
+
 - enforce idle transaction timeouts  
 - surface lock metrics  
 - alert on autovacuum lag  
@@ -143,6 +149,7 @@ PostgreSQL’s background processes operate at the **instance** level:
 A high-churn tenant can degrade performance for everyone.
 
 ### Guardrails  
+
 - WAL monitoring  
 - Instance sizing  
 - Enforced workload limits  
@@ -154,6 +161,7 @@ A high-churn tenant can degrade performance for everyone.
 On AWS RDS, a snapshot contains **all tenant databases**.
 
 ### Guardrail  
+
 - strict IAM permissions for snapshot creation/restoration  
 - KMS key policy constraints  
 - auditing of all snapshot actions  
@@ -165,6 +173,7 @@ This is essential for IL4 workloads.
 # Guardrails Implemented in the Project
 
 ## Security Controls
+
 - role-per-tenant  
 - database-per-tenant  
 - schema-per-tenant  
@@ -175,17 +184,20 @@ This is essential for IL4 workloads.
 - negative cross-tenant isolation tests  
 
 ## Operational Controls
+
 - per-role connection limits  
 - per-role statement timeouts  
 - per-role lock timeouts  
 - per-role idle-in-transaction timeouts  
 
 ## Automated Tests
+
 - connection-limit exceedance validated via concurrency  
 - long-query timeout enforcement  
 - concurrency behaviors tested safely and repeatably  
 
 ## Compliance Documentation
+
 - NIST 800-53 mapping  
 - FedRAMP Moderate alignment  
 - DoD IL2/IL4 considerations  
@@ -220,4 +232,3 @@ Multi-tenant PostgreSQL can be secure, cost-effective, and IL4-aligned — but o
 The accompanying project provides a complete, [reproducible reference architecture](https://github.com/eckslopez/pg)
 
 Upcoming work: Terraform integration using the PostgreSQL provider, RDS automation, and CI/CD validation pipelines.
-
