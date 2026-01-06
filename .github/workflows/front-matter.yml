@@ -1,15 +1,15 @@
-name: Front Matter Validation
+name: Validate Front Matter
 
 on:
   pull_request:
-  push:
-    branches: [ main ]
-
+  workflow_dispatch:
+    
 permissions:
   contents: read
 
 jobs:
   validate-front-matter:
+    name: Validate Front Matter
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
