@@ -66,7 +66,7 @@ These aliases assume:
 - awareness of what commands like `rm`, `rmi`, and `prune` actually do
 - intentional use (not blind copy-paste in production environments)
 
-```
+```bash
 # Containers
 alias dps='docker ps'
 alias dpsa='docker ps -a'

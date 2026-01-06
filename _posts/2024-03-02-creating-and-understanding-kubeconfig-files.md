@@ -158,7 +158,7 @@ At this point, `kubectl` is fully configured.
 
 By default, `kubectl` looks for:
 
-```
+```text
 ~/.kube/config
 ```
 

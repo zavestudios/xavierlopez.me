@@ -44,7 +44,7 @@ Used primarily for:
 - network throughput
 - vendor specifications
 
-```
+```text
 1 KB = 1,000 bytes
 1 MB = 1,000,000 bytes
 1 GB = 1,000,000,000 bytes
@@ -64,7 +64,7 @@ Used primarily by:
 - filesystems
 - low-level tooling
 
-```
+```text
 1 KiB = 1,024 bytes
 1 MiB = 1,048,576 bytes
 1 GiB = 1,073,741,824 bytes
@@ -115,13 +115,13 @@ The units changed.
 
 A disk advertised as **1 TB** contains:
 
-```
+```text
 1,000,000,000,000 bytes
 ```
 
 Your OS reports in GiB:
 
-```
+```text
 1,000,000,000,000 ÷ 1,073,741,824 ≈ 931 GiB
 ```
 

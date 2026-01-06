@@ -95,7 +95,7 @@ kubectl get namespace example-namespace
 
 If it shows:
 
-```
+```text
 STATUS   Terminating
 ```
 
@@ -115,7 +115,7 @@ kubectl get namespace example-namespace -o json
 
 Look specifically at:
 
-```
+```text
 spec.finalizers
 ```
 
