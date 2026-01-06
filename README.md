@@ -19,7 +19,7 @@ The blog is intentionally written for platform engineers and adjacent roles (SRE
    - who this blog is for
    - how to use it
    - links to foundational posts
-   
+
 2. Add **light internal linking**:
 
    - connect obvious related posts (storage/auth/tooling/etc.)
