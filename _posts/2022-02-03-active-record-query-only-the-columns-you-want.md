@@ -6,12 +6,12 @@ last_modified_at: "2025-01-01"
 categories:
   - rails
   - databases
-  - operations
+  - devops
 tags:
   - rails
   - activerecord
   - sql
-  - operations
+  - devops
   - optimization
 excerpt: "How to query only specific columns with Active Record, why it matters for performance and memory usage, and how to avoid common pitfalls."
 toc: true

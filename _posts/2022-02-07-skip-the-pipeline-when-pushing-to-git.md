@@ -5,11 +5,11 @@ date: 2022-02-07 08:00:00 +0000
 last_modified_at: "2025-01-02"
 categories:
   - git
-  - ci-cd
+  - devops
   - productivity
 tags:
   - git
-  - ci-cd
+  - devops
   - pipelines
   - gitlab
   - github

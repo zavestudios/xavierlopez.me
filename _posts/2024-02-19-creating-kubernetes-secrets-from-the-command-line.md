@@ -4,13 +4,13 @@ title: "Creating Kubernetes Secrets from the Command Line (and When Not To)"
 date: 2024-02-19 08:00:00 +0000
 last_modified_at: "2025-01-06"
 categories:
-  - kubernetes
+  - devops
   - security
-  - operations
+  - devops
 tags:
   - kubectl
   - secrets
-  - kubernetes
+  - devops
   - configuration-management
   - security
 excerpt: "Practical notes on creating Kubernetes Secrets from the command line, including when kubectl create secret is appropriate—and when it becomes a liability."

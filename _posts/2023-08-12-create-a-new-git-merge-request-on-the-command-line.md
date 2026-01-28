@@ -6,12 +6,12 @@ last_modified_at: "2025-01-29"
 categories:
   - git
   - workflow
-  - automation
+  - devops
 tags:
   - git
   - merge-request
   - cli
-  - ci-cd
+  - devops
   - developer-workflow
 excerpt: "A practical guide to creating Git merge requests directly from the command line, streamlining review workflows without leaving the terminal."
 toc: true

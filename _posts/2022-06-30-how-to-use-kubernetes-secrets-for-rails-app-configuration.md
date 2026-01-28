@@ -4,11 +4,11 @@ title: "Using Kubernetes Secrets for Rails Application Configuration"
 date: 2022-06-30 09:05:00 +0000
 last_modified_at: "2025-01-14"
 categories:
-  - kubernetes
+  - devops
   - configuration-management
   - security
 tags:
-  - kubernetes
+  - devops
   - secrets
   - rails
   - configuration-management
