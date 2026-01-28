@@ -153,7 +153,7 @@ To completely remove everything:
 ```bash
 make clean                    # Clean project files
 docker-compose down -v        # Remove containers and volumes
-docker rmi jotspot-jekyll     # Remove the image
+docker rmi xavierlopez-jekyll     # Remove the image
 ```
 
 ## Advanced Usage
