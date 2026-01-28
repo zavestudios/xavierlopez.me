@@ -4,15 +4,15 @@ title: "AWS Tag Filtering Using Terraform Data Sources"
 date: 2022-06-23 09:00:00 +0000
 last_modified_at: "2025-02-12"
 categories:
-  - infrastructure
-  - aws
-  - infrastructure
+  - devops
+  - devops
+  - devops
 tags:
-  - infrastructure
-  - aws
+  - devops
+  - devops
   - tagging
   - data-sources
-  - infrastructure
+  - devops
 excerpt: "How to use Terraform data sources to discover and filter AWS resources by tags, enabling dynamic and environment-aware infrastructure configurations."
 toc: true
 toc_sticky: true
