@@ -4,8 +4,8 @@ date: 2023-12-05 10:50:00 +0000
 last_modified_at: "2025-04-03"
 categories:
   - linux
-  - operations
-  - platform
+  - devops
+  - devops
 tags:
   - linux
   - troubleshooting

@@ -5,15 +5,14 @@ date: 2026-01-06 08:00:00 +0000
 last_modified_at: "2026-01-06"
 categories:
   - databases
-  - operations
-  - platform
+  - devops
+  - devops
 tags:
   - postgresql
   - multi-tenant
   - databases
-  - operations
-  - rds
-  - platform-engineering
+  - devops
+  - rds-engineering
 excerpt: "Operational guardrails needed to safely run PostgreSQL in a multi-tenant configuration, including connection limits, timeouts, lock protection, shared resource considerations, and how these are enforced and tested in the multi-tenant Postgres project."
 toc: true
 toc_sticky: true

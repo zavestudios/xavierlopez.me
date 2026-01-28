@@ -6,7 +6,7 @@ last_modified_at: "2025-01-01"
 categories:
   - linux
   - systems
-  - operations
+  - devops
 tags:
   - systemd
   - systemctl

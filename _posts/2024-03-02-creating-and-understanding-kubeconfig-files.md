@@ -4,11 +4,11 @@ title: "Creating and Understanding kubeconfig Files"
 date: 2024-03-02 08:00:00 +0000
 last_modified_at: "2025-01-10"
 categories:
-  - kubernetes
+  - devops
   - security
-  - operations
+  - devops
 tags:
-  - kubernetes
+  - devops
   - kubeconfig
   - kubectl
   - authentication

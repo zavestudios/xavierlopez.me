@@ -5,8 +5,7 @@ date: 2022-02-04 07:30:00 +0000
 last_modified_at: "2025-01-01"
 categories:
   - rails
-  - operations
-  - operations
+  - devops
 tags:
   - unicorn
   - rails

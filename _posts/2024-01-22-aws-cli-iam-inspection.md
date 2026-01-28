@@ -12,7 +12,7 @@ tags:
   - security
   - security
   - cloud
-  - operations
+  - devops
 excerpt: "Practical AWS CLI commands for inspecting IAM account state, users, groups, roles, and attached policies without relying on the AWS console."
 toc: true
 toc_sticky: true

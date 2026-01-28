@@ -4,14 +4,14 @@ title: "Building a Production-Grade k3s Cluster on Spare Capacity"
 date: 2026-01-27 12:00:00 +0000
 last_modified_at: "2026-01-27"
 categories:
-  - platform
+  - devops
 tags:
-  - kubernetes
+  - devops
   - k3s
   - kvm
   - libvirt
   - infrastructure
-  - automation
+  - devops
 excerpt: "I built a 3-node k3s cluster that deploys automatically in 5 minutes using Terraform and cloud-init. Here's how it works and what I learned."
 toc: true
 toc_sticky: true

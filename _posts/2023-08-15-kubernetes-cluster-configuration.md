@@ -4,16 +4,16 @@ title: "Kubernetes Cluster Configuration: Decisions That Shape Everything"
 date: 2023-08-15 09:30:00 +0000
 last_modified_at: "2025-05-06"
 categories:
-  - kubernetes
-  - platform
+  - devops
+  - devops
   - systems
 tags:
-  - kubernetes
+  - devops
   - cluster-configuration
   - control-plane
   - networking
   - security
-  - operations
+  - devops
 excerpt: "A practical guide to Kubernetes cluster configuration, focusing on the early decisions that determine security, reliability, and operational sanity."
 toc: true
 toc_sticky: true

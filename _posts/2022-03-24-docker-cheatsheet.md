@@ -4,12 +4,11 @@ title: "Docker Cheatsheet: Practical Commands for Daily Use"
 date: 2022-03-24 08:05:00 +0000
 last_modified_at: "2025-01-12"
 categories:
-  - containers
+  - devops
   - cli
   - productivity
 tags:
-  - containers
-  - containers
+  - devops
   - images
   - networking
   - troubleshooting
