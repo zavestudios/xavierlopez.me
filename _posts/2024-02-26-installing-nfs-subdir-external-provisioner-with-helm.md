@@ -9,7 +9,7 @@ categories:
   - platform
 tags:
   - kubernetes
-  - helm
+  - kubernetes
   - nfs
   - storageclass
   - persistent-volumes

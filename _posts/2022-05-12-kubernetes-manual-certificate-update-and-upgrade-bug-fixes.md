@@ -9,7 +9,7 @@ categories:
   - security
 tags:
   - kubernetes
-  - certificates
+  - security
   - pki
   - upgrades
   - troubleshooting

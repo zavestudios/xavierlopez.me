@@ -6,7 +6,7 @@ last_modified_at: "2025-01-13"
 categories:
   - tooling
   - operations
-  - developer-experience
+  - tooling
 tags:
   - homebrew
   - openssl

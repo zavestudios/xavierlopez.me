@@ -5,11 +5,11 @@ date: 2023-08-22 08:00:00 +0000
 last_modified_at: "2024-12-14"
 categories:
   - aws
-  - iam
+  - security
   - cli
 tags:
   - aws-cli
-  - iam
+  - security
   - security
   - cloud
   - operations

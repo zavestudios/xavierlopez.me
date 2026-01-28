@@ -4,14 +4,14 @@ title: "Understanding Byte Size Units (Without Overthinking Them)"
 date: 2024-02-28 08:00:00 +0000
 last_modified_at: "2025-01-09"
 categories:
-  - fundamentals
+  - systems
   - systems
   - storage
 tags:
   - bytes
   - storage
   - memory
-  - fundamentals
+  - systems
   - systems
 excerpt: "A practical explanation of byte size units—KB vs KiB, MB vs MiB—and why the distinction matters in real systems."
 toc: true

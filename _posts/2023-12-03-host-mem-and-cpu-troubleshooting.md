@@ -9,7 +9,7 @@ categories:
 tags:
   - cpu
   - memory
-  - performance
+  - operations
   - sysstat
   - observability
 excerpt: "A practical, host-level troubleshooting guide for diagnosing CPU and memory pressure using sysstat, procfs, and core Linux tools."

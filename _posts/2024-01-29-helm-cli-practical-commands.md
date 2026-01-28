@@ -5,10 +5,10 @@ date: 2024-01-29 08:00:00 +0000
 last_modified_at: "2025-01-02"
 categories:
   - kubernetes
-  - helm
+  - kubernetes
   - cli
 tags:
-  - helm
+  - kubernetes
   - kubernetes
   - package-management
   - operations

@@ -9,7 +9,7 @@ categories:
   - configuration-management
 tags:
   - rails
-  - ruby
+  - development
   - database
   - configuration-management
   - api
