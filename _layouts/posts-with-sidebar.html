@@ -26,11 +26,10 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
-        <ul class="taxonomy__index">
-          {% for post in site.posts %}
-            {% include archive-single.html %}
-          {% endfor %}
-        </ul>
+        {% assign entries = site.posts %}
+        {% for post in entries %}
+          {% include archive-single.html type="list" %}
+        {% endfor %}
       </section>
     </div>
   </article>
