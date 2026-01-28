@@ -1,0 +1,19 @@
+<nav class="toc">
+  <header><h4 class="nav__title"><i class="fas fa-folder"></i> Categories</h4></header>
+  <ul class="toc__menu">
+  {% assign categories_sorted = site.categories | sort %}
+  {% for category in categories_sorted %}
+    <li><a href="/categories/#{{ category[0] | slugify }}">{{ category[0] }} <span class="taxonomy__count">({{ category[1].size }})</span></a></li>
+  {% endfor %}
+  </ul>
+</nav>
+
+<nav class="toc" style="margin-top: 2em;">
+  <header><h4 class="nav__title"><i class="fas fa-tags"></i> Tags</h4></header>
+  <ul class="toc__menu">
+  {% assign tags_sorted = site.tags | sort %}
+  {% for tag in tags_sorted %}
+    <li><a href="/tags/#{{ tag[0] | slugify }}">{{ tag[0] }} <span class="taxonomy__count">({{ tag[1].size }})</span></a></li>
+  {% endfor %}
+  </ul>
+</nav>
