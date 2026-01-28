@@ -2,7 +2,7 @@
 layout: single
 title: "Building a Production-Grade k3s Cluster on Spare Capacity"
 date: 2026-01-27 12:00:00 +0000
-last_modified_at: 2026-01-27
+last_modified_at: "2026-01-27"
 categories:
   - Platform Engineering
 tags:
