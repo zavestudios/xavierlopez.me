@@ -12,7 +12,7 @@ tags:
   - security
   - pki
   - upgrades
-  - troubleshooting
+  - development
 excerpt: "How to manually update Kubernetes certificates, why certificate issues often surface during upgrades, and how to safely recover clusters when automation falls short."
 toc: true
 toc_sticky: true

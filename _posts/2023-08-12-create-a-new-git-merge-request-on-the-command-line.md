@@ -4,13 +4,13 @@ title: "Create a New Git Merge Request from the Command Line"
 date: 2023-08-12 09:15:00 +0000
 last_modified_at: "2025-01-29"
 categories:
-  - git
-  - workflow
+  - development
+  - development
   - devops
 tags:
-  - git
+  - development
   - merge-request
-  - cli
+  - development
   - devops
   - developer-workflow
 excerpt: "A practical guide to creating Git merge requests directly from the command line, streamlining review workflows without leaving the terminal."

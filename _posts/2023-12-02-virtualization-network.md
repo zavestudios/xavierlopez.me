@@ -11,7 +11,7 @@ tags:
   - networking
   - hypervisor
   - virtual-switching
-  - troubleshooting
+  - development
 excerpt: "An overview of how networking works in virtualized environments, what gets abstracted, and why troubleshooting virtual networks is often harder than physical ones."
 toc: true
 toc_sticky: true

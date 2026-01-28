@@ -8,9 +8,9 @@ categories:
   - devops
 tags:
   - linux
-  - troubleshooting
+  - development
   - observability
-  - cli
+  - development
 excerpt: "A small but high-leverage set of Linux commands platform engineers reach for when debugging performance, identity, and system state."
 toc: true
 toc_sticky: true

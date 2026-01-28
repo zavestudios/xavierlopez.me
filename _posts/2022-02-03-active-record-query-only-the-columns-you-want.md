@@ -4,11 +4,11 @@ title: "Active Record: Query Only the Columns You Want"
 date: 2022-02-03 07:15:00 +0000
 last_modified_at: "2025-01-01"
 categories:
-  - rails
+  - development
   - databases
   - devops
 tags:
-  - rails
+  - development
   - activerecord
   - sql
   - devops

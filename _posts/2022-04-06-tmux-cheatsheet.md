@@ -4,7 +4,7 @@ title: "tmux Cheatsheet: Practical Commands for Daily Use"
 date: 2022-04-06 08:20:00 +0000
 last_modified_at: "2025-01-16"
 categories:
-  - cli
+  - development
   - productivity
 tags:
   - tmux

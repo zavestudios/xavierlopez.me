@@ -6,7 +6,7 @@ last_modified_at: "2024-12-14"
 categories:
   - devops
   - security
-  - cli
+  - development
 tags:
   - aws-cli
   - security

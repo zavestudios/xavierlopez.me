@@ -4,9 +4,9 @@ title: "Recovering from Toolchain Drift on macOS"
 date: 2024-03-11 08:00:00 +0000
 last_modified_at: "2025-01-13"
 categories:
-  - tooling
+  - development
   - devops
-  - tooling
+  - development
 tags:
   - homebrew
   - openssl

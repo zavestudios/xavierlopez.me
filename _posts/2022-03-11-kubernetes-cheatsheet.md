@@ -5,13 +5,13 @@ date: 2022-03-11 08:00:00 +0000
 last_modified_at: "2025-01-10"
 categories:
   - devops
-  - cli
+  - development
   - productivity
 tags:
   - devops
   - kubectl
   - devops
-  - troubleshooting
+  - development
   - devops
 excerpt: "A practical Kubernetes cheatsheet focused on kubectl commands and patterns you actually use when operating clusters and debugging workloads."
 toc: true

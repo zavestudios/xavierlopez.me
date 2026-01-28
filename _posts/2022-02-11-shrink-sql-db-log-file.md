@@ -6,7 +6,7 @@ last_modified_at: "2025-01-03"
 categories:
   - databases
   - devops
-  - troubleshooting
+  - development
 tags:
   - sql
   - database

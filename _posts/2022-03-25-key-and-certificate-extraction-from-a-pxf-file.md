@@ -6,7 +6,7 @@ last_modified_at: "2025-01-20"
 categories:
   - security
   - security
-  - cli
+  - development
 tags:
   - pfx
   - pkcs12

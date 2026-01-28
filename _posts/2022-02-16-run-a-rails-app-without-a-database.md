@@ -4,11 +4,11 @@ title: "Run a Rails App Without a Database"
 date: 2022-02-16 08:00:00 +0000
 last_modified_at: "2025-01-06"
 categories:
-  - rails
+  - development
   - development
   - devops
 tags:
-  - rails
+  - development
   - development
   - database
   - devops

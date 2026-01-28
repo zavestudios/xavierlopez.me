@@ -5,7 +5,7 @@ date: 2022-02-28 08:00:00 +0000
 last_modified_at: "2025-01-08"
 categories:
   - development
-  - cli
+  - development
   - productivity
 tags:
   - rvm

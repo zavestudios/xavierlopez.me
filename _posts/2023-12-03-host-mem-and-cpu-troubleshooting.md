@@ -5,7 +5,7 @@ last_modified_at: "2025-01-11"
 categories:
   - linux
   - systems
-  - troubleshooting
+  - development
 tags:
   - cpu
   - memory

@@ -5,13 +5,13 @@ date: 2022-03-24 08:05:00 +0000
 last_modified_at: "2025-01-12"
 categories:
   - devops
-  - cli
+  - development
   - productivity
 tags:
   - devops
   - images
   - networking
-  - troubleshooting
+  - development
 excerpt: "A practical Docker cheatsheet focused on the commands and patterns you actually use when building, running, and debugging containers."
 toc: true
 toc_sticky: true

@@ -6,7 +6,7 @@ last_modified_at: "2025-01-07"
 categories:
   - devops
   - devops
-  - troubleshooting
+  - development
 tags:
   - devops
   - namespaces
