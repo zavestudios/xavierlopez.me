@@ -1,7 +1,7 @@
 services:
   jekyll:
     build: .
-    container_name: jotspot-jekyll
+    container_name: xavierlopez-jekyll
     ports:
       - "4000:4000"
       - "35729:35729"

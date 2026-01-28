@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Jekyll-based static site blog focused on SRE/DevOps topics. The site uses the Minima theme and is hosted via GitHub Pages at `eckslopez/jotspot`.
+This is a Jekyll-based static site blog focused on SRE/DevOps topics. The site uses the Minima theme and is hosted via GitHub Pages at `eckslopez/xavierlopez.me`.
 
 ## Development Commands
 
