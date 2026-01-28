@@ -11,7 +11,7 @@ tags:
   - kubectl
   - secrets
   - kubernetes
-  - configuration
+  - configuration-management
   - security
 excerpt: "Practical notes on creating Kubernetes Secrets from the command line, including when kubectl create secret is appropriate—and when it becomes a liability."
 toc: true

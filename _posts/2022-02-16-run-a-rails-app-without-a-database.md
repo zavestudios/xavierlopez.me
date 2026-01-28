@@ -6,12 +6,12 @@ last_modified_at: "2025-01-06"
 categories:
   - rails
   - development
-  - configuration
+  - configuration-management
 tags:
   - rails
   - ruby
   - database
-  - configuration
+  - configuration-management
   - api
 excerpt: "How to run a Rails application without a database, why you might want to, and what configuration changes are required to avoid unnecessary coupling."
 toc: true

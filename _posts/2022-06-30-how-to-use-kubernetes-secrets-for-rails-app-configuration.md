@@ -5,13 +5,13 @@ date: 2022-06-30 09:05:00 +0000
 last_modified_at: "2025-01-14"
 categories:
   - kubernetes
-  - application-configuration
+  - configuration-management
   - security
 tags:
   - kubernetes
   - secrets
   - rails
-  - configuration
+  - configuration-management
   - twelve-factor
 excerpt: "How to configure a Rails application using Kubernetes Secrets, why this pattern works well in containerized environments, and what pitfalls to avoid."
 toc: true

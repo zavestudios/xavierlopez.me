@@ -8,7 +8,7 @@ categories:
   - cli
   - productivity
 tags:
-  - docker
+  - containers
   - containers
   - images
   - networking

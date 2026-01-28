@@ -4,11 +4,11 @@ title: "AWS Tag Filtering Using Terraform Data Sources"
 date: 2022-06-23 09:00:00 +0000
 last_modified_at: "2025-02-12"
 categories:
-  - terraform
+  - infrastructure
   - aws
-  - infrastructure-as-code
+  - infrastructure
 tags:
-  - terraform
+  - infrastructure
   - aws
   - tagging
   - data-sources

@@ -8,7 +8,7 @@ categories:
   - productivity
   - tooling
 tags:
-  - docker
+  - containers
   - aliases
   - cli
   - developer-productivity
