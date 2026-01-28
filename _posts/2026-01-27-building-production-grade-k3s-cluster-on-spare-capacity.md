@@ -10,7 +10,7 @@ tags:
   - k3s
   - kvm
   - libvirt
-  - infrastructure
+  - devops
   - devops
 excerpt: "I built a 3-node k3s cluster that deploys automatically in 5 minutes using Terraform and cloud-init. Here's how it works and what I learned."
 toc: true
