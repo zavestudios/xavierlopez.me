@@ -6,7 +6,7 @@ last_modified_at: "2025-01-02"
 categories:
   - devops
   - storage
-  - architecture
+  - devops
 tags:
   - devops
   - persistent-volumes

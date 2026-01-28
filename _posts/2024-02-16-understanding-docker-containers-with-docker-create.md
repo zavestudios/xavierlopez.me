@@ -5,7 +5,7 @@ date: 2024-02-16 08:00:00 +0000
 last_modified_at: "2025-01-05"
 categories:
   - devops
-  - architecture
+  - devops
 tags:
   - devops
   - docker-create
