@@ -5,12 +5,12 @@ date: 2024-03-08 08:00:00 +0000
 last_modified_at: "2025-01-12"
 categories:
   - databases
-  - operations
-  - platform
+  - devops
+  - devops
 tags:
   - postgresql
   - databases
-  - operations
+  - devops
   - storage
   - stateful-workloads
 excerpt: "Practical lessons about running PostgreSQL as a system: memory, storage, I/O, and why defaults and containers don’t remove operational responsibility."

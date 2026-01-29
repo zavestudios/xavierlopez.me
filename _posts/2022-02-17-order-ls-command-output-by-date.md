@@ -5,13 +5,13 @@ date: 2022-02-17 08:00:00 +0000
 last_modified_at: "2025-01-07"
 categories:
   - linux
-  - cli
+  - development
   - productivity
 tags:
   - ls
   - linux
   - filesystems
-  - troubleshooting
+  - development
 excerpt: "How to order `ls` output by date, what each time field represents, and which flags are most useful when investigating files and directories."
 toc: true
 toc_sticky: true

@@ -4,11 +4,11 @@ title: "Kubernetes ServiceAccount Tokens and CI/CD Authentication"
 date: 2024-03-05 08:00:00 +0000
 last_modified_at: "2025-01-11"
 categories:
-  - kubernetes
+  - devops
   - security
-  - ci-cd
+  - devops
 tags:
-  - kubernetes
+  - devops
   - serviceaccounts
   - authentication
   - kubeconfig

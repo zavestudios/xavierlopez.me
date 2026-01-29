@@ -4,15 +4,13 @@ title: "Understanding Docker Containers by Using docker create Explicitly"
 date: 2024-02-16 08:00:00 +0000
 last_modified_at: "2025-01-05"
 categories:
-  - containers
-  - docker
-  - architecture
+  - devops
+  - devops
 tags:
-  - docker
-  - containers
+  - devops
   - docker-create
   - container-runtime
-  - operations
+  - devops
 excerpt: "A practical mental model for understanding how Docker containers are configured by separating container definition from execution using docker create."
 toc: true
 toc_sticky: true

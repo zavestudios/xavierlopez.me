@@ -6,7 +6,7 @@ last_modified_at: "2025-01-04"
 categories:
   - linux
   - development
-  - troubleshooting
+  - development
 tags:
   - postgresql
   - libpq

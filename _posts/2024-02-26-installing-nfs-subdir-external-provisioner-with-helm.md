@@ -4,12 +4,11 @@ title: "Installing the NFS Subdir External Provisioner with Helm"
 date: 2024-02-26 08:00:00 +0000
 last_modified_at: "2025-01-08"
 categories:
-  - kubernetes
+  - devops
   - storage
-  - platform
+  - devops
 tags:
-  - kubernetes
-  - helm
+  - devops
   - nfs
   - storageclass
   - persistent-volumes

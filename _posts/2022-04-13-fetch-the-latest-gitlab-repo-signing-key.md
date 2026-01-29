@@ -6,7 +6,7 @@ last_modified_at: "2025-01-22"
 categories:
   - linux
   - security
-  - packaging
+  - systems
 tags:
   - gitlab
   - apt

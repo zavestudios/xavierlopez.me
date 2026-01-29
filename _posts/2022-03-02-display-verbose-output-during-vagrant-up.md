@@ -4,14 +4,14 @@ title: "Display Verbose Output During `vagrant up`"
 date: 2022-03-02 08:00:00 +0000
 last_modified_at: "2025-01-09"
 categories:
-  - virtualization
-  - cli
-  - troubleshooting
+  - devops
+  - development
+  - development
 tags:
   - vagrant
-  - virtualization
+  - devops
   - debugging
-  - cli
+  - development
 excerpt: "How to enable verbose output during `vagrant up`, why it’s useful for debugging provisioning issues, and when increased verbosity is worth the noise."
 toc: true
 toc_sticky: true

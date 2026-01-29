@@ -4,11 +4,11 @@ title: "How to Delete a Local and Remote Git Branch"
 date: 2022-02-06 08:00:00 +0000
 last_modified_at: "2025-01-01"
 categories:
-  - git
-  - cli
-  - workflow
+  - development
+  - development
+  - development
 tags:
-  - git
+  - development
   - branches
   - cleanup
   - version-control

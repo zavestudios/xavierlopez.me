@@ -5,12 +5,12 @@ date: 2022-03-25 08:10:00 +0000
 last_modified_at: "2025-01-20"
 categories:
   - security
-  - certificates
-  - cli
+  - security
+  - development
 tags:
   - pfx
   - pkcs12
-  - certificates
+  - security
   - openssl
   - tls
 excerpt: "How to extract private keys and certificates from a PFX (PKCS#12) file using OpenSSL, with an explanation of what’s inside the file and how to handle the output safely."

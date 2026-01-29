@@ -4,13 +4,13 @@ date: 2023-12-05 10:50:00 +0000
 last_modified_at: "2025-04-03"
 categories:
   - linux
-  - administration
-  - platform
+  - devops
+  - devops
 tags:
   - linux
-  - troubleshooting
+  - development
   - observability
-  - cli
+  - development
 excerpt: "A small but high-leverage set of Linux commands platform engineers reach for when debugging performance, identity, and system state."
 toc: true
 toc_sticky: true

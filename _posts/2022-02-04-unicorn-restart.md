@@ -4,12 +4,11 @@ title: "Restarting Unicorn Without Dropping Requests"
 date: 2022-02-04 07:30:00 +0000
 last_modified_at: "2025-01-01"
 categories:
-  - rails
-  - operations
-  - web-servers
+  - development
+  - devops
 tags:
   - unicorn
-  - rails
+  - development
   - process-management
   - zero-downtime
 excerpt: "How to restart a Unicorn-based Rails application safely, what signals Unicorn responds to, and how to avoid dropping requests during restarts."

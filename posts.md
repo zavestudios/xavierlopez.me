@@ -1,6 +1,6 @@
 ---
 title: "Blog Posts"
-layout: posts
+layout: posts-with-sidebar
 permalink: /posts/
-author_profile: true
+entries_layout: list
 ---

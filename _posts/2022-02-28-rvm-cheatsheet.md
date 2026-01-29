@@ -4,12 +4,12 @@ title: "RVM Cheatsheet: Practical Ruby Version Management"
 date: 2022-02-28 08:00:00 +0000
 last_modified_at: "2025-01-08"
 categories:
-  - ruby
-  - cli
+  - development
+  - development
   - productivity
 tags:
   - rvm
-  - ruby
+  - development
   - version-management
   - development
 excerpt: "A practical RVM cheatsheet covering the commands you actually use to install, switch, and manage Ruby versions and gemsets."

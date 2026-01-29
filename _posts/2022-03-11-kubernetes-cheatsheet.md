@@ -4,15 +4,15 @@ title: "Kubernetes Cheatsheet: Practical kubectl Commands"
 date: 2022-03-11 08:00:00 +0000
 last_modified_at: "2025-01-10"
 categories:
-  - kubernetes
-  - cli
+  - devops
+  - development
   - productivity
 tags:
-  - kubernetes
+  - devops
   - kubectl
-  - containers
-  - troubleshooting
-  - operations
+  - devops
+  - development
+  - devops
 excerpt: "A practical Kubernetes cheatsheet focused on kubectl commands and patterns you actually use when operating clusters and debugging workloads."
 toc: true
 toc_sticky: true

@@ -5,7 +5,7 @@ date: 2023-11-30 10:44:00 +0000
 last_modified_at: "2025-02-03"
 categories:
   - networking
-  - troubleshooting
+  - development
 tags:
   - networking
   - tcp-ip

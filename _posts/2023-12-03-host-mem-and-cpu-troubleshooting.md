@@ -5,11 +5,11 @@ last_modified_at: "2025-01-11"
 categories:
   - linux
   - systems
-  - troubleshooting
+  - development
 tags:
   - cpu
   - memory
-  - performance
+  - devops
   - sysstat
   - observability
 excerpt: "A practical, host-level troubleshooting guide for diagnosing CPU and memory pressure using sysstat, procfs, and core Linux tools."

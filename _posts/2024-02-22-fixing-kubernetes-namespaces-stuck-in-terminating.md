@@ -4,11 +4,11 @@ title: "Fixing Kubernetes Namespaces Stuck in Terminating"
 date: 2024-02-22 08:00:00 +0000
 last_modified_at: "2025-01-07"
 categories:
-  - kubernetes
-  - operations
-  - troubleshooting
+  - devops
+  - devops
+  - development
 tags:
-  - kubernetes
+  - devops
   - namespaces
   - finalizers
   - kubectl

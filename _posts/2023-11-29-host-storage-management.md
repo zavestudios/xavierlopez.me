@@ -11,8 +11,8 @@ tags:
   - storage
   - capacity-planning
   - filesystems
-  - performance
-  - troubleshooting
+  - devops
+  - development
 excerpt: "A practical guide to managing host-level storage, focusing on capacity, performance characteristics, and the failure modes engineers actually encounter in production."
 toc: true
 toc_sticky: true

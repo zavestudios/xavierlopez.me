@@ -4,13 +4,13 @@ title: "Docker CLI Aliases for Day-to-Day Work"
 date: 2024-02-12 08:00:00 +0000
 last_modified_at: "2025-01-04"
 categories:
-  - containers
+  - devops
   - productivity
-  - tooling
+  - development
 tags:
-  - docker
+  - devops
   - aliases
-  - cli
+  - development
   - developer-productivity
 excerpt: "A curated set of Docker CLI aliases that reduce friction during day-to-day container work, with context on how and when to use them."
 toc: true

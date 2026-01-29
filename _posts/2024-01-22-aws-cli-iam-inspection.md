@@ -4,15 +4,15 @@ title: "AWS CLI Notes: Inspecting IAM Accounts, Users, Groups, and Roles"
 date: 2023-08-22 08:00:00 +0000
 last_modified_at: "2024-12-14"
 categories:
-  - aws
-  - iam
-  - cli
+  - devops
+  - security
+  - development
 tags:
   - aws-cli
-  - iam
+  - security
   - security
   - cloud
-  - operations
+  - devops
 excerpt: "Practical AWS CLI commands for inspecting IAM account state, users, groups, roles, and attached policies without relying on the AWS console."
 toc: true
 toc_sticky: true

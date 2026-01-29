@@ -6,12 +6,12 @@ last_modified_at: "2025-01-01"
 categories:
   - linux
   - systems
-  - operations
+  - devops
 tags:
   - systemd
   - systemctl
   - services
-  - troubleshooting
+  - development
 excerpt: "Practical systemd commands and patterns for managing services, inspecting state, and troubleshooting issues on modern Linux systems."
 toc: true
 toc_sticky: true

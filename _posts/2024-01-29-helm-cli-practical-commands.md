@@ -4,14 +4,12 @@ title: "Helm CLI: Practical Command Notes"
 date: 2024-01-29 08:00:00 +0000
 last_modified_at: "2025-01-02"
 categories:
-  - kubernetes
-  - helm
-  - cli
+  - devops
+  - development
 tags:
-  - helm
-  - kubernetes
+  - devops
   - package-management
-  - operations
+  - devops
 excerpt: "A practical collection of Helm CLI commands for inspecting releases, managing charts, and debugging deployments in Kubernetes clusters."
 toc: true
 toc_sticky: true

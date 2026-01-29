@@ -4,14 +4,14 @@ title: "Active Record: Query Only the Columns You Want"
 date: 2022-02-03 07:15:00 +0000
 last_modified_at: "2025-01-01"
 categories:
-  - rails
+  - development
   - databases
-  - performance
+  - devops
 tags:
-  - rails
+  - development
   - activerecord
   - sql
-  - performance
+  - devops
   - optimization
 excerpt: "How to query only specific columns with Active Record, why it matters for performance and memory usage, and how to avoid common pitfalls."
 toc: true

@@ -4,11 +4,11 @@ title: "How NFS-Backed Persistent Volumes Actually Work in Kubernetes"
 date: 2024-02-05 08:00:00 +0000
 last_modified_at: "2025-01-02"
 categories:
-  - kubernetes
+  - devops
   - storage
-  - architecture
+  - devops
 tags:
-  - kubernetes
+  - devops
   - persistent-volumes
   - nfs
   - storageclass

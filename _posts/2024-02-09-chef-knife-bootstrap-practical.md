@@ -4,15 +4,15 @@ title: "Chef Knife Bootstrap: Practical Notes for Linux and Windows Nodes"
 date: 2024-02-09 08:00:00 +0000
 last_modified_at: "2025-01-03"
 categories:
-  - configuration-management
-  - automation
-  - operations
+  - devops
+  - devops
+  - devops
 tags:
   - chef
   - knife
   - bootstrap
-  - infrastructure
-  - configuration-management
+  - devops
+  - devops
 excerpt: "Practical notes and command patterns for bootstrapping Linux and Windows nodes with Chef using knife bootstrap, including legacy systems and policy-based workflows."
 toc: true
 toc_sticky: true

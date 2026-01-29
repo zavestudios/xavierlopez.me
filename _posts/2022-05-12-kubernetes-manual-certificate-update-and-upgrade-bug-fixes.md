@@ -4,15 +4,15 @@ title: "Kubernetes Manual Certificate Updates and Upgrade Bug Fixes"
 date: 2022-05-12 08:40:00 +0000
 last_modified_at: "2025-02-27"
 categories:
-  - kubernetes
-  - operations
+  - devops
+  - devops
   - security
 tags:
-  - kubernetes
-  - certificates
+  - devops
+  - security
   - pki
   - upgrades
-  - troubleshooting
+  - development
 excerpt: "How to manually update Kubernetes certificates, why certificate issues often surface during upgrades, and how to safely recover clusters when automation falls short."
 toc: true
 toc_sticky: true
