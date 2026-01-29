@@ -7,12 +7,6 @@ categories:
   - linux
   - development
   - development
-tags:
-  - postgresql
-  - libpq
-  - headers
-  - compilation
-  - native-extensions
 excerpt: "How to resolve errors related to missing libpq-fe.h headers when compiling PostgreSQL clients or native extensions, and why this issue occurs."
 toc: true
 toc_sticky: true

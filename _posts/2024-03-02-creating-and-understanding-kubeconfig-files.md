@@ -7,12 +7,6 @@ categories:
   - devops
   - security
   - devops
-tags:
-  - devops
-  - kubeconfig
-  - kubectl
-  - authentication
-  - access-control
 excerpt: "A practical mental model for creating and understanding kubeconfig files, including clusters, users, contexts, and how kubectl actually authenticates."
 toc: true
 toc_sticky: true

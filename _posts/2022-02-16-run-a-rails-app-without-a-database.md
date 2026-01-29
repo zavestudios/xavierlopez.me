@@ -7,12 +7,6 @@ categories:
   - development
   - development
   - devops
-tags:
-  - development
-  - development
-  - database
-  - devops
-  - api
 excerpt: "How to run a Rails application without a database, why you might want to, and what configuration changes are required to avoid unnecessary coupling."
 toc: true
 toc_sticky: true

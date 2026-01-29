@@ -6,10 +6,6 @@ last_modified_at: "2025-01-02"
 categories:
   - devops
   - development
-tags:
-  - devops
-  - package-management
-  - devops
 excerpt: "A practical collection of Helm CLI commands for inspecting releases, managing charts, and debugging deployments in Kubernetes clusters."
 toc: true
 toc_sticky: true

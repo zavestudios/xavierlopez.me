@@ -7,12 +7,6 @@ categories:
   - linux
   - security
   - systems
-tags:
-  - gitlab
-  - apt
-  - gpg
-  - repository-signing
-  - supply-chain
 excerpt: "How to fetch and install the latest GitLab package repository signing key, why this matters for secure package installation, and how to avoid common APT key pitfalls."
 toc: true
 toc_sticky: true

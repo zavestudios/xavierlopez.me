@@ -7,11 +7,6 @@ categories:
   - devops
   - storage
   - devops
-tags:
-  - devops
-  - nfs
-  - storageclass
-  - persistent-volumes
 excerpt: "How to install and reason about the NFS Subdir External Provisioner using Helm, enabling dynamic NFS-backed Persistent Volumes in Kubernetes."
 toc: true
 toc_sticky: true

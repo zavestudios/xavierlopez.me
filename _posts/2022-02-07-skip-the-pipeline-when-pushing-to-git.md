@@ -7,12 +7,6 @@ categories:
   - development
   - devops
   - productivity
-tags:
-  - development
-  - devops
-  - pipelines
-  - gitlab
-  - github
 excerpt: "How to intentionally skip CI/CD pipelines when pushing to Git, when it’s appropriate to do so, and how to avoid accidental misuse."
 toc: true
 toc_sticky: true

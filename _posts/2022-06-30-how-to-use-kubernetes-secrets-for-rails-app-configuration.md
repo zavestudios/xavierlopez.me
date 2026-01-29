@@ -7,12 +7,6 @@ categories:
   - devops
   - devops
   - security
-tags:
-  - devops
-  - secrets
-  - development
-  - devops
-  - twelve-factor
 excerpt: "How to configure a Rails application using Kubernetes Secrets, why this pattern works well in containerized environments, and what pitfalls to avoid."
 toc: true
 toc_sticky: true

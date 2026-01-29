@@ -6,12 +6,6 @@ last_modified_at: "2025-01-18"
 categories:
   - development
   - productivity
-tags:
-  - fzf
-  - terminal
-  - bash
-  - zsh
-  - developer-tools
 excerpt: "Three practical fzf patterns that turn common terminal tasks—finding files, commands, and processes—into fast, interactive workflows."
 toc: true
 toc_sticky: true

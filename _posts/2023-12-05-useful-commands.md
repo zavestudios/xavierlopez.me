@@ -6,11 +6,6 @@ categories:
   - linux
   - devops
   - devops
-tags:
-  - linux
-  - development
-  - observability
-  - development
 excerpt: "A small but high-leverage set of Linux commands platform engineers reach for when debugging performance, identity, and system state."
 toc: true
 toc_sticky: true

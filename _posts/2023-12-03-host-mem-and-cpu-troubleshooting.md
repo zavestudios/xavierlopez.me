@@ -6,12 +6,6 @@ categories:
   - linux
   - systems
   - development
-tags:
-  - cpu
-  - memory
-  - devops
-  - sysstat
-  - observability
 excerpt: "A practical, host-level troubleshooting guide for diagnosing CPU and memory pressure using sysstat, procfs, and core Linux tools."
 toc: true
 toc_sticky: true

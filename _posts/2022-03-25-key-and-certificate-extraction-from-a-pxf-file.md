@@ -7,12 +7,6 @@ categories:
   - security
   - security
   - development
-tags:
-  - pfx
-  - pkcs12
-  - security
-  - openssl
-  - tls
 excerpt: "How to extract private keys and certificates from a PFX (PKCS#12) file using OpenSSL, with an explanation of what’s inside the file and how to handle the output safely."
 toc: true
 toc_sticky: true

@@ -6,11 +6,6 @@ last_modified_at: "2025-01-01"
 categories:
   - development
   - devops
-tags:
-  - unicorn
-  - development
-  - process-management
-  - zero-downtime
 excerpt: "How to restart a Unicorn-based Rails application safely, what signals Unicorn responds to, and how to avoid dropping requests during restarts."
 toc: true
 toc_sticky: true

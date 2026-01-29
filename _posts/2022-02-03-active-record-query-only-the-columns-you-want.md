@@ -7,12 +7,6 @@ categories:
   - development
   - databases
   - devops
-tags:
-  - development
-  - activerecord
-  - sql
-  - devops
-  - optimization
 excerpt: "How to query only specific columns with Active Record, why it matters for performance and memory usage, and how to avoid common pitfalls."
 toc: true
 toc_sticky: true

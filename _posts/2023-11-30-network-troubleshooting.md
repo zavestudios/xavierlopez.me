@@ -6,12 +6,6 @@ last_modified_at: "2025-02-03"
 categories:
   - networking
   - development
-tags:
-  - networking
-  - tcp-ip
-  - dns
-  - latency
-  - packet-loss
 excerpt: "A step-by-step approach to diagnosing network problems, focusing on isolating failure domains and validating assumptions layer by layer."
 toc: true
 toc_sticky: true

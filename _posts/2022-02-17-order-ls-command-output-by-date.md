@@ -7,11 +7,6 @@ categories:
   - linux
   - development
   - productivity
-tags:
-  - ls
-  - linux
-  - filesystems
-  - development
 excerpt: "How to order `ls` output by date, what each time field represents, and which flags are most useful when investigating files and directories."
 toc: true
 toc_sticky: true

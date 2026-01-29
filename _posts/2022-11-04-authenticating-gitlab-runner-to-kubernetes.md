@@ -7,13 +7,6 @@ categories:
   - devops
   - devops
   - security
-tags:
-  - gitlab
-  - gitlab-runner
-  - devops
-  - authentication
-  - rbac
-  - service-accounts
 excerpt: "How GitLab Runner authenticates to Kubernetes, the security implications of each method, and how to choose the right approach for production clusters."
 toc: true
 toc_sticky: true

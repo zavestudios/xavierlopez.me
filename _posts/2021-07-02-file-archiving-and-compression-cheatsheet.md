@@ -7,12 +7,6 @@ categories:
   - linux
   - development
   - productivity
-tags:
-  - tar
-  - gzip
-  - zip
-  - compression
-  - archives
 excerpt: "A practical cheatsheet for creating, extracting, and inspecting compressed archives using common Unix tools."
 toc: true
 toc_sticky: true

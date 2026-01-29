@@ -7,12 +7,6 @@ categories:
   - development
   - development
   - devops
-tags:
-  - development
-  - merge-request
-  - development
-  - devops
-  - developer-workflow
 excerpt: "A practical guide to creating Git merge requests directly from the command line, streamlining review workflows without leaving the terminal."
 toc: true
 toc_sticky: true

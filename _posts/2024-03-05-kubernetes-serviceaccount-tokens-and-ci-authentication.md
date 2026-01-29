@@ -7,12 +7,6 @@ categories:
   - devops
   - security
   - devops
-tags:
-  - devops
-  - serviceaccounts
-  - authentication
-  - kubeconfig
-  - cicd
 excerpt: "A practical explanation of how Kubernetes ServiceAccount authentication works for CI/CD systems, what changed in Kubernetes 1.24, and why previously working pipelines broke."
 toc: true
 toc_sticky: true

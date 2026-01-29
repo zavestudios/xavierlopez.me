@@ -7,13 +7,6 @@ categories:
   - devops
   - devops
   - systems
-tags:
-  - devops
-  - cluster-configuration
-  - control-plane
-  - networking
-  - security
-  - devops
 excerpt: "A practical guide to Kubernetes cluster configuration, focusing on the early decisions that determine security, reliability, and operational sanity."
 toc: true
 toc_sticky: true

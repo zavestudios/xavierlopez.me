@@ -6,11 +6,6 @@ last_modified_at: "2025-01-05"
 categories:
   - devops
   - devops
-tags:
-  - devops
-  - docker-create
-  - container-runtime
-  - devops
 excerpt: "A practical mental model for understanding how Docker containers are configured by separating container definition from execution using docker create."
 toc: true
 toc_sticky: true

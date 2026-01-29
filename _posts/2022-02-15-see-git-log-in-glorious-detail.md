@@ -7,11 +7,6 @@ categories:
   - development
   - development
   - productivity
-tags:
-  - development
-  - git-log
-  - version-control
-  - debugging
 excerpt: "How to view Git history in rich, readable detail using git log options that surface context, intent, and change impact."
 toc: true
 toc_sticky: true

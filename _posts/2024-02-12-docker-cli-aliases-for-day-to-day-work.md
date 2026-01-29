@@ -7,11 +7,6 @@ categories:
   - devops
   - productivity
   - development
-tags:
-  - devops
-  - aliases
-  - development
-  - developer-productivity
 excerpt: "A curated set of Docker CLI aliases that reduce friction during day-to-day container work, with context on how and when to use them."
 toc: true
 toc_sticky: true

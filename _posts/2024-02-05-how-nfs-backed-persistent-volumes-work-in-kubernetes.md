@@ -7,12 +7,6 @@ categories:
   - devops
   - storage
   - devops
-tags:
-  - devops
-  - persistent-volumes
-  - nfs
-  - storageclass
-  - stateful-workloads
 excerpt: "A practical mental model for understanding how NFS-backed Persistent Volumes, StorageClasses, and external provisioners work together in Kubernetes."
 toc: true
 toc_sticky: true

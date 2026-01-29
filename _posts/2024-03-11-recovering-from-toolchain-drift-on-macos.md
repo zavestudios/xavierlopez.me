@@ -7,12 +7,6 @@ categories:
   - development
   - devops
   - development
-tags:
-  - homebrew
-  - openssl
-  - toolchains
-  - reproducibility
-  - debugging
 excerpt: "A real-world example of toolchain drift on macOS, why it happens, and how pinning or downgrading dependencies can be a pragmatic recovery strategy."
 toc: true
 toc_sticky: true

@@ -7,11 +7,6 @@ categories:
   - development
   - productivity
   - development
-tags:
-  - vim
-  - sudo
-  - permissions
-  - linux
 excerpt: "How to save a file in Vim when you forgot to open it with sudo, why the trick works, and when you should avoid using it."
 toc: true
 toc_sticky: true

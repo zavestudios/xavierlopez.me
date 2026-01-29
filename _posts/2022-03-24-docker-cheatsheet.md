@@ -7,11 +7,6 @@ categories:
   - devops
   - development
   - productivity
-tags:
-  - devops
-  - images
-  - networking
-  - development
 excerpt: "A practical Docker cheatsheet focused on the commands and patterns you actually use when building, running, and debugging containers."
 toc: true
 toc_sticky: true

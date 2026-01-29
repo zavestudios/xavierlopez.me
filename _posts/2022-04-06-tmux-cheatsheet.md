@@ -6,12 +6,6 @@ last_modified_at: "2025-01-16"
 categories:
   - development
   - productivity
-tags:
-  - tmux
-  - terminal
-  - productivity
-  - ssh
-  - workflows
 excerpt: "A practical tmux cheatsheet focused on the commands and patterns you actually use when living in terminals and remote systems."
 toc: true
 toc_sticky: true

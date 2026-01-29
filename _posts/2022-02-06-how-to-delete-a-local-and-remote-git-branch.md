@@ -7,11 +7,6 @@ categories:
   - development
   - development
   - development
-tags:
-  - development
-  - branches
-  - cleanup
-  - version-control
 excerpt: "How to safely delete local and remote Git branches, what the commands actually do, and how to avoid common cleanup mistakes."
 toc: true
 toc_sticky: true

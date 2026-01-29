@@ -7,12 +7,6 @@ categories:
   - devops
   - development
   - productivity
-tags:
-  - devops
-  - kubectl
-  - devops
-  - development
-  - devops
 excerpt: "A practical Kubernetes cheatsheet focused on kubectl commands and patterns you actually use when operating clusters and debugging workloads."
 toc: true
 toc_sticky: true

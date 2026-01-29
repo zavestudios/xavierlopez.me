@@ -7,12 +7,6 @@ categories:
   - databases
   - devops
   - devops
-tags:
-  - postgresql
-  - multi-tenant
-  - databases
-  - devops
-  - rds-engineering
 excerpt: "Operational guardrails needed to safely run PostgreSQL in a multi-tenant configuration, including connection limits, timeouts, lock protection, shared resource considerations, and how these are enforced and tested in the multi-tenant Postgres project."
 toc: true
 toc_sticky: true

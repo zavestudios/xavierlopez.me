@@ -7,12 +7,6 @@ categories:
   - devops
   - devops
   - devops
-tags:
-  - chef
-  - knife
-  - bootstrap
-  - devops
-  - devops
 excerpt: "Practical notes and command patterns for bootstrapping Linux and Windows nodes with Chef using knife bootstrap, including legacy systems and policy-based workflows."
 toc: true
 toc_sticky: true

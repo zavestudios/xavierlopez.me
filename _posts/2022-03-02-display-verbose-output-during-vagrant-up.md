@@ -7,11 +7,6 @@ categories:
   - devops
   - development
   - development
-tags:
-  - vagrant
-  - devops
-  - debugging
-  - development
 excerpt: "How to enable verbose output during `vagrant up`, why it’s useful for debugging provisioning issues, and when increased verbosity is worth the noise."
 toc: true
 toc_sticky: true

@@ -7,12 +7,6 @@ categories:
   - databases
   - devops
   - devops
-tags:
-  - postgresql
-  - databases
-  - devops
-  - storage
-  - stateful-workloads
 excerpt: "Practical lessons about running PostgreSQL as a system: memory, storage, I/O, and why defaults and containers don’t remove operational responsibility."
 toc: true
 toc_sticky: true

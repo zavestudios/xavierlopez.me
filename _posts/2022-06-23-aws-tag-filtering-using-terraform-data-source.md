@@ -7,12 +7,6 @@ categories:
   - devops
   - devops
   - devops
-tags:
-  - devops
-  - devops
-  - tagging
-  - data-sources
-  - devops
 excerpt: "How to use Terraform data sources to discover and filter AWS resources by tags, enabling dynamic and environment-aware infrastructure configurations."
 toc: true
 toc_sticky: true

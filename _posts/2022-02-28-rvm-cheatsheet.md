@@ -7,11 +7,6 @@ categories:
   - development
   - development
   - productivity
-tags:
-  - rvm
-  - development
-  - version-management
-  - development
 excerpt: "A practical RVM cheatsheet covering the commands you actually use to install, switch, and manage Ruby versions and gemsets."
 toc: true
 toc_sticky: true

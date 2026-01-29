@@ -7,12 +7,6 @@ categories:
   - databases
   - devops
   - development
-tags:
-  - sql
-  - database
-  - transaction-log
-  - maintenance
-  - devops
 excerpt: "How to safely shrink a SQL database transaction log file, when it’s appropriate to do so, and why indiscriminate shrinking often causes more harm than good."
 toc: true
 toc_sticky: true

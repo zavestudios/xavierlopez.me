@@ -7,12 +7,6 @@ categories:
   - devops
   - devops
   - development
-tags:
-  - devops
-  - namespaces
-  - finalizers
-  - kubectl
-  - day-2-operations
 excerpt: "A practical explanation of why Kubernetes namespaces get stuck in Terminating and how to safely resolve the issue by understanding and managing finalizers."
 toc: true
 toc_sticky: true

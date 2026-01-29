@@ -7,12 +7,6 @@ categories:
   - systems
   - systems
   - storage
-tags:
-  - bytes
-  - storage
-  - memory
-  - systems
-  - systems
 excerpt: "A practical explanation of byte size units—KB vs KiB, MB vs MiB—and why the distinction matters in real systems."
 toc: true
 toc_sticky: true

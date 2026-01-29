@@ -6,12 +6,6 @@ last_modified_at: "2025-01-15"
 categories:
   - development
   - productivity
-tags:
-  - vim
-  - editor
-  - terminal
-  - productivity
-  - workflows
 excerpt: "A practical Vim cheatsheet focused on the commands and patterns most useful for everyday editing in terminal-based workflows."
 toc: true
 toc_sticky: true

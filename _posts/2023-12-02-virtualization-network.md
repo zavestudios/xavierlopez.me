@@ -6,12 +6,6 @@ last_modified_at: "2025-01-07"
 categories:
   - devops
   - networking
-tags:
-  - devops
-  - networking
-  - hypervisor
-  - virtual-switching
-  - development
 excerpt: "An overview of how networking works in virtualized environments, what gets abstracted, and why troubleshooting virtual networks is often harder than physical ones."
 toc: true
 toc_sticky: true
