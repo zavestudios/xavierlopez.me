@@ -10,6 +10,16 @@ The blog is intentionally written for platform engineers and adjacent roles (SRE
 - CI guardrails are in place (build, lint, link checks, front matter validation, security scan).
 - The blog is “done for now” in the sense that it is stable and publishable.
 
+## Part of ZaveStudios Platform
+
+This application runs as a tenant on the [ZaveStudios multi-tenant platform](link).
+
+**Platform integration:**
+- Namespace: `<app-name>` (isolated Kubernetes namespace)
+- Database: `db_<app-name>` tenant in [pg-multitenant](link)
+- Deployment: ArgoCD GitOps via [kubernetes-platform-infrastructure](link)
+- Observability: Shared Prometheus/Grafana
+
 ## Next Actions (Backlog)
 
 ### Phase 1 — Light curation (no new writing required)
