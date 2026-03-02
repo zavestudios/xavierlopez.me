@@ -1,6 +1,6 @@
 ---
-permalink: /about/
-title: "Professional Summary"
+permalink: /resume/
+title: "Resume"
 layout: single
 author_profile: true
 ---

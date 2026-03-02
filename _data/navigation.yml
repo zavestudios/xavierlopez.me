@@ -1,9 +1,13 @@
 main:
-  - title: "Blog"
-    url: /posts/
-  - title: "Projects"
-    url: /projects/
-  - title: "Industry Notes"
-    url: /industry-notes/
+  - title: "Work"
+    url: /work/
+  - title: "Writing"
+    url: /writing/
+  - title: "Systems"
+    url: /systems/
+  - title: "Lab"
+    url: /lab/
+  - title: "Cheatsheets"
+    url: /cheatsheets/
   - title: "Resume"
-    url: /about/
+    url: /resume/

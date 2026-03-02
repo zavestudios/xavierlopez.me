@@ -1,24 +1,35 @@
 ---
 layout: single
 author_profile: true
-title: "Welcome"
+title: "Platform Engineer"
 ---
 
-Senior Platform Engineer specializing in Kubernetes, cloud infrastructure, and secure CI/CD pipelines. I build and support platforms that developers can be enthusiastic about.
+Specializing in Infrastructure as Product and Executable Architecture.
 
-[View My Resume →](/about/){: .btn .btn--primary}
+I build platforms that reduce infrastructure variance, encode governance structurally, and convert complexity into bounded declarative interfaces. The goal is developer velocity without operational chaos.
 
-## Recent Posts
+---
 
-{% for post in site.posts limit:3 %}
+## Current Focus
 
-### [{{ post.title }}]({{ post.url }})
+**ZaveStudios** — Reference implementation demonstrating contract-driven platform engineering. Tenants declare requirements in `zave.yaml`, the platform handles everything else. No infrastructure access required. No custom CI workflows. No guessing which manifest goes where.
 
-*{{ post.date | date: "%B %d, %Y" }}*
+Formation Phase: proving patterns work at reference scale before committing to full automation.
 
-{{ post.excerpt }}
+[View Systems →](/systems/){: .btn .btn--primary}
 
-[Read more →]({{ post.url }}){: .btn .btn--inverse}
-{% endfor %}
+---
 
-[View all posts →](/posts/){: .btn .btn--primary}
+## How I Think
+
+Platform engineering as organizational discipline, not tooling exercise. Delivery guarantees encoded into mechanics, not team-level heroics. Infrastructure portability through abstraction boundaries, not configuration management sprawl.
+
+[View Writing →](/writing/){: .btn .btn--primary}
+
+---
+
+## Professional Background
+
+10+ years building secure, reliable, cloud-native platforms across defense, federal, and commercial sectors. Kubernetes, GitOps, multi-tenant architecture, and platform-as-product thinking.
+
+[View Work →](/work/){: .btn .btn--primary}
