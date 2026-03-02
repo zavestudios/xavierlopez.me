@@ -13,6 +13,8 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ## Browse by Category
 
+{% if site.writing.size > 0 %}
+
 ### Platform Engineering
 {% assign platform_posts = site.writing | where: "category", "Platform Engineering" | sort: 'date' | reverse %}
 {% for post in platform_posts limit:5 %}
@@ -58,8 +60,16 @@ Articles focus on mental models, implementation analysis, and field notes from b
 [View all Data Systems posts →](/writing/data-systems/)
 {% endif %}
 
+{% else %}
+*Writing archive is being migrated. Check back soon.*
+{% endif %}
+
 ---
 
 ## All Posts
 
+{% if site.writing.size > 0 %}
 [View all posts chronologically →](/writing/all/)
+{% else %}
+*Content migration in progress.*
+{% endif %}

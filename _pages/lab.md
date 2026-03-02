@@ -17,6 +17,7 @@ Each entry documents hypothesis, context, approach, outcome, and lessons learned
 
 ## Current Experiments
 
+{% if site.lab.size > 0 %}
 {% assign experiments = site.lab | sort: 'date' | reverse %}
 {% for experiment in experiments %}
 ### [{{ experiment.title }}]({{ experiment.url }})
@@ -25,6 +26,9 @@ Each entry documents hypothesis, context, approach, outcome, and lessons learned
 {{ experiment.excerpt }}
 
 {% endfor %}
+{% else %}
+*No experiments yet. Check back soon.*
+{% endif %}
 
 ---
 

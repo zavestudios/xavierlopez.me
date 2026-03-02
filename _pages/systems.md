@@ -13,12 +13,16 @@ Each system page provides architectural narrative and links to canonical impleme
 
 ## Current Systems
 
+{% if site.systems.size > 0 %}
 {% for system in site.systems %}
 ### [{{ system.title }}]({{ system.url }})
 
 {{ system.excerpt }}
 
 {% endfor %}
+{% else %}
+*Systems documentation is being migrated. Check back soon.*
+{% endif %}
 
 ---
 
