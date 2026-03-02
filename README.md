@@ -2,6 +2,11 @@
 
 This repo contains the source for my personal engineering blog (Jekyll / Minimal Mistakes).
 
+**Repository Category:** `portfolio` (canonical classification in [REPO_TAXONOMY.md](https://github.com/zavestudios/platform-docs/blob/main/_platform/REPO_TAXONOMY.md))
+
+**Contract Governance:** This repository is a contract-governed portfolio workload.
+Canonical contract: [`zave.yaml`](./zave.yaml)
+
 The blog is intentionally written for platform engineers and adjacent roles (SRE, DevOps, security-minded infrastructure engineers). The style is “mental models first, implementation second.”
 
 ## Current Status
@@ -12,13 +17,13 @@ The blog is intentionally written for platform engineers and adjacent roles (SRE
 
 ## Part of ZaveStudios Platform
 
-This application runs as a tenant on the [ZaveStudios multi-tenant platform](link).
+This application is deployed as a contract-governed static workload on the ZaveStudios platform.
 
 **Platform integration:**
-- Namespace: `<app-name>` (isolated Kubernetes namespace)
-- Database: `db_<app-name>` tenant in [pg-multitenant](link)
-- Deployment: ArgoCD GitOps via [kubernetes-platform-infrastructure](link)
-- Observability: Shared Prometheus/Grafana
+- Runtime profile: `spec.runtime: static`
+- Exposure: `spec.exposure: public-http`
+- Delivery strategy: `spec.delivery: rolling`
+- Lifecycle authority: GitOps-managed deployment flow
 
 ## Next Actions (Backlog)
 
@@ -57,8 +62,11 @@ Guiding principles:
 - Content lives in `_posts/`.
 - Pages live in `_pages/` (or the site’s chosen pages dir).
 - Local dev:
-  - `bundle install`
-  - `bundle exec jekyll serve`
+  - `docker-compose up`
+
+Alternative host workflow (optional, not primary):
+- `bundle install`
+- `bundle exec jekyll serve`
 
 ## Conventions
 

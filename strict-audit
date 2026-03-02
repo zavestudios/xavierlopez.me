@@ -1,0 +1,34 @@
+# Strict Documentation Authority Audit
+
+Date: 2026-03-02
+Repository: `xavierlopez.me`
+Category (canonical): `portfolio` (from `platform-docs/_platform/REPO_TAXONOMY.md`)
+Overall Disposition: **Compliant (contract-governed portfolio workload)**
+
+## Scope Snapshot
+
+- `docs/` present: yes
+- `README.md` present: yes
+- `zave.yaml` present: yes
+- Authoritative governance source linked: yes (`platform-docs`)
+
+## Validation Points
+
+1. README explicitly reflects repository category (`portfolio`).
+2. README states contract governance and points to `zave.yaml`.
+3. Canonical contract file exists with:
+   - `spec.runtime: static`
+   - `spec.exposure: public-http`
+   - `spec.delivery: rolling`
+
+## Validation Commands
+
+```bash
+rg -n "Repository Category:\s*`portfolio`|Repository Category:\s*portfolio" README.md
+rg -n "Contract Governance|zave.yaml" README.md
+test -f zave.yaml && yq e '.spec.runtime, .spec.exposure, .spec.delivery' zave.yaml
+```
+
+## Manual Steps
+
+- None.
