@@ -31,7 +31,7 @@ author:
       url: "https://linkedin.com/in/zavelopez"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-    url: "https://github.com/zavestudios"
+      url: "https://github.com/zavestudios"
 
 # Site Footer
 footer:
@@ -41,7 +41,7 @@ footer:
       url: "https://linkedin.com/in/zavelopez"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-    url: "https://github.com/zavestudios"
+      url: "https://github.com/zavestudios"
 
 # Reading Files
 include:
