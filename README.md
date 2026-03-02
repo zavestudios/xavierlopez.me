@@ -20,6 +20,7 @@ The blog is intentionally written for platform engineers and adjacent roles (SRE
 This application is deployed as a contract-governed static workload on the ZaveStudios platform.
 
 **Platform integration:**
+
 - Runtime profile: `spec.runtime: static`
 - Exposure: `spec.exposure: public-http`
 - Delivery strategy: `spec.delivery: rolling`
@@ -65,6 +66,7 @@ Guiding principles:
   - `docker-compose up`
 
 Alternative host workflow (optional, not primary):
+
 - `bundle install`
 - `bundle exec jekyll serve`
 
