@@ -20,6 +20,7 @@ Each entry documents hypothesis, context, approach, outcome, and lessons learned
 {% if site.lab.size > 0 %}
 {% assign experiments = site.lab | sort: 'date' | reverse %}
 {% for experiment in experiments %}
+
 ### [{{ experiment.title }}]({{ experiment.url }})
 
 **Status:** {{ experiment.status }}
@@ -35,6 +36,7 @@ Each entry documents hypothesis, context, approach, outcome, and lessons learned
 **Lab Methodology:**
 
 Experiments follow a structured format:
+
 1. **Hypothesis** - What are we testing?
 2. **Context** - Why test this now?
 3. **Approach** - How are we testing?

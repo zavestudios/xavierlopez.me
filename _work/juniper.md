@@ -16,18 +16,21 @@ Led and paired on network device automation projects for enterprise customers. C
 ## Systems Influenced
 
 **Network Device API Automation**
+
 - Consulted enterprise customers on automation strategies
 - Reduced manual configuration errors
 - Improved operational efficiency through programmatic device management
 - **Impact:** Eliminated manual errors, increased deployment consistency
 
 **Configuration Management Tooling**
+
 - Developed automation for network configuration tasks
 - Enabled non-technical staff to perform security-critical operations safely
 - Abstracted complexity behind validated automation
 - **Impact:** Broader team capability, reduced risk
 
 **Zero-Downtime Update Orchestration**
+
 - Designed POC for live network device software/firmware updates
 - Orchestrated updates across multiple devices without service interruption
 - Validated feasibility of automated update workflows
@@ -38,16 +41,19 @@ Led and paired on network device automation projects for enterprise customers. C
 ## Architectural Decisions
 
 **API-First Automation**
+
 - Decision: Build automation around network device APIs
 - Rationale: Eliminate manual CLI operations, enable version control, improve consistency
 - Outcome: Reduced errors, faster deployments
 
 **Abstraction Layer for Non-Technical Users**
+
 - Decision: Create tooling that abstracts network complexity
 - Rationale: Enable broader team participation in operational tasks, reduce dependency on specialists
 - Outcome: Non-technical staff safely performing security-critical tasks
 
 **Live Update Orchestration**
+
 - Decision: Design zero-downtime update system
 - Rationale: Validate feasibility of automated firmware management without service interruption
 - Outcome: POC demonstrated viability, informed future automation strategy

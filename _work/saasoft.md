@@ -16,16 +16,19 @@ DevOps and site reliability engineering for SaaS platform. Maintained GitOps-dri
 ## Systems Influenced
 
 **GitOps CI/CD**
+
 - Maintained version-controlled infrastructure and application code
 - Enabled efficient software delivery through GitOps patterns
 - Reduced deployment friction with declarative configuration
 
 **Observability Stack**
+
 - Implemented Prometheus instrumentation for web applications
 - Enabled data-driven optimization through metrics visibility
 - Improved application performance monitoring
 
 **Application Layer**
+
 - Developed Ruby on Rails features (REST APIs, microservices, auth/authz)
 - Contributed to service architecture and API design
 - Maintained application reliability and feature delivery
@@ -35,11 +38,13 @@ DevOps and site reliability engineering for SaaS platform. Maintained GitOps-dri
 ## Architectural Decisions
 
 **GitOps-First Deployment**
+
 - Decision: Maintain GitOps-driven pipeline architecture
 - Rationale: Version control as source of truth, declarative infrastructure, rollback capability
 - Outcome: Reduced deployment errors, improved auditability
 
 **Prometheus Integration**
+
 - Decision: Instrument applications with Prometheus metrics
 - Rationale: Enable observability, support data-driven decisions, improve debugging
 - Outcome: Faster incident response, better capacity planning

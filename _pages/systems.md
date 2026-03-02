@@ -15,6 +15,7 @@ Each system page provides architectural narrative and links to canonical impleme
 
 {% if site.systems.size > 0 %}
 {% for system in site.systems %}
+
 ### [{{ system.title }}]({{ system.url }})
 
 {{ system.excerpt }}

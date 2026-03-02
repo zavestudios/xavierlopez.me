@@ -1,10 +1,8 @@
 ---
 layout: single
 author_profile: true
-title: ""
+title: "Platform Engineer"
 ---
-
-# Platform Engineer
 
 Specializing in Infrastructure as Product and Executable Architecture.
 

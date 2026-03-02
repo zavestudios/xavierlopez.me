@@ -47,21 +47,25 @@ Prove patterns work at reference scale before investing in generators. Manual sc
 ZaveStudios implements a **four-plane control architecture:**
 
 **1. Contract Plane**
+
 - Authority: `zave.yaml` in tenant repositories
 - Tenants declare: runtime, persistence, exposure, delivery
 - Single source of requirements
 
 **2. CI Plane**
+
 - Authority: `platform-pipelines` shared workflows
 - Validates contracts, builds images, semantic versioning
 - Triggers GitOps updates
 
 **3. GitOps Plane**
+
 - Authority: `gitops` repository (Flux + ArgoCD)
 - Declarative cluster state in Git
 - Reconciliation loops ensure cluster matches declared state
 
 **4. Runtime Plane**
+
 - Authority: Kubernetes cluster + shared infrastructure
 - Namespace isolation per tenant
 - Database isolation (schema-per-tenant)
@@ -81,6 +85,7 @@ The platform is in **Formation Phase**, focused on:
 - Multi-tenant database architecture validation
 
 **Exit criteria:**
+
 - ≥80% of workloads deploy via contract without repo design decisions
 - Contract schema stable for 90 days (no breaking changes)
 - Generator automation operational (Stages 1-3)
@@ -93,9 +98,11 @@ No revenue dependencies. No customer commitments. Just deliberate architecture a
 ## Implementation Repositories
 
 **Canonical documentation and governance:**
+
 - [platform-docs](https://github.com/zavestudios/platform-docs) - Platform operating model, architectural doctrine, contract schema, lifecycle model, generator specifications
 
 **Active repositories:**
+
 - [platform-pipelines](https://github.com/zavestudios/platform-pipelines) - Shared CI/CD workflows
 - [gitops](https://github.com/zavestudios/gitops) - GitOps state (Flux + ArgoCD)
 - [kubernetes-platform-infrastructure](https://github.com/zavestudios/kubernetes-platform-infrastructure) - Cluster definitions
@@ -103,6 +110,7 @@ No revenue dependencies. No customer commitments. Just deliberate architecture a
 - [image-factory](https://github.com/zavestudios/image-factory) - Base container images
 
 **Tenant workloads:**
+
 - [mia](https://github.com/zavestudios/mia) - AI assistant (Formation)
 - [panchito](https://github.com/zavestudios/panchito) - Real estate ETL (Python, Flask, Celery)
 - [rigoberta](https://github.com/zavestudios/rigoberta) - Rails reference template
@@ -111,6 +119,7 @@ No revenue dependencies. No customer commitments. Just deliberate architecture a
 - [data-pipelines](https://github.com/zavestudios/data-pipelines) - Data orchestration
 
 **Public site:**
+
 - [zavestudios.com](https://zavestudios.com) - Narrative entry point and philosophy
 
 ---
