@@ -7,3 +7,7 @@ main:
     url: /systems/
   - title: "Lab"
     url: /lab/
+  - title: "Cheatsheets"
+    url: /cheatsheets/
+  - title: "Resume"
+    url: /resume/
