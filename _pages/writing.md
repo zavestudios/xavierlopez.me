@@ -17,11 +17,12 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### Platform Engineering
 
-
 {% assign platform_posts = site.writing | where: "category", "Platform Engineering" | sort: 'date' | reverse %}
 
 {% for post in platform_posts limit:5 %}
+
 - [{{ post.title }}]({{ post.url }}) <span class="post-type">{{ post.type }}</span>
+
 {% endfor %}
 
 {% if platform_posts.size > 5 %}
@@ -30,11 +31,12 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### Infrastructure as Product
 
-
 {% assign infra_posts = site.writing | where: "category", "Infrastructure as Product" | sort: 'date' | reverse %}
 
 {% for post in infra_posts limit:5 %}
+
 - [{{ post.title }}]({{ post.url }}) <span class="post-type">{{ post.type }}</span>
+
 {% endfor %}
 
 {% if infra_posts.size > 5 %}
@@ -43,11 +45,12 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### System Design
 
-
 {% assign design_posts = site.writing | where: "category", "System Design" | sort: 'date' | reverse %}
 
 {% for post in design_posts limit:5 %}
+
 - [{{ post.title }}]({{ post.url }}) <span class="post-type">{{ post.type }}</span>
+
 {% endfor %}
 
 {% if design_posts.size > 5 %}
@@ -56,11 +59,12 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### Operating Models
 
-
 {% assign ops_posts = site.writing | where: "category", "Operating Models" | sort: 'date' | reverse %}
 
 {% for post in ops_posts limit:5 %}
+
 - [{{ post.title }}]({{ post.url }}) <span class="post-type">{{ post.type }}</span>
+
 {% endfor %}
 
 {% if ops_posts.size > 5 %}
@@ -69,11 +73,12 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### Data Systems
 
-
 {% assign data_posts = site.writing | where: "category", "Data Systems" | sort: 'date' | reverse %}
 
 {% for post in data_posts limit:5 %}
+
 - [{{ post.title }}]({{ post.url }}) <span class="post-type">{{ post.type }}</span>
+
 {% endfor %}
 
 {% if data_posts.size > 5 %}
