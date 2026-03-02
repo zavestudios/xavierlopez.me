@@ -17,6 +17,7 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### Platform Engineering
 
+
 {% assign platform_posts = site.writing | where: "category", "Platform Engineering" | sort: 'date' | reverse %}
 
 {% for post in platform_posts limit:5 %}
@@ -28,6 +29,7 @@ Articles focus on mental models, implementation analysis, and field notes from b
 {% endif %}
 
 ### Infrastructure as Product
+
 
 {% assign infra_posts = site.writing | where: "category", "Infrastructure as Product" | sort: 'date' | reverse %}
 
@@ -41,6 +43,7 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### System Design
 
+
 {% assign design_posts = site.writing | where: "category", "System Design" | sort: 'date' | reverse %}
 
 {% for post in design_posts limit:5 %}
@@ -53,6 +56,7 @@ Articles focus on mental models, implementation analysis, and field notes from b
 
 ### Operating Models
 
+
 {% assign ops_posts = site.writing | where: "category", "Operating Models" | sort: 'date' | reverse %}
 
 {% for post in ops_posts limit:5 %}
@@ -64,6 +68,7 @@ Articles focus on mental models, implementation analysis, and field notes from b
 {% endif %}
 
 ### Data Systems
+
 
 {% assign data_posts = site.writing | where: "category", "Data Systems" | sort: 'date' | reverse %}
 
