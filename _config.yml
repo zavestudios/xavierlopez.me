@@ -1,10 +1,10 @@
 # Site Settings
 locale: "en-US"
-title: "Platform Engineering | DevSecOps"
+title: "Xavier G. Lopez | Platform Engineer"
 title_separator: "|"
-subtitle: "Xavier G. Lopez"
+subtitle: ""
 name: ""
-description: "Senior Platform Engineer with a decade of experience in DevOps, site reliability engineering, cloud architecture and platform development. Sec+ and TS/SCI certified."
+description: "Platform Engineer specializing in Infrastructure as Product and Executable Architecture."
 url: "https://xavierlopez.me"
 baseurl: ""
 repository: "zavestudios/xavierlopez.me"
@@ -107,6 +107,21 @@ paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Los_Angeles
 
+# Collections
+collections:
+  work:
+    output: true
+    permalink: /work/:title/
+  writing:
+    output: true
+    permalink: /writing/:title/
+  systems:
+    output: true
+    permalink: /systems/:title/
+  lab:
+    output: true
+    permalink: /lab/:title/
+
 # Plugins (previously gems:)
 plugins:
   - jekyll-remote-theme
@@ -159,6 +174,41 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _work
+  - scope:
+      path: ""
+      type: work
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+  # _writing
+  - scope:
+      path: ""
+      type: writing
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: true
+  # _systems
+  - scope:
+      path: ""
+      type: systems
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+  # _lab
+  - scope:
+      path: ""
+      type: lab
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
 
 # Theme Settings
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
