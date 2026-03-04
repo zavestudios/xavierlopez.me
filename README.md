@@ -60,8 +60,10 @@ Guiding principles:
 
 ## Workflow
 
+### Writing and Publishing
+
 - Content lives in `_posts/`.
-- Pages live in `_pages/` (or the site’s chosen pages dir).
+- Pages live in `_pages/` (or the site's chosen pages dir).
 - Local dev:
   - `docker-compose up`
 
@@ -69,6 +71,24 @@ Alternative host workflow (optional, not primary):
 
 - `bundle install`
 - `bundle exec jekyll serve`
+
+### Publishing Cadence
+
+**Goal:** Publish at least one post every 2 weeks.
+
+**Process:**
+
+1. Draft posts are written on the `posts/unpublished` branch (branch is protected from deletion)
+2. Every 2 weeks, review all posts on `posts/unpublished`
+3. For each post, make a decision: **publish** or **delete**
+   - No "hold" option — forces decision-making
+   - If not ready to publish, either finish it now or delete it
+4. To publish: cherry-pick post to main, merge, deploy
+5. To delete: remove from `posts/unpublished` branch
+
+**Tracking:** Set a recurring calendar reminder every 2 weeks: "Review unpublished posts"
+
+This cadence ensures consistent publishing velocity and prevents draft accumulation.
 
 ## Conventions
 
