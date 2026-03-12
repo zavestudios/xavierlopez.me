@@ -58,6 +58,21 @@ Guiding principles:
 - Prefer “why this matters” and “how to think about it” over step-by-step tutorials.
 - Write to be useful to peers, not to impress recruiters.
 
+## Local Development
+
+### Prerequisites
+
+- Docker and Docker Compose
+- Git
+
+### Quick Start
+
+- Copy the environment template:
+  `cp .env.example .env`
+- Start the site:
+  `docker compose up`
+- Open the site at `http://localhost:4000`
+
 ## Workflow
 
 ### Writing and Publishing
