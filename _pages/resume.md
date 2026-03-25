@@ -31,7 +31,7 @@ Platform Engineer with 10+ years building secure, reliable, cloud-native platfor
 
 ### Senior DevSecOps Engineer / Platform Engineer
 
-**Raft, Reston, VA** | *January 2024 - November 2024*
+**Raft, Reston, VA** | *January 2024 - November 2025*
 
 Led, paired and mentored on platform engineering stories and tenant tickets on production DoD ATO'd cloud infrastructure serving internal and tenant development teams. Architected and implemented scalable solutions reducing build times 87% while enhancing security posture.
 

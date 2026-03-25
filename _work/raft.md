@@ -1,7 +1,7 @@
 ---
 company: "Raft"
 title: "Senior DevSecOps Engineer / Platform Engineer"
-period: "January 2024 - November 2024"
+period: "January 2024 - November 2025"
 location: "Reston, VA"
 order: 1
 excerpt: "Platform engineering on production DoD ATO'd infrastructure, reducing build times 87% and expanding platform to support Java, C#, and PHP workloads."
