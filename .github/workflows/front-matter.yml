@@ -10,4 +10,4 @@ permissions:
 jobs:
   validate:
     name: Validate Front Matter
-    uses: zavestudios/platform-pipelines/.github/workflows/jekyll-validate-front-matter.yml@main
+    uses: zavestudios/platform-pipelines/.github/workflows/jekyll-validate-front-matter.yml@c0aa80bb405fa24ede5ebcf1c40b0be90328386c

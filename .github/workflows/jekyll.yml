@@ -17,4 +17,4 @@ concurrency:
 jobs:
   deploy:
     name: Deploy Jekyll Site
-    uses: zavestudios/platform-pipelines/.github/workflows/jekyll-deploy.yml@main
+    uses: zavestudios/platform-pipelines/.github/workflows/jekyll-deploy.yml@c0aa80bb405fa24ede5ebcf1c40b0be90328386c
