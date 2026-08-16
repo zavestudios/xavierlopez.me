@@ -1,7 +1,7 @@
 ---
 permalink: /lab/
 title: "Lab"
-layout: single
+layout: default
 author_profile: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: "Quick Reference Cheatsheets"
 permalink: /cheatsheets/
 author_profile: true

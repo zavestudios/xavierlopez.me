@@ -1,0 +1,10 @@
+subject: "Education & Credentials"
+short_name: "Credentials"
+listing-order: 4
+contents:
+  - title: "Bachelor of Arts"
+    subtitle: "California State University, San Bernardino, CA"
+  - title: "Security+"
+    subtitle: "Active"
+  - title: "TS"
+    subtitle: "Active"

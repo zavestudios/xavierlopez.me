@@ -1,30 +1,39 @@
 ---
 permalink: /systems/
-title: "Systems"
-layout: single
-author_profile: true
+title: "ZaveStudios"
+layout: default
+author_profile: false
 ---
 
-Long-running platform initiatives demonstrating infrastructure-as-product principles.
+ZaveStudios is my internal developer platform sandbox: an opinionated platform architecture designed to make infrastructure predictable, composable, and easier to operate through bounded declarative contracts.
 
-Each system page provides architectural narrative and links to canonical implementation repositories.
+## Why it exists
 
----
+I created ZaveStudios to maintain a hands-on platform sandbox independent of any employer environment. It gives me a place to build, operate, break, document, and refine real systems so I can keep pace with DevSecOps, secure data engineering, data pipelines, and operational AI.
 
-## Current Systems
+The platform stays understandable by organizing the work into three connected planes:
 
-{% if site.systems.size > 0 %}
-{% for system in site.systems %}
+**Delivery and governance** - Source changes, validation, build behavior, policy, promotion, and GitOps-managed runtime state.
 
-### [{{ system.title }}]({{ system.url }})
+**Identity and data boundaries** - SSO, workload identity, tenant separation, persistence, orchestration, and isolation.
 
-{{ system.excerpt }}
+**Observability and OpAI** - Telemetry, diagnostics, agent-assisted operations, documentation, and automation planning.
 
-{% endfor %}
-{% else %}
-*Systems documentation is being migrated. Check back soon.*
-{% endif %}
+## How it works
 
----
+ZaveStudios has two jobs: define clear operating boundaries and make adoption predictable for workload owners. Workloads declare intent through a small contract surface; the platform supplies the delivery path, desired state, data isolation, observability, policy controls, and shared model access.
 
-**Note:** System pages explain intent, problem space, and architectural philosophy. Implementation details, contracts, and configuration live in GitHub repositories.
+The baseline path is deliberately governed:
+
+```text
+Workload intent -> validation and build -> GitOps desired state -> runtime execution -> telemetry feedback
+```
+
+The platform owns repeatable mechanics. Workload owners make application and data decisions without rebuilding the delivery, identity, observability, or runtime path for every repository.
+
+## What the practice proves
+
+ZaveStudios is in Formation Phase: stabilizing the contract surface, narrowing scope, and keeping the system small enough for one operator to understand. The working repositories provide the evidence; the public site provides the narrative and map.
+
+[Explore ZaveStudios](https://zavestudios.com){: .btn .btn--primary}
+[View the GitHub organization](https://github.com/zavestudios){: .btn .btn--light-outline}

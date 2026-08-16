@@ -1,11 +1,11 @@
 ---
 permalink: /writing/
-title: "Writing"
-layout: single
-author_profile: true
+title: "Writing Archive"
+layout: default
+author_profile: false
 ---
 
-Technical thinking archive organized by theme.
+This is an archive of technical notes and field writing from earlier work. It remains available for reference, but the current portfolio is centered on platform practice and selected outcomes.
 
 Articles focus on mental models, implementation analysis, and field notes from building and operating platforms.
 

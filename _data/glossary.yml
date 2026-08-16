@@ -1,0 +1,143 @@
+- term: "boundaries"
+  slug: "boundaries"
+  definition: "The places where responsibility, authority, data, identity, runtime state, or network access changes hands."
+  why_it_matters: "Clear boundaries let workload teams and platform operators understand what they own, what they can change, what they inherit, and where escalation belongs."
+  examples:
+    - "A workload team owns application behavior, while the platform owns build and deployment mechanics."
+    - "A network path crosses an account or gateway boundary where another team owns the next control."
+    - "A data boundary separates tenant state, shared platform state, and operational telemetry."
+  references:
+    - label: "ZaveStudios design principles"
+      url: "https://zavestudios.com/philosophy/principles/"
+
+- term: "certificate trust"
+  slug: "certificate-trust"
+  definition: "The runtime trust path created by certificates, issuers, service identity, and encryption expectations."
+  why_it_matters: "Certificate problems often look like application or network failures, but the real issue may be expired trust, the wrong issuer, missing mTLS configuration, or a certificate that does not match the route being used."
+  examples:
+    - "cert-manager issues the certificate, but the ingress or service mesh expects a different issuer or secret."
+    - "mTLS is required between services, but one side does not trust the certificate chain presented by the other."
+    - "A route is reachable, but clients fail because DNS, certificate SANs, and ingress configuration do not describe the same endpoint."
+  references:
+    - label: "ZaveStudios architecture overview"
+      url: "https://zavestudios.com/architecture/overview/"
+
+- term: "contracts"
+  slug: "contracts"
+  definition: "Small, explicit interfaces where a workload declares what it needs and the platform supplies the repeatable mechanics around delivery, policy, identity, runtime, observability, and service integration."
+  why_it_matters: "Contracts reduce variance. They let teams express intent without redesigning the platform path for every workload."
+  examples:
+    - "A workload declares runtime, exposure, delivery behavior, and capability needs."
+    - "Shared workflows validate the contract before build or promotion."
+    - "The platform owns the mechanics behind the contract instead of pushing those decisions into every workload repository."
+  references:
+    - label: "ZaveStudios architecture overview"
+      url: "https://zavestudios.com/architecture/overview/"
+
+- term: "control plane"
+  slug: "control-plane"
+  definition: "The part of a platform that declares, authorizes, reconciles, or governs behavior. In this site, the term can refer to Kubernetes, GitOps, Terraform, IAM/SSO, policy, delivery, certificate, or network control layers depending on context."
+  why_it_matters: "Control planes are where platform intent becomes enforceable behavior. If their state, ownership, or authority is unclear, teams lose the ability to understand and safely change the system."
+  examples:
+    - "Kubernetes controllers reconcile declared workload state into runtime behavior."
+    - "GitOps stores desired runtime state and becomes the reviewable path for deployment changes."
+    - "IAM, SSO, policy, certificate, and network control layers decide which actions, identities, routes, and trust paths are allowed."
+  references:
+    - label: "ZaveStudios architecture overview"
+      url: "https://zavestudios.com/architecture/overview/"
+
+- term: "default path"
+  slug: "default-path"
+  definition: "The supported path that is easier, safer, and more reviewable than creating a custom platform route for each workload."
+  why_it_matters: "The platform creates leverage when the secure path is the normal path. If teams must invent delivery, identity, policy, networking, and observability each time, the platform is not doing its job."
+  examples:
+    - "A workload declares intent through a small contract and inherits validation, build, promotion, policy, and runtime expectations."
+    - "GitOps represents desired runtime state instead of each team changing cluster resources manually."
+    - "Standard controls apply through the platform path instead of being rediscovered during review."
+  references:
+    - label: "ZaveStudios architecture overview"
+      url: "https://zavestudios.com/architecture/overview/"
+
+- term: "failed handoff"
+  slug: "failed-handoff"
+  definition: "A boundary where responsibility, state, or context moves from one layer, team, or process to another, but the receiving side cannot safely continue because something is missing, stale, unclear, or misaligned."
+  why_it_matters: "Platform problems often appear as component failures, but the useful signal is frequently in the transition between components or owners."
+  examples:
+    - "Terraform renames an IAM role, but Kubernetes workload identity still expects the old role."
+    - "CI builds an image, but promotion or deployment does not know which digest or runtime state to consume."
+    - "Security flags a finding, but ownership between the workload team, platform baseline, and Landing Zone controls is unclear."
+  references:
+    - label: "ZaveStudios architecture overview"
+      url: "https://zavestudios.com/architecture/overview/"
+
+- term: "formation phase"
+  slug: "formation-phase"
+  definition: "The stage where a platform is still proving its surface area, contract model, operating model, supported paths, and automation boundaries before treating them as stable product interfaces."
+  why_it_matters: "Formation phase makes maturity explicit. It lets the platform show real work without pretending that onboarding, self-service, documentation, and automation are already fully productized."
+  examples:
+    - "A contract exists, but the team is still learning which fields belong in the stable interface."
+    - "Manual validation remains acceptable while the platform is proving which behavior should later become automation."
+    - "Docs and operating rules are being refined so the supported path becomes easier to consume by someone other than the platform owner."
+  references:
+    - label: "ZaveStudios formation phase"
+      url: "https://zavestudios.com/philosophy/formation-phase/"
+
+- term: "network pathing"
+  slug: "network-pathing"
+  definition: "The route traffic is expected to take across cloud, cluster, service, and boundary layers."
+  why_it_matters: "A platform can look correctly configured while traffic still fails because the intended path crosses the wrong endpoint, gateway, route table, ingress, policy, or trust boundary."
+  examples:
+    - "A workload reaches a cloud service through a VPC endpoint instead of public internet egress."
+    - "Traffic crosses a transit gateway, internet gateway, NAT gateway, or internal gateway depending on the account and network boundary."
+    - "An ingress route works in one environment but fails in another because DNS, certificates, service routing, or network policy do not match."
+  references:
+    - label: "ZaveStudios infrastructure"
+      url: "https://zavestudios.com/infrastructure/"
+
+- term: "operating model"
+  slug: "operating-model"
+  definition: "The ownership and execution model around the platform: who owns what, how work enters the system, what is self-service, what requires approval, how changes are validated, and where escalation goes."
+  why_it_matters: "A platform is not just infrastructure. The technical architecture and the human execution path have to agree, or every important change becomes a negotiation."
+  examples:
+    - "A workload team owns application behavior, while the platform owns delivery mechanics, policy controls, and runtime registration."
+    - "A security finding is handled differently depending on whether it belongs to the workload, platform baseline, or a shared infrastructure control."
+    - "A platform operator knows whether the next move belongs in GitOps, Terraform, the IdP, a ticket, or an escalation path."
+  references:
+    - label: "ZaveStudios formation phase"
+      url: "https://zavestudios.com/philosophy/formation-phase/"
+
+- term: "operating rules"
+  slug: "operating-rules"
+  definition: "The explicit rules that describe how the platform should be changed, reviewed, supported, escalated, and documented."
+  why_it_matters: "Operating rules keep platform behavior from living only in the memory of the last person who debugged it."
+  examples:
+    - "Breaking changes require a reviewable path and a documented handoff."
+    - "Manual changes are treated as exceptions unless they are captured back into the governed state."
+    - "A recurring failure mode becomes a documented validation step or clearer ownership boundary."
+  references:
+    - label: "ZaveStudios design principles"
+      url: "https://zavestudios.com/philosophy/principles/"
+
+- term: "workload delivery"
+  slug: "workload-delivery"
+  definition: "The governed path from source change to running workload, including validation, build, security checks, artifact promotion, desired state, deployment, and runtime verification."
+  why_it_matters: "Delivery is where platform intent becomes operational reality. The path has to be predictable enough for workload teams and supportable enough for platform operators."
+  examples:
+    - "A repository change runs shared validation and build behavior before promotion."
+    - "An image digest is promoted into GitOps-managed runtime state."
+    - "Policy, identity, and observability expectations are handled as part of the delivery path, not added later."
+  references:
+    - label: "ZaveStudios platform pipelines"
+      url: "https://zavestudios.com/platform-services/platform-pipelines/"
+
+- term: "workload identity"
+  slug: "workload-identity"
+  definition: "The path that lets a running workload prove who it is and receive only the permissions it needs to call platform, cloud, or data services."
+  why_it_matters: "In regulated platforms, identity is part of the runtime contract. A workload should not inherit broad credentials or depend on unclear manual secret handling."
+  examples:
+    - "A Kubernetes service account maps to an AWS role through IRSA or Pod Identity."
+    - "A pod can call one cloud service because its trust relationship and policy allow that path, but it cannot use unrelated permissions."
+    - "A renamed IAM role breaks workspace launch behavior because the runtime identity layer still expects the old shape."
+  references:
+    - label: "ZaveStudios design principles"
+      url: "https://zavestudios.com/philosophy/principles/"

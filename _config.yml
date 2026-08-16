@@ -1,219 +1,42 @@
-# Site Settings
-locale: "en-US"
-title: "Xavier G. Lopez | Platform Engineer"
-title_separator: "|"
-subtitle: ""
-name: ""
-description: "Platform Engineer specializing in Infrastructure as Product and Executable Architecture."
+title: "Xavier G. Lopez | Platform Engineer | Kubernetes | DevSecOps | OpAI"
+description: "Platform engineering, secure delivery, and operational AI practice."
 url: "https://xavierlopez.me"
 baseurl: ""
-repository: "zavestudios/xavierlopez.me"
-teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title: # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs: false # true, false (default)
-words_per_minute: 200
-
-# Comments (optional - can enable later)
-comments:
-  provider: false # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
-
-# Site Author
-author:
-  name: ""
-  avatar: # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: ""
-  location: "Los Angeles, CA"
-  email: "xavier@xavierlopez.me"
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/zavelopez"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/zavestudios"
-
-# Site Footer
-footer:
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/zavelopez"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/zavestudios"
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - package-lock.json
-  - Rakefile
-  - README
-  - tmp
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-# Outputting
-permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
 timezone: America/Los_Angeles
 
-# Collections
-collections:
-  work:
-    output: true
-    permalink: /work/:title/
-  writing:
-    output: true
-    permalink: /writing/:title/
-  systems:
-    output: true
-    permalink: /systems/:title/
-  lab:
-    output: true
-    permalink: /lab/:title/
+include:
+  - _pages
 
-# Plugins (previously gems:)
+name: "Xavier G. Lopez"
+job: "Platform Engineer | Kubernetes | DevSecOps | OpAI"
+location: "Los Angeles, CA"
+email: "xavier@zavestudios.com"
+linkedin_username: "zavelopez"
+github_username: "eckslopez"
+zavestudios_url: "https://zavestudios.com"
+
+exclude:
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - node_modules
+  - tmp
+  - log
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Dockerfile
+  - docker-compose.yml
+  - scripts
+  - _posts
+  - _writing
+  - blog.md
+  - posts.md
+  - categories.md
+  - tags.md
+
 plugins:
-  - jekyll-remote-theme
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gzip
   - jekyll-feed
-  - jekyll-include-cache
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-remote-theme
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gzip
-  - jekyll-feed
-  - jekyll-include-cache
-
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-# Defaults
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: false
-      related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _work
-  - scope:
-      path: ""
-      type: work
-    values:
-      layout: single
-      author_profile: false
-      read_time: false
-  # _writing
-  - scope:
-      path: ""
-      type: writing
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: false
-      related: true
-  # _systems
-  - scope:
-      path: ""
-      type: systems
-    values:
-      layout: single
-      author_profile: false
-      read_time: false
-  # _lab
-  - scope:
-      path: ""
-      type: lab
-    values:
-      layout: single
-      author_profile: false
-      read_time: true
-
-# Theme Settings
-remote_theme: "mmistakes/minimal-mistakes@4.27.3"
-minimal_mistakes_skin: "dark" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
-# Analytics (optional - can add later)
-analytics:
-  provider: false # false (default), "google", "google-universal", "google-gtag", "custom"

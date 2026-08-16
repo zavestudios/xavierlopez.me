@@ -1,28 +1,13 @@
 ---
 permalink: /work/
-title: "Work"
-layout: single
-author_profile: true
+title: "Experience"
+layout: default
+author_profile: false
 ---
 
-Platform Engineer specializing in Infrastructure as Product and Executable Architecture.
+<meta http-equiv="refresh" content="0; url=/#experience">
+<link rel="canonical" href="/#experience">
 
-10+ years building secure, reliable, cloud-native platforms that increase developer velocity and reduce operational load.
+<p class="page-intro">Experience now lives on the homepage.</p>
 
----
-
-## Professional Experience
-
-{% assign work_sorted = site.work | sort: 'order' %}
-{% for role in work_sorted %}
-  <h3><a href="{{ role.url }}">{{ role.company }}</a></h3>
-  <p><strong>{{ role.title }}</strong> | {{ role.period }}</p>
-  <p>{{ role.excerpt }}</p>
-{% endfor %}
-
----
-
-## Certifications
-
-- **Security+** (CompTIA)
-- **TS/SCI Clearance** (Active)
+<p><a href="/#experience">Go to Experience</a></p>

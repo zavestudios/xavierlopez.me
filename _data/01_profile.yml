@@ -1,0 +1,21 @@
+subject: "How I Approach Platform Engineering"
+short_name: "Approach"
+listing-order: 1
+intro: "I work across the full platform loop: define the platform model, build the path, operate the system, and feed what breaks back into the design. The goal is not just to keep platform components running. The goal is to make secure [workload delivery](/glossary/#workload-delivery) and operation understandable, repeatable, and easier for teams to use."
+contents:
+  - title: "Define the platform model"
+    description:
+      - "Clarify what the platform owns, what teams own, and what has to be expressed through [contracts](/glossary/#contracts), policies, workflows, or [operating rules](/glossary/#operating-rules)."
+      - "Turn vague infrastructure needs into [boundaries](/glossary/#boundaries) workload teams and platform operators can reason about."
+  - title: "Build the path"
+    description:
+      - "Implement the delivery, identity, runtime, network, telemetry, trust, and policy pieces that translate the platform model into predictable, supportable paths for workload teams and platform operators."
+      - "Prefer platform-owned paths that reduce one-off decisions without blocking useful team autonomy."
+  - title: "Operate from evidence"
+    description:
+      - "Use runtime behavior, logs, telemetry, GitOps state, Terraform state, identity configuration, and [failed handoffs](/glossary/#failed-handoff) to understand what the platform is actually doing."
+      - "Trace failures across layers instead of stopping at the first component showing an error."
+  - title: "Feed learning back"
+    description:
+      - "Convert incidents, blocked workflows, and ambiguous ownership into better docs, clearer controls, safer defaults, and more explicit operating paths."
+      - "The platform improves when repeated confusion becomes a better interface."
