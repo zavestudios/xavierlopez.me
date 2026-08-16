@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    {% assign sections = "" | split: "" %}
+    {% for data_file in site.data %}
+      {% if data_file[1].listing-order %}
+        {% assign sections = sections | push: data_file[1] %}
+      {% endif %}
+    {% endfor %}
+    {% assign sections = sections | sort: 'listing-order' %}
+    {% include site-rail.html %}
+
+    {% include profile-header.html %}
+
+    <main class="cv" id="main-content">
+      {% for section in sections %}
+        <section class="cv-section" id="{{ section.subject | slugify }}">
+          <div class="section-heading">
+            <span class="section-index">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <h2>{{ section.subject }}</h2>
+          </div>
+          {% if section.intro %}<div class="section-intro">{{ section.intro | markdownify }}</div>{% endif %}
+          <div class="entries">
+            {% for entry in section.contents %}
+              <article class="entry">
+                <div class="entry-heading">
+                  <h3>{{ entry.title | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
+                  {% if entry.date %}<p class="entry-date">{{ entry.date }}</p>{% endif %}
+                </div>
+                {% if entry.subtitle %}<p class="entry-subtitle">{{ entry.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+                {% if entry.description %}
+                  {% if entry.description.first %}
+                    <ul>
+                      {% for item in entry.description %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}
+                    </ul>
+                  {% else %}
+                    <div class="entry-body">{{ entry.description | markdownify }}</div>
+                  {% endif %}
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    </main>
+
+    <footer>
+      <a href="/glossary/">Glossary</a>
+      <a href="/writing/">Writing archive</a>
+      <span>Theme structure adapted from <a href="https://github.com/byanko55/jekyll-professional-resume">Jekyll Professional Resume</a>, MIT License.</span>
+    </footer>
+  </body>
+</html>

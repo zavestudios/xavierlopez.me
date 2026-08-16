@@ -1,0 +1,15 @@
+skills:
+  subject: "Technical Skills"
+  short_name: "Skills"
+  intro: "A practical view of the systems I work across, grouped by operating concern rather than vendor inventory."
+  contents:
+    - title: "Cloud & Infrastructure"
+      description: "GovCloud operations, account and environment boundaries, IAM, network controls, repeatable provisioning, module design, and automation."
+    - title: "Kubernetes & Runtime Operations"
+      description: "Control-plane behavior, workload rollout paths, desired-state management, ingress/routing, registry flows, secrets handling, and multi-environment operations."
+    - title: "Security & Compliance"
+      description: "DoD ATO environments, TS, Security+, NIST-aligned practices, vulnerability handling, SBOMs, rootless build posture, reviewable controls, and audit-friendly handoffs."
+    - title: "Identity & Observability"
+      description: "SSO, OIDC, SAML, JWT, workload identity, telemetry, logs, metrics, operational visibility, incident response, failure-mode analysis, and platform governance."
+    - title: "Software, Data & OpAI"
+      description: "API design, container build systems, data services, ETL workflows, AI-assisted infrastructure work, documentation, automation planning, and operational support."

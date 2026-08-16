@@ -1,0 +1,14 @@
+subject: "ZaveStudios"
+short_name: "ZaveStudios"
+listing-order: 2
+intro: "ZaveStudios is where I turn my platform thinking into working infrastructure outside an employer environment. It is my internal developer platform sandbox: an opinionated platform architecture designed to make infrastructure predictable, composable, and easier to operate through bounded declarative contracts."
+contents:
+  - title: "[ZaveStudios](https://zavestudios.com)"
+    subtitle: "Independent platform practice"
+    description:
+      - "Building and refining a multi-workload reference platform where workload contracts declare intent and shared platform paths handle validation, build, promotion, runtime state, and governance."
+      - "Writing and maintaining the operating doctrine so repository boundaries, lifecycle rules, diagnostics, enforcement, and pull-request behavior are explicit instead of tribal."
+      - "Moving delivery mechanics into platform-owned workflows so workload repositories inherit the path instead of rebuilding it each time."
+      - "Treating tenant data boundaries, GitOps state, identity, and telemetry as part of the platform design, not cleanup work after deployment."
+      - "Using agent-assisted workflows for documentation, triage, code generation, and automation planning with reviewable human/agent attribution boundaries."
+      - "Keeping the platform in [formation phase](/glossary/#formation-phase): clarifying the contract surface, tightening the operating model, and making the supported path easier to consume over time."

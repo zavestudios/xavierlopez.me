@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body class="resume-pdf-page">
+    <main class="pdf-resume">
+      <header class="pdf-header">
+        <div>
+          <h1>{{ site.name }}</h1>
+          <p class="pdf-title">{{ site.job }}</p>
+        </div>
+        <ul class="pdf-contact">
+          <li>{{ site.location }}</li>
+          <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">linkedin.com/in/{{ site.linkedin_username }}</a></li>
+          <li><a href="https://github.com/{{ site.github_username }}/">github.com/{{ site.github_username }}</a></li>
+          <li><a href="{{ site.zavestudios_url }}">zavestudios.com</a></li>
+        </ul>
+      </header>
+
+      <section class="pdf-section pdf-summary">
+        <h2>Summary</h2>
+        {{ site.data.profile_header.resume_summary | markdownify }}
+      </section>
+
+      {% assign skills = site.data.resume.skills %}
+      <section class="pdf-section">
+        <h2>{{ skills.subject }}</h2>
+        <div class="pdf-skill-grid">
+          {% for entry in skills.contents %}
+            <article>
+              <h3>{{ entry.title }}</h3>
+              {{ entry.description | markdownify }}
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      {% assign projects = site.data['02_projects'] %}
+      <section class="pdf-section">
+        <h2>{{ projects.subject }}</h2>
+        {% if projects.intro %}{{ projects.intro | markdownify }}{% endif %}
+        {% for entry in projects.contents %}
+          <article class="pdf-entry">
+            <div class="pdf-entry-heading">
+              <h3>{{ entry.title | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
+              {% if entry.subtitle %}<p>{{ entry.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+            </div>
+            {% if entry.description %}
+              <ul>
+                {% for item in entry.description %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </section>
+
+      {% assign experience = site.data['03_experience'] %}
+      <section class="pdf-section pdf-page-break">
+        <h2>{{ experience.subject }}</h2>
+        {% for entry in experience.contents %}
+          <article class="pdf-entry">
+            <div class="pdf-entry-heading">
+              <h3>{{ entry.title | markdownify | remove: '<p>' | remove: '</p>' }}</h3>
+              <p>
+                {% if entry.subtitle %}{{ entry.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}
+                {% if entry.date %} · {{ entry.date }}{% endif %}
+              </p>
+            </div>
+            {% if entry.description %}
+              <ul>
+                {% for item in entry.description %}<li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}
+              </ul>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </section>
+
+      {% assign education = site.data['04_education'] %}
+      <section class="pdf-section pdf-credentials">
+        <h2>{{ education.subject }}</h2>
+        <ul>
+          {% for entry in education.contents %}
+            <li><strong>{{ entry.title }}</strong>{% if entry.subtitle %}, {{ entry.subtitle }}{% endif %}</li>
+          {% endfor %}
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

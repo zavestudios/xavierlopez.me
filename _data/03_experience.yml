@@ -1,0 +1,40 @@
+subject: "Experience"
+short_name: "Experience"
+listing-order: 3
+contents:
+  - title: "SAIC"
+    subtitle: "Platform Engineer · Federal Defense Program"
+    date: "May 2026 – Present"
+    description:
+      - "Contain platform entropy by making [control-plane](/glossary/#control-plane) behavior more legible, maintainable, and supportable across cluster state, identity, network boundaries, policy controls, and cloud-broker access paths."
+      - "Own AWS Security Hub remediation paths by separating team-owned findings from managed baseline controls and driving remediation, suppression, or escalation through supportable ownership paths."
+      - "Work with cloud-broker teams and vendor support to turn access, certificate-trust, RBAC, and network-inspection requirements into deployable Kubernetes configuration, secrets, documented steps, and Flux GitOps scaffolding for the stabilized path."
+      - "Own the nested GovCloud platform path from AWS account infrastructure to EKS to Spectro Palette Vertex to Domino Data Lab, where each layer becomes the control surface for the next layer of self-hosted AI/ML training operations."
+      - "Coordinate vendor support and product engineering to resolve blockers across deployment artifacts, manifests, RBAC, values files, scripts, private ECR/S3 paths, and cloud-broker constraints."
+      - "Lead Bedrock Mantle service development for GovCloud model inference and daily team development use through Terraform provisioning, provider/model/agent configuration, cost awareness, documentation, and operational handoffs."
+  - title: "Raft, LLC"
+    subtitle: "Senior Platform / DevSecOps Engineer · Reston, VA"
+    date: "Jan 2024 – Nov 2025"
+    description:
+      - "Contributed to platform architecture for DoD ATO'd environments supporting internal engineering teams and tenant workloads."
+      - "Rebuilt AMI workflows around AWS Image Builder so remediation became part of the image lifecycle instead of a separate cleanup path."
+      - "Built an external-image approval pipeline with vulnerability scanning, cybersecurity review routing, internal registry promotion, audit-friendly handoffs, and notifications."
+      - "Led rootless build migration from Kaniko to Buildah and designed Terraform module boundaries and CI policy gates."
+  - title: "Charter Communications"
+    subtitle: "Configuration Management / Automation Consultant · Independent Consultant"
+    date: "Jan 2024 – Apr 2024"
+    description:
+      - "Translated legacy Chef configuration workflows into structured Ansible roles and playbooks for repeatable infrastructure operations."
+      - "Standardized inventory layering, service-state management, validation, and idempotence checks."
+  - title: "Insight Direct"
+    subtitle: "Platform Lead / DevOps Engineer / SRE · Chandler, AZ"
+    date: "Jul 2018 – May 2023"
+    description:
+      - "Led the organization's Kubernetes strategy from research and decision framing through bare-metal and hybrid-cloud EKS delivery."
+      - "Built the team's first CI/CD pipelines and Kubernetes deployments, moving release work out of manual operations and into a repeatable delivery path."
+      - "Improved cloud cost profile through migration strategy, rightsizing, and operational cleanup."
+  - title: "Earlier engineering work"
+    subtitle: "Juniper Networks · Datalink · DST"
+    date: "2012 – 2018"
+    description:
+      - "Delivered network automation and customer training, introduced DevOps and configuration-management practices across .NET and Rails stacks, and began in data extraction and transformation workflows."

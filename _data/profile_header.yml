@@ -1,0 +1,5 @@
+summary: "I help teams build and operate cloud-native, regulated environments where cloud infrastructure, Kubernetes runtime behavior, [workload identity](/glossary/#workload-identity), SSO, [network pathing](/glossary/#network-pathing), telemetry, [certificate trust](/glossary/#certificate-trust), policy controls, and the [operating model](/glossary/#operating-model) combine to make secure [workload delivery](/glossary/#workload-delivery) and operation the [default path](/glossary/#default-path)."
+resume_summary: |
+  I help teams build and operate cloud-native, regulated environments where cloud infrastructure, Kubernetes runtime behavior, workload identity, SSO, network pathing, telemetry, certificate trust, policy controls, and the operating model combine to make secure workload delivery and operation the default path.
+
+  My work spans the full platform loop: define the platform model, build the path, operate the system, and feed what breaks back into the design so delivery and operation become understandable, repeatable, and easier for teams to use.
