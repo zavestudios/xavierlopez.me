@@ -97,8 +97,10 @@ a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: .
 .section-rail { display: grid; gap: .35rem; position: fixed; right: 1.25rem; top: 30vh; z-index: 2; }
 .section-rail a { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; box-shadow: 0 2px 12px rgba(36, 60, 76, .08); color: var(--blue-deep); font-size: .72rem; padding: .4rem .7rem; text-align: center; text-decoration: none; }
 .section-rail .rail-home { background: var(--blue-deep); color: #fff; font-family: Georgia, serif; font-size: 1rem; font-weight: 700; }
-footer { background: var(--blue-deep); color: #dce9f1; display: flex; font-size: .8rem; gap: 1.5rem; justify-content: space-between; padding: 1.25rem max(1.5rem, calc((100% - 1024px) / 2)); }
-footer a { color: #fff; }
+.site-footer { align-items: center; background: var(--blue-deep); color: #dce9f1; display: flex; font-size: .8rem; gap: 1.5rem; justify-content: space-between; padding: 1.25rem max(1.5rem, calc((100% - 1024px) / 2)); }
+.site-footer a { color: #fff; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: .35rem .9rem; }
+.theme-credit { max-width: 520px; }
 
 .document-page { background: var(--paper); }
 .document-header { align-items: center; display: flex; gap: 1.5rem; justify-content: space-between; margin: 0 auto; max-width: 960px; padding: 1.25rem 2rem; }
@@ -187,14 +189,26 @@ footer a { color: #fff; }
 }
 
 @media (max-width: 900px) {
+  body { padding-bottom: 4.5rem; }
   .profile-header { grid-template-columns: auto 1fr; }
   .contact-list { border-left: 0; grid-column: 1 / -1; padding-left: 0; }
-  .section-rail { display: none; }
+  .section-rail {
+    bottom: .75rem;
+    display: flex;
+    gap: .35rem;
+    justify-content: center;
+    left: .75rem;
+    overflow-x: auto;
+    padding: .25rem;
+    right: .75rem;
+    top: auto;
+  }
+  .section-rail a { flex: 0 0 auto; }
 }
 @media (max-width: 620px) {
   .profile-header { grid-template-columns: 1fr; text-align: center; }
   .profile-mark { margin: auto; }
   .contact-list { text-align: center; }
   .entry-heading { align-items: flex-start; flex-direction: column; gap: .25rem; }
-  footer { flex-direction: column; }
+  .site-footer { align-items: flex-start; flex-direction: column; }
 }
