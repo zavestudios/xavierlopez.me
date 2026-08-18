@@ -47,7 +47,7 @@ This application is deployed as a contract-governed static workload on the ZaveS
 
 - Portfolio pages live in `_pages/`.
 - Legacy posts live in `_posts/` and `_writing/`; their public URLs are preserved.
-- The canonical professional identity and resume source live in the `professional-identity` workspace repository.
+- The maintained public portfolio and resume surface lives in this repository.
 - Use `docker compose up` for local development.
 
 ## Conventions
