@@ -104,7 +104,7 @@ No revenue dependencies. No customer commitments. Just deliberate architecture a
 **Active repositories:**
 
 - [platform-pipelines](https://github.com/zavestudios/platform-pipelines) - Shared CI/CD workflows
-- [gitops](https://github.com/zavestudios/gitops) - GitOps state (Flux + ArgoCD)
+- `gitops` (private) - GitOps state (Flux + ArgoCD)
 - [kubernetes-platform-infrastructure](https://github.com/zavestudios/kubernetes-platform-infrastructure) - Cluster definitions
 - [pg](https://github.com/zavestudios/pg) - Multi-tenant PostgreSQL provisioning
 - [image-factory](https://github.com/zavestudios/image-factory) - Base container images
